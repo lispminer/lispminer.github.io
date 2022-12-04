@@ -1,0 +1,148 @@
+/****************************************************************************/
+/******************************* LISPMINER.CSS ******************************/
+/****************************************************************************/
+
+BODY { 
+   	background: #f9f9f9;	/*#f0f0f0;	/*#f0f0e0;	/*#e0e0c4;	/*#ffffff; */
+/*   	font-family: sans-serif; */
+ 	font-family: Verdana, Arial CE, Arial, Helvetica, sans-serif; 
+/* 	font-weight: 80 %; */
+	font-size: 100%;	/*12pt;	/*80%;	/*xx-small;*/
+	text-align: left;
+	color: black;	
+}
+
+H1, H2, H3, H4, H5, H6 {
+/*    	font-family: Verdana, Arial CE, Arial, Helvetica, sans-serif; */
+ 	font-family: Garamond, Palatino, Times New Roman, Times, serif; 
+    	color: black;
+    	font-weight: normal;
+	text-align: left;
+    }
+    
+H1 {   	font-size: 1.45em;	/*12pt;*/
+}
+    
+H2 {    font-size: 1.25em;	/*11pt;*/
+}    
+
+H3 {    font-size: 1.1em;	/*10pt;*/
+    	margin-bottom: 1pt;
+}    
+
+/*P {
+	line-height: 1.5;
+}*/
+
+.titulek {
+  font-size: 1.4em;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.hilite {			/* Zvyrazneni v textu */
+  font-weight: bold;
+  font-style: italic;
+}
+
+.obtekany-box {
+    float: left;
+    width: 200px;
+/*  background: red; */
+}
+
+.obtekany-rbox {
+    float: right;
+    width: 200px;
+/*  background: red; */
+}
+
+A { 		color:#0000E0; text-decoration: none}
+A:link { 	color:#0000E0}
+/*A:link { 	color:#4c48e0}*/
+A:active { 	color:#0000E0}
+A:visited { 	color:#0000E0}
+A:hover { 	color:red; background: #dbdcff}
+/*A:hover { 	color:red; text-decoration: underline; }*/
+
+.ToDo {			/* Vizualni oznaceni nedodelku */
+  background: yellow;
+  color: red;
+  font-weight: bold;
+}
+
+/****************************************************************************/
+/**********************************  HLAVNI *********************************/
+/****************************************************************************/
+
+.hlavni {
+/*    	font-size: 70%;	/*xx-small;*/
+    	text-align: left;
+	line-height: 1.4;
+    	margin-top: 0.5em;	/*5pt;	/*5pt;*/
+/*    	margin: 1pt;*/
+}    
+
+.hlavni H1 {
+/*    	font-family: Verdana, Arial CE, Arial, Helvetica, sans-serif; */
+ 	font-family: 'Linux Libertine','Georgia','Times',serif;  
+ 	font-weight: 600;
+	margin-top: 0.8em;	/* 0pt; */
+	margin-bottom: 0.5em;	/*3pt;*/
+}
+
+.hlavni H2 {
+/*    	font-family: Verdana, Arial CE, Arial, Helvetica, sans-serif; */
+ 	font-family: 'Linux Libertine','Georgia','Times',serif;
+ 	font-weight: 600;
+	margin-top: .8em;	/*8pt;*/
+	margin-bottom: 0.5em;	/*3pt;*/
+}
+
+.bulletblue-bag {
+	  display: flex;
+/*	  position: fixed; /* Stay in place */
+/*	  margin-top: 0px;*/
+	  padding: 0 4px;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+/*	  flex-flow: row nowrap;	flex-direction + flex-wrap */
+	  align-items: left;
+/*	  align-content: space-around; */
+/*	  justify-content: flex-start;	/*zleva je default, jinak jde i center*/
+/*    	  font-size: 80%;	/*xx-small;*/
+/*    	  font-weight: normal; */
+	  text-align: left;
+/*	  background-color: #f0f0f0;*/
+}
+
+.bulletblue-bag > div {
+	background-image: url('../pic/bullet_black.png');
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: 16px 16px;
+	background-position: left top;
+/*	background-color: DodgerBlue;*/
+/*	height: 125px; */
+/*	flex: 0 0 200px;	/* Make the third flex item not growable (0), not shrinkable (0), and with an initial length of 200 pixels: */
+				/* The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties. */
+	margin: 3px;
+	padding-left: 20px;
+/*	text-align: center;*/
+/*	line-height: 75px;*/
+/*	font-size: 30px;*/
+}
+
+p.module {
+	font-size: 95%;
+	background-color: #ddeeff;
+    	border-top: 1px solid #dddddd;
+    	border-bottom: 1px solid #dddddd;
+	padding: 0.1em 0.2em;
+	margin-left: 0;
+	margin-bottom: 0.5em;
+}
+
+/****************************************************************************/
+/********************************** OBRAZKY *********************************/
+/****************************************************************************/
+
