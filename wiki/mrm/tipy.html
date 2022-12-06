@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>mrm:tipy [LISp-Miner]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="mrm,tipy"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="LISp-Miner"/>
+<link rel="start" href="tipy.html"/>
+<link rel="contents" href="tipy.html" title="Mapa stránek"/>
+<link rel="manifest" href="../lib/exe/manifest.html"/>
+<link rel="alternate" type="application/rss+xml" title="Poslední úpravy" />
+<link rel="alternate" type="application/rss+xml" title="Aktuální jmenný prostor" />
+<link rel="alternate" type="text/html" title="Čisté HTML" href="tipy.html"/>
+<link rel="alternate" type="text/plain" title="Wiki jazyk" href="tipy.html"/>
+<link rel="canonical" href="https://lispminer.vse.cz/wiki/doku.php?id=mrm:tipy"/>
+<link rel="stylesheet" href="../lib/exe/css.php.t.dokuwiki.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='mrm';var JSINFO = {"id":"mrm:tipy","namespace":"mrm","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki.js"></script>
+<script charset="utf-8" src="../lib/exe/js.php.t.dokuwiki.js"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="../lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">jít k obsahu</a></li>
+        </ul>
+
+        <h1><a href="../start.html"  accesskey="h" title="[H]"><img src="../lib/tpl/dokuwiki/images/logo.png" width="64" height="64" alt="" /> <span>LISp-Miner</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Uživatelské nástroje</h3>
+                <ul>
+                    <li class="action login"><a href="tipy.html" title="Přihlásit se" rel="nofollow"><span>Přihlásit se</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Nástroje pro tento web</h3>
+            <form action="../start.html" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="mrm:tipy" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Hledat" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Hledat">Hledat</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="..//wiki/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="mrm:tipy" /><select name="do" class="edit quickselect" title="Nástroje"><option value="">Nástroje</option><optgroup label="Nástroje pro stránku"><option value="edit">Zdrojový kód stránky</option><option value="revisions">Starší verze</option><option value="siteexport_addpage">Export Page to HTML/PDF</option><option value="backlink">Zpětné odkazy</option></optgroup><optgroup label="Nástroje pro tento web"><option value="recent">Poslední úpravy</option><option value="media">Správa médií</option><option value="index">Mapa stránek</option></optgroup><optgroup label="Uživatelské nástroje"><option value="login">Přihlásit se</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li class="action recent"><a href="tipy.html" title="Poslední úpravy [r]" rel="nofollow" accesskey="r">Poslední úpravy</a></li><li class="action media"><a href="tipy.html" title="Správa médií" rel="nofollow">Správa médií</a></li><li class="action index"><a href="tipy.html" title="Mapa stránek [x]" rel="nofollow" accesskey="x">Mapa stránek</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Historie:</span> <span class="bcsep">•</span> <bdi><a href="ui/list.html"  class="breadcrumbs" title="mrm:ui:list">list</a></bdi> <span class="bcsep">•</span> <bdi><a href="ui/prepro.html"  class="breadcrumbs" title="mrm:ui:prepro">prepro</a></bdi> <span class="bcsep">•</span> <bdi><a href="ui/results.html"  class="breadcrumbs" title="mrm:ui:results">results</a></bdi> <span class="bcsep">•</span> <bdi><a href="ui/rmcase.html"  class="breadcrumbs" title="mrm:ui:rmcase">rmcase</a></bdi> <span class="bcsep">•</span> <bdi><a href="ui/rmcharib.html"  class="breadcrumbs" title="mrm:ui:rmcharib">rmcharib</a></bdi> <span class="bcsep">•</span> <bdi><a href="ui/start.html"  class="breadcrumbs" title="mrm:ui:start">ui</a></bdi> <span class="bcsep">•</span> <bdi><a href="install.html"  class="breadcrumbs" title="mrm:install">install</a></bdi> <span class="bcsep">•</span> <bdi><a href="rmcase.html"  class="breadcrumbs" title="mrm:rmcase">rmcase</a></bdi> <span class="bcsep">•</span> <bdi><a href="start.html"  class="breadcrumbs" title="mrm:start">mrm</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="tipy.html"  class="breadcrumbs" title="mrm:tipy">tipy</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle">Postranní lišta</h3>
+                    <div class="content"><div class="group">
+                                                                        
+
+
+<p>
+<strong> Začínáme </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../start.html" class="wikilink1" title="start" data-wiki-id="start">Úvodní stránka</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../lmbase/instalace.html" class="wikilink1" title="lmbase:instalace" data-wiki-id="lmbase:instalace">Instalace systému</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmbase/start.html" class="wikilink1" title="lmbase:start" data-wiki-id="lmbase:start">Základy ovládání</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmbase/lmworkspace.html" class="wikilink1" title="lmbase:lmworkspace" data-wiki-id="lmbase:lmworkspace">LM Workspace</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmdata/start.html" class="wikilink1" title="lmdata:start" data-wiki-id="lmdata:start">Demonstrační data</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmdemo/start.html" class="wikilink1" title="lmdemo:start" data-wiki-id="lmdemo:start">Ukázkové postupy</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmdemo/hotel2015/start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong> Systém LISp-Miner a proces DZD </strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="../lmexplore/start.html" class="wikilink1" title="lmexplore:start" data-wiki-id="lmexplore:start">Seznámení s daty</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmexplore/import.html" class="wikilink1" title="lmexplore:import" data-wiki-id="lmexplore:import">Načtení dat</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmexplore/importtxt.html" class="wikilink1" title="lmexplore:importtxt" data-wiki-id="lmexplore:importtxt">Načtení dat z TXT</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmprepro/start.html" class="wikilink1" title="lmprepro:start" data-wiki-id="lmprepro:start">Předzpracování dat</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">Výpočet odvozených hodnot</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmprepro/attribute.html" class="wikilink1" title="lmprepro:attribute" data-wiki-id="lmprepro:attribute">Atribut a jeho kategorie</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmprepro/attributes.html" class="wikilink1" title="lmprepro:attributes" data-wiki-id="lmprepro:attributes">Strom skupin atributů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">Interaktivní analýza</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmtask/start.html" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Modelování</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmtask/task.html" class="wikilink1" title="lmtask:task" data-wiki-id="lmtask:task">Analytická úloha</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/cedent.html" class="wikilink1" title="lmtask:settings:cedent" data-wiki-id="lmtask:settings:cedent">Výběr atributů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/ftcedenthierarchy.html" class="wikilink1" title="lmtask:settings:ftcedenthierarchy" data-wiki-id="lmtask:settings:ftcedenthierarchy">Zadávání cedentů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/ftcoefficient.html" class="wikilink1" title="lmtask:settings:ftcoefficient" data-wiki-id="lmtask:settings:ftcoefficient">Zadávání koeficientů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmtask/start.html#prohlizeni_vysledku" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Prohlížení výsledků</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Analytické procedury </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../mcf/start.html" class="wikilink1" title="mcf:start" data-wiki-id="mcf:start">CF-Miner</a> <img src="../mcf/tasksubtypecf.tok.59dee6_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mkl/start.html" class="wikilink1" title="mkl:start" data-wiki-id="mkl:start">KL-Miner</a> <img src="../mkl/tasksubtypekl.tok.b39fa5_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mft/start.html" class="wikilink1" title="mft:start" data-wiki-id="mft:start">4ft-Miner</a> <img src="../mft/tasksubtypeft.tok.02d723_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mmc/start.html" class="wikilink1" title="mmc:start" data-wiki-id="mmc:start">MCluster-Miner</a> <img src="../mmc/tasksubtypemc.tok.677b81_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../met/start.html" class="wikilink1" title="met:start" data-wiki-id="met:start">ETree-Miner</a> <img src="../met/tasksubtypeet.tok.aaa210_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdc/start.html" class="wikilink1" title="mdc:start" data-wiki-id="mdc:start">SDCF-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdk/start.html" class="wikilink1" title="mdk:start" data-wiki-id="mdk:start">SDKL-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdf/start.html" class="wikilink1" title="mdf:start" data-wiki-id="mdf:start">SD4ft-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../maf/start.html" class="wikilink1" title="maf:start" data-wiki-id="maf:start">Ac4ft-Miner</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Pokročilé funkce </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../lmcl/start.html" class="wikilink1" title="lmcl:start" data-wiki-id="lmcl:start">Skriptovací jazyk</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../imex/start" class="wikilink2" title="imex:start" rel="nofollow" data-wiki-id="imex:start">Import a export</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="start.html" class="wikilink1" title="mrm:start" data-wiki-id="mrm:start">Generování umělých dat</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Výzkum a vývoj </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../rad/start" class="wikilink2" title="rad:start" rel="nofollow" data-wiki-id="rad:start">Směry výzkumu</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../wiki/napoveda.html" class="wikilink1" title="wiki:napoveda" data-wiki-id="wiki:napoveda">Tvorba stránek</a></div>
+</li>
+</ul>
+<hr />
+                                            </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>mrm:tipy</span></div>
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Obsah</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#tipy_a_doporuceni">Tipy a doporučení</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#obecne">Obecné</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#od_jednodussiho_ke_slozitejsimu">Od jednoduššího ke složitějšímu</a></div></li>
+<li class="level3"><div class="li"><a href="#zavest_si_system_v_pojmenovavani">Zavést si systém v pojmenovávání</a></div></li>
+<li class="level3"><div class="li"><a href="#obrnit_se_trpelivosti">Obrnit se trpělivostí</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#sloupce_a_hodnoty">Sloupce a hodnoty</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#pocatecni_distribuce_hodnot">Počáteční distribuce hodnot</a></div></li>
+<li class="level3"><div class="li"><a href="#povolene_rozpeti_hodnot">Povolené rozpětí hodnot</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#pozadovane_vztahy">Požadované vztahy</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#realnost_pozadavku_na_data">Reálnost požadavků na data</a></div></li>
+<li class="level3"><div class="li"><a href="#vhodny_typ_dzd_ulohy_pro_zachyceni_pozadavku">Vhodný typ DZD úlohy pro zachycení požadavku</a></div></li>
+<li class="level3"><div class="li"><a href="#ulohy_zajistujici_neexistenci_jinych_vztahu_v_datech">Úlohy zajišťující neexistenci jiných vztahů v datech</a></div></li>
+<li class="level3"><div class="li"><a href="#problematicke_vztahy">Problematické vztahy</a></div></li>
+<li class="level3"><div class="li"><a href="#problem_s_base">Problém s BASE</a></div></li>
+<li class="level3"><div class="li"><a href="#pouziti_aad">Použití AAD</a></div></li>
+<li class="level3"><div class="li"><a href="#negativni_vztahy">Negativní vztahy</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#evoluce">Evoluce</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#velikost_dat_pro_evoluci">Velikost dat pro evoluci</a></div></li>
+<li class="level3"><div class="li"><a href="#dilci_evoluce">Dílčí evoluce</a></div></li>
+<li class="level3"><div class="li"><a href="#voditka_pro_evoluci">Vodítka pro evoluci</a></div></li>
+<li class="level3"><div class="li"><a href="#rychly_pocatek_evoluce">Rychlý počátek evoluce</a></div></li>
+<li class="level3"><div class="li"><a href="#zabraneni_unifikaci_populace">Zabránění unifikaci populace</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="tipy_a_doporuceni">Tipy a doporučení</h1>
+<div class="level1">
+
+<p>
+V této sekci budou postupně přibývat doporučení pro generování umělých dat a pro práci s modulem ReverseMiner.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="obecne">Obecné</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit3" id="od_jednodussiho_ke_slozitejsimu">Od jednoduššího ke složitějšímu</h3>
+<div class="level3">
+
+<p>
+Pro získání základní představy o chování evolučního algoritmu je vhodné nejprve projít ukázkové RM případy, zkusit udělat drobné změny a teprve následně zkoušet zadávat vlastní – nejprve jednoduché, a potom složitější s více omezeními. 
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="zavest_si_system_v_pojmenovavani">Zavést si systém v pojmenovávání</h3>
+<div class="level3">
+
+<p>
+Zejména u složitějších úloh generování dat bude postupně vznikat velké množství RM případů a ještě více DZD úloh, které budou představovat požadavky na data. Množství úloh bude o to větší, že pro jeden požadavek může být nutné zadat více úloh (např. samostatně pro míru zajímavosti, pro BASE a následně i negativní vztah). 
+</p>
+
+<p>
+Proto je důležité si zavést systém v pojmenování RM případů i DZD úloh. Je vhodné si jednotlivé požadavky na data očíslovat (případně i hierarchicky podle jejich typů a atributů, kterých se týkají) a toto číslování používat při pojmenování jak DZD úloh, tak i <em>RM případů</em> představujících <a href="ea/start.html#dilci_evoluce" class="wikilink1" title="mrm:ea:start" data-wiki-id="mrm:ea:start">dílčí evoluci</a>. DZD úlohy mohou být zároveň umísťovány do skupin.
+</p>
+
+</div>
+
+<h3 class="sectionedit5" id="obrnit_se_trpelivosti">Obrnit se trpělivostí</h3>
+<div class="level3">
+
+<p>
+Řešení úloh pomocí evolučních algoritmů má svá specifika. Evoluce potřebuje (stejně jako v přírodě) čas, aby se dobrala k vhodnému řešení. Není možné očekávat, že náhodné změny budou hned a vždy přesně takové, jak bychom potřebovali. 
+</p>
+
+<p>
+Směrem ke konci evoluce (a zejména těsně před dosažením přesně požadovaných dat) bude klesat četnost nalezení ještě lepšího jedince. Vidíme-li, že evoluce „zamrzla“, můžeme zkusit výpočet pozastavit (Pause) a na záložce <code>RM Case</code> zkusit změnit parametry evoluce (v takovém případě obvykle pomáhá zvýšit pravděpodobnost mutací). Alternativně můžeme na záložce <code>DM Tasks</code> zkusit změnit váhu některých požadavků (zejména, pokud se ukáže, že v evoluci dva navzájem protichůdné).
+</p>
+
+<p>
+Pro lepší pochopení, co během evoluce děje, je možné zaškrtnout volbu <code>Save each iteration EA State</code>. Potom v pracovní složce RM případu nalezneme pro každou iteraci detailní rozpis jedinců aktuálně v populace. Z iterace na iteraci můžeme sledovat změny a zjišťovat, proč se například neuplatnil jedinec s vhodnou mutací pro danou DZD úlohu (obvykle zjistíme, že tou samou mutací byla naopak výrazně poškozena <em>fitness</em> pro úlohu jinou – jde tedy o dva protichůdné požadavky).
+</p>
+
+<p>
+Zároveň však neexistuje žádné všeobecně platné pravidlo, jak by měly být parametry pro ta či jiná generovaná data nastaveny. Je třeba zkoušet různé možnosti, sledovat průběh evoluce a zkoumat <em>EA report</em> pro získání co nejlepší představy. Ani pak však není jistota, že nastavené parametry jsou ty nejlepší nebo že budou dobré pro jiný RM případ.
+</p>
+
+<p>
+I když jsou všechny parametry nastavené zdánlivě dobrým způsobem, tak se evoluce může chovat nepředpokládaně a doba řešení může být velmi dlouhá (dny i více). I drobná změna parametrů může vést k naprosto odlišnému průběhu evoluce, době řešení i podobě nalezených dat.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="sloupce_a_hodnoty">Sloupce a hodnoty</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit7" id="pocatecni_distribuce_hodnot">Počáteční distribuce hodnot</h3>
+<div class="level3">
+
+<p>
+Počáteční distribuci hodnot ve sloupcích volit tak, aby co nejvíce odpovídala požadované cílovému stavu. Budeme-li například požadovat v celé datové matici nahromadění výskytů klientů s nízkým platem, je nevhodné zadat uniformní rozdělení výše platu (nebo dokonce takové, které vygeneruje převážně vysoké hodnoty platu). Přestože evoluce pravděpodobně nakonec pomocí velkého množství mutací změní frekvence nízkých a vysokých platů, aby odpovídaly zadané DZD úloze, tak jí to bude trvat dlouho. Dokonce může „uvíznout“ v lokálním minimu a řešení nebude nalezeno vůbec!
+</p>
+
+<p>
+V tomto ohledu zejména pozor na použití kvantifikátoru Fundovaná implikace s vysokými hodnotami parametru p pro obecné (krátké) antecedenty – např.:
+</p>
+
+<p>
+<strong>Pohlaví</strong>( žena) ⇒<sub>0,9</sub> <strong>Vzdělání</strong>( vysokoškolské)
+</p>
+
+<p>
+Jsou-li hodnoty na počátku vygenerovány přibližně rovnoměrně, bude evolučním operacím trvat dlouhou dobu, než zajistí u velké většiny objektů opravu hodnoty na ty, které vyhovují zadané implikaci.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="povolene_rozpeti_hodnot">Povolené rozpětí hodnot</h3>
+<div class="level3">
+
+<p>
+Frekvence hodnot lze udržet v tolerovaném rozpětí od počátečního nastavení pomocí tzv. <em>Frequency guiding rules</em>. Ta se zobrazují v dialogovém okně vyvolaném z okna definice sloupce a nová se přidávají pomocí tlačítka <strong>Add</strong>.
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="pozadovane_vztahy">Požadované vztahy</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit10" id="realnost_pozadavku_na_data">Reálnost požadavků na data</h3>
+<div class="level3">
+
+<p>
+Při zadání každé DZD úlohy definující požadavky na data je třeba pečlivě zkontrolovat, že taková data mohou teoreticky vůbec existovat. Tuto kontrolu je třeba provést znovu po přidání každé další DZD úlohy, a to jak pro úlohu samotnou (nevyžaduje-li v datech závislosti, které není možné vygenerovat), tak zároveň v souvislosti s již dříve zadanými úlohami (že nemají navzájem protikladné požadavky na data).
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="vhodny_typ_dzd_ulohy_pro_zachyceni_pozadavku">Vhodný typ DZD úlohy pro zachycení požadavku</h3>
+<div class="level3">
+
+<p>
+<img src="../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" />
+</p>
+
+<p>
+4ft-Miner
+</p>
+<ul>
+<li class="level1"><div class="li"> pro specifické vztahy týkající se menší podmnožiny dat</div>
+</li>
+<li class="level1"><div class="li"> obvykle nutné zadat více vztahů (pro IM, pro BASE a negativní vztah)</div>
+</li>
+<li class="level1"><div class="li"> BASE nemusí být potřeba, když máme zadaná <em>Frequency Guiding Rules</em></div>
+</li>
+</ul>
+
+<p>
+CF-Miner
+</p>
+<ul>
+<li class="level1 node"><div class="li"> jedna úloha zajišťuje kompletní rozložení frekvencí, tzn. pozitivní i negativní vztah. Navíc není třeba řešit dostatečné BASE.</div>
+<ul>
+<li class="level2 node"><div class="li"> př. rekreační pobyty začínají obvykle v pátek a v sobotu (pozitivní vztah), málokdy v jiný den (negativní vztah) zadáme jako jednu DZD úlohu:</div>
+<ul>
+<li class="level3"><div class="li"> CF: <strong>HDenTydne</strong><sub>SUM(Pá+So)≥70 %</sub> / <strong>HTypPobytu</strong>( rekreační)</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit12" id="ulohy_zajistujici_neexistenci_jinych_vztahu_v_datech">Úlohy zajišťující neexistenci jiných vztahů v datech</h3>
+<div class="level3">
+
+<p>
+Při generování dat je zejména pro požadavky založené na úlohách pro 4ft-Miner nutné zadat i DZD úlohy, které zajistí, že v datech nebude příliš mnoho (jiných) vztahů/vzorů kromě těch, které v nich mít chceme. Takové úlohy se zadávají s požadavkem na počet nalezených hypotéz menší než X nebo obrácením intervalu pro normalizaci.
+</p>
+
+<p>
+Ukazuje se však, že ve většině případů je vhodné u takových úloh snížit váhu (např. na 0,5 nebo na 0,3), aby v evoluci nejprve dostávali přednost jedinci směřující k vytvoření vztahů, které mít v datech chceme. Teprve až po nalezení takové podoby dat se má evoluce soustředit na „zničení“ případných jiných náhodou vzniklých závislostí v datech (to je totiž obvykle snazší). 
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="problematicke_vztahy">Problematické vztahy</h3>
+<div class="level3">
+
+<p>
+Z dosavadních zkušeností vyplývá, že jsou dva typy vztahů, které způsobují evoluci problémy, resp. prodlužují dobu hledání výsledku. Jde o vztahy týkající se velkého množství dat a o velmi silné vztahy. Velmi silné vztahy obvykle navíc popisují velmi řídké jevy, což může působit další problémy.
+</p>
+
+<p>
+Obvykle jde o vztahy založené na KL-Mineru, CF-Mineru nebo Fundované implikaci ve 4ft-Mineru. Příkladem prvního typu problematických vztahů může být požadavek na začátek rekreačních pobytů převážně v pátek nebo v sobotu, za současného požadavku na 70 % podíl rekreačních pobytů v datech. Jsou-li na počátku začátky pobytů rozdělené přibližně rovnoměrně, dá evoluci velkou práci, než pomocí křížení a mutací dosáhne kýženého stavu. Zde se jako nejlepší pro zrychlení doby řešení ukazuje nastavení vhodnějšího počátečního rozdělení dat na záložce <code>Columns</code> ještě před samotným spuštěním evoluce.
+</p>
+
+<p>
+Příkladem druhého typu problematických vztahů může být požadavek, že pobyty na 28 nocí musí být vždy služební cesty začínající v pondělí. Zároveň těchto pobytů má být mezi 1,5 až 2,5 %. Tady se jako řešení nabízí využití šlechtění (breeding – zvláštního typu křížení popsaného výše). Podaří-li se nalézt řešení této dílčí úlohy samostatně ve zvláštním RM případu, můžeme jej následně přidat jako <em>Data Preset</em>. Pak budeme doufat, že křížení s odpovídajícím jedincem se podaří do aktuálně nejlepšího jedince zanést požadované řídké vztahy. 
+</p>
+
+<p>
+U opravdu řídkých jevů je však úspěšnost i v případě šlechtění malá. Potom pomůže vytvoření RM případu pracovně nazvaného jako <a href="ea/start.html#mutant" class="wikilink1" title="mrm:ea:start" data-wiki-id="mrm:ea:start">mutant</a>. 
+</p>
+
+<p>
+Alternativně lze silnou vazbu mezi dvěma sloupci zajistit zadáním matematického vztahu, kterým budou hodnoty ve druhém sloupci inicializovány přesně podle hodnot ve sloupci prvním. Protože však bude matematický vztah využit pouze pro inicializaci, budou se hodnoty ve druhém sloupci v průběhu evoluce měnit a vazba mezi hodnotami v obou se sloupcích se bude narušovat. Aby neklesla pod námi stanovenou mez, zadáme požadavek ve formě implikačního asociačního pravidla. 
+</p>
+
+<p>
+Výhoda je v tom, že nyní bude pravidlo „pouze“ bránit poklesu míry platnosti vztahu. To je méně časově náročné, než když se náhodným evolučním procesem vhodná kombinace hodnot hledala. 
+</p>
+
+<p>
+Alternativně lze místo matematického vztahu použít funkci <em>Lookup</em> pro dohledání hodnoty odkazem z jiné tabulky a přidat náhodný rozptyl pomocí funkce <code>lm.rnd</code>.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="problem_s_base">Problém s BASE</h3>
+<div class="level3">
+
+<p>
+Zadání libovolného druhého kritéria (nejčastěji BASE) v zadání úlohy pro požadovaný vztah v datech může způsobit problém v evoluci, když pro většinu jedinců nebude nalezen vůbec žádný vztah právě z důvodu nedostatečného BASE. 
+</p>
+
+<p>
+V tom případě je třeba udělat klon úlohy DZD a v něm ponechat pouze kritérium BASE a nastavit jej jako <em>Primary IM</em>. V původní úloze DZD naopak BASE vymazat. Obě úlohy pak vložit jako požadavky do RM případu.
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="pouziti_aad">Použití AAD</h3>
+<div class="level3">
+
+<p>
+Zadáme-li požadovaný vztah jako úlohu pro 4ft-Miner a kvantifikátor AAD, je potřeba zaručit, že evoluce bude schopna rozpoznat lepšího jedince i v případě, že všichni budou <em>Below Average</em>. To zajistíme přidáním klonu úlohy, změnou kvantifikátoru na „BAD“ a požadavkem na nenalezení žádného vztahu.
+</p>
+
+</div>
+
+<h3 class="sectionedit16" id="negativni_vztahy">Negativní vztahy</h3>
+<div class="level3">
+
+<p>
+V navržených vztazích musí být i takové, které zamezí vzniku jiných nechtěných závislostí – tzv. „negativní vztahy“. 
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="evoluce">Evoluce</h2>
+<div class="level2">
+
+</div>
+
+<h3 class="sectionedit18" id="velikost_dat_pro_evoluci">Velikost dat pro evoluci</h3>
+<div class="level3">
+
+<p>
+Ve fázi evoluce držet počet řádků v generovaných datech co nejnižší. Teprve po nalezení varianty dat, která splňuje všechny požadavky, znásobit počet řádků a přidat náhodný „šum“ pomocí randomizace. 
+</p>
+
+<p>
+V datech Hotel postačilo pro zachycení všech vztahů i četností kategorií pouhých 200 řádků. To výrazně zkrátilo čas, který evoluce potřebovala k nalezení přijatleného řešení. Následně byla tabulka zvětšena na 2000 řádků a ponechán prostor pro randomizaci.
+</p>
+
+</div>
+
+<h3 class="sectionedit19" id="dilci_evoluce">Dílčí evoluce</h3>
+<div class="level3">
+
+<p>
+U velmi složitých úloh generování dat (s mnoha omezeními a požadavky na data) není vhodné zadat evoluci hned napoprvé jako jeden běh. Nejprve generovat data pro každý ze zamýšlených vztahů samostatně. Z toho poznáme, jak obtížné je pro evoluci dojít od počátečních rozložení hodnot k takovým, která daný vztah splňují. Můžete i experimentovat s různou požadovanou sílou vztahu, aby se evoluce zrychlila. Zkoušet můžeme i různá nastavení parametrů evoluce. Zároveň můžeme dobu řešení značně zkrátit tím, že v dílčím požadavku generujeme pouze ty sloupce, kterou jsou pro něj relevantní (vyskytují se v nějaké DZD úloze).
+</p>
+
+<p>
+Teprve po vyřešení dílčích požadavků na data přistoupíme ke generování dat splňujících více požadavků najednou. Opět je vhodné postupovat v malých krocích a nejprve třeba kombinovat dva požadavky, následně tři atd. Při tomto postupu daleko snáze zjistíme, které požadavky jsou navzájem v rozporu a že musíme jeden bud oslabit nebo úplně z evoluce vyřadit.
+</p>
+
+<p>
+Máme-li výsledky pro dílčí běhy, nemusí kombinovaná evoluce začínat vždy úplně odznovu. Do počáteční populace můžeme přidat jedince představující již nalezená řešení dílčích evolucí jako <a href="rm/datapresets" class="wikilink2" title="mrm:rm:datapresets" rel="nofollow" data-wiki-id="mrm:rm:datapresets">Data Presets</a>.
+</p>
+
+<p>
+Jako první dílčí evoluci se ukazuje se jako vhodné vytvořit RM případ pouze s požadavky na rozpětí frekvencí hodnot (<em>Frequency Guiding Rules</em>) a nechat evoluci taková data nalézt. Výsledek pak přidáváme do každého dalšího RM případu jako jednu z možné výchozí podoby dat, do které jsou následně zakomponovány další požadované vztahy.
+</p>
+
+</div>
+
+<h3 class="sectionedit20" id="voditka_pro_evoluci">Vodítka pro evoluci</h3>
+<div class="level3">
+
+<p>
+Aby mohla evoluce pro „rozmnožování“ vybírat skutečně nejlepší jedince, musí být schopna mezi nimi rozlišovat. Bude-li požadavek pomocí DZD úlohy zadán s vysokou hodnotou prahu kvantifikátoru, nebude pro většinu jedinců nalezen žádný vztah a z pohledu evoluce budou všichni stejně špatní. 
+</p>
+
+<p>
+Proto je důležité nastavovat hodnoty prahů co nejnižší (resp. na 0), kvantifikátor označit v zadání úlohy jako <em>Primary IM</em> a cílovou hodnotu míry zajímavosti uvádět v druhém z polí pro normalizaci tamtéž. Potom může evoluce dávat přednost jedincům, pro které požadovaný vztah platí na 0,3, oproti jedincům, kde platí pouze na 0,3.
+</p>
+
+<p>
+Zároveň je třeba opatrně pracovat s hodnotou parametru BASE – viz <a href="#problem_s_base" title="mrm:tipy ↵" class="wikilink1">Problém s BASE</a>
+</p>
+
+</div>
+
+<h3 class="sectionedit21" id="rychly_pocatek_evoluce">Rychlý počátek evoluce</h3>
+<div class="level3">
+
+<p>
+Nedochází-li hned na počátku evoluce k alespoň nějakému zlepšování <em>fitness</em> aktuálně nejlepšího jedince (modrá čára v grafu), je patrně něco v zadání špatně a nemá cenu ztrácet čas čekáním na případné zlepšení. Příčinou mohou být například nereálné požadavky na data nebo požadavky, které jsou navzájem v rozporu.
+</p>
+
+<p>
+Na počátku má totiž populace velkou diverzitu, a proto by se mělo hodně uplatnit křížení, které povede k rychlému nalezení daleko lepších jedinců. Když se toto neděje, tak k nalezení lepších jedinců dochází pouze mutacemi, které jsou však spíše lokálního významu a nelze od nich očekávat radikální vylepšení. Mutace by se měly výrazněji uplatňovat až v další fázi evoluce při „dolaďování“ dat.
+</p>
+
+</div>
+
+<h3 class="sectionedit22" id="zabraneni_unifikaci_populace">Zabránění unifikaci populace</h3>
+<div class="level3">
+
+<p>
+Na základě průběhu grafu evoluce je třeba zvážit možné změny v parametrech evoluce. 
+</p>
+
+<p>
+Dochází-li ke snížení diverzity populace, je možné zkusit:
+</p>
+<ul>
+<li class="level1"><div class="li"> zvýšit procento mutací, počet opakování a maximální počty řádků, kterých se týkají;</div>
+</li>
+<li class="level1"><div class="li"> zvýšit velikost populace a/nebo zvýšit velikost turnaje (viz výše);</div>
+</li>
+<li class="level1"><div class="li"> přidat výsledek jiného běhu evoluce jako <a href="rm/datapresets" class="wikilink2" title="mrm:rm:datapresets" rel="nofollow" data-wiki-id="mrm:rm:datapresets">Data Preset</a> a vynutit jeho stálou přítomnost v populaci.</div>
+</li>
+</ul>
+
+<p>
+Zůstává-li dlouhodobě stejná hodnota fitness aktuálně nejlepšího jedince, je možné:
+</p>
+<ul>
+<li class="level1"><div class="li"> snížit velikost turnaje.</div>
+</li>
+</ul>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>mrm/tipy.txt</bdi> · Poslední úprava: 2015/09/30 18:47 (upraveno mimo DokuWiki)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Nástroje pro stránku</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="tipy.html" title="Zdrojový kód stránky [v]" rel="nofollow" accesskey="v"><span>Zdrojový kód stránky</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="tipy.html" title="Starší verze [o]" rel="nofollow" accesskey="o"><span>Starší verze</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="tipy.html" title="Zpětné odkazy" rel="nofollow"><span>Zpětné odkazy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="siteexport_addpage"><a href="tipy.html" title="Export Page to HTML/PDF" rel="nofollow"><span>Export Page to HTML/PDF</span><svg width="61px" height="51px" viewBox="0 0 61 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><path d="M26.1891503,39.0065635 L26.0876578,38.9773206 L60.6523866,1.23972885 L60.4321374,2.11844376 L60.476442,2.07071678 L60.4265202,2.14085429 L49.5024876,45.7237994 L32.8255882,40.9187101 L26,50.508302 L26,39.2103249 L26.1891503,39.0065635 Z M60.9727675,0.862917243 L22.2676619,38.2155059 L-0.00245042233,30.2214566 L60.9727675,0.862917243 Z" id="Paper-Plane"></path></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Nahoru [t]" rel="nofollow" accesskey="t"><span>Nahoru</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Kromě míst, kde je explicitně uvedeno jinak, je obsah této wiki licencován pod následující licencí: <bdi><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img src="../lib/images/license/button/cc-by-sa.png" alt="CC Attribution-Share Alike 4.0 International" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="https://php.net" title="Powered by PHP" ><img
+            src="../lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="../check/referer" title="Valid HTML5" ><img
+            src="../lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="../css-validator/check/referer.profile.css3?profile=css3" title="Valid CSS" ><img
+            src="../lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+            alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="../lib/exe/taskrunner.1667081959.gif?1667081959" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>

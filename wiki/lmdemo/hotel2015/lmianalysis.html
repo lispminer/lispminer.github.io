@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>lmdemo:hotel2015:lmianalysis [LISp-Miner]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="lmdemo,hotel2015,lmianalysis"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="LISp-Miner"/>
+<link rel="start" href="lmianalysis.html"/>
+<link rel="contents" href="lmianalysis.html" title="Mapa stránek"/>
+<link rel="manifest" href="../../lib/exe/manifest.html"/>
+<link rel="alternate" type="application/rss+xml" title="Poslední úpravy" />
+<link rel="alternate" type="application/rss+xml" title="Aktuální jmenný prostor" />
+<link rel="alternate" type="text/html" title="Čisté HTML" href="lmianalysis.html"/>
+<link rel="alternate" type="text/plain" title="Wiki jazyk" href="lmianalysis.html"/>
+<link rel="canonical" href="https://lispminer.vse.cz/wiki/doku.php?id=lmdemo:hotel2015:lmianalysis"/>
+<link rel="stylesheet" href="../../lib/exe/css.php.t.dokuwiki.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='lmdemo:hotel2015';var JSINFO = {"id":"lmdemo:hotel2015:lmianalysis","namespace":"lmdemo:hotel2015","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki.js"></script>
+<script charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki.js"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="../../lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">jít k obsahu</a></li>
+        </ul>
+
+        <h1><a href="../../start.html"  accesskey="h" title="[H]"><img src="../../lib/tpl/dokuwiki/images/logo.png" width="64" height="64" alt="" /> <span>LISp-Miner</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Uživatelské nástroje</h3>
+                <ul>
+                    <li class="action login"><a href="lmianalysis.html" title="Přihlásit se" rel="nofollow"><span>Přihlásit se</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Nástroje pro tento web</h3>
+            <form action="../../start.html" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="lmdemo:hotel2015:lmianalysis" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Hledat" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Hledat">Hledat</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="../..//wiki/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lmdemo:hotel2015:lmianalysis" /><select name="do" class="edit quickselect" title="Nástroje"><option value="">Nástroje</option><optgroup label="Nástroje pro stránku"><option value="edit">Zdrojový kód stránky</option><option value="revisions">Starší verze</option><option value="siteexport_addpage">Export Page to HTML/PDF</option><option value="backlink">Zpětné odkazy</option></optgroup><optgroup label="Nástroje pro tento web"><option value="recent">Poslední úpravy</option><option value="media">Správa médií</option><option value="index">Mapa stránek</option></optgroup><optgroup label="Uživatelské nástroje"><option value="login">Přihlásit se</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li class="action recent"><a href="lmianalysis.html" title="Poslední úpravy [r]" rel="nofollow" accesskey="r">Poslední úpravy</a></li><li class="action media"><a href="lmianalysis.html" title="Správa médií" rel="nofollow">Správa médií</a></li><li class="action index"><a href="lmianalysis.html" title="Mapa stránek [x]" rel="nofollow" accesskey="x">Mapa stránek</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Historie:</span> <span class="bcsep">•</span> <bdi><a href="import.html"  class="breadcrumbs" title="lmdemo:hotel2015:import">import</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="lmianalysis.html"  class="breadcrumbs" title="lmdemo:hotel2015:lmianalysis">lmianalysis</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle">Postranní lišta</h3>
+                    <div class="content"><div class="group">
+                                                                        
+
+
+<p>
+<strong> Začínáme </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../start.html" class="wikilink1" title="start" data-wiki-id="start">Úvodní stránka</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmbase/instalace.html" class="wikilink1" title="lmbase:instalace" data-wiki-id="lmbase:instalace">Instalace systému</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmbase/start.html" class="wikilink1" title="lmbase:start" data-wiki-id="lmbase:start">Základy ovládání</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmbase/lmworkspace.html" class="wikilink1" title="lmbase:lmworkspace" data-wiki-id="lmbase:lmworkspace">LM Workspace</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmdata/start.html" class="wikilink1" title="lmdata:start" data-wiki-id="lmdata:start">Demonstrační data</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../start.html" class="wikilink1" title="lmdemo:start" data-wiki-id="lmdemo:start">Ukázkové postupy</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong> Systém LISp-Miner a proces DZD </strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="../../lmexplore/start.html" class="wikilink1" title="lmexplore:start" data-wiki-id="lmexplore:start">Seznámení s daty</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmexplore/import.html" class="wikilink1" title="lmexplore:import" data-wiki-id="lmexplore:import">Načtení dat</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmexplore/importtxt.html" class="wikilink1" title="lmexplore:importtxt" data-wiki-id="lmexplore:importtxt">Načtení dat z TXT</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmprepro/start.html" class="wikilink1" title="lmprepro:start" data-wiki-id="lmprepro:start">Předzpracování dat</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">Výpočet odvozených hodnot</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmprepro/attribute.html" class="wikilink1" title="lmprepro:attribute" data-wiki-id="lmprepro:attribute">Atribut a jeho kategorie</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmprepro/attributes.html" class="wikilink1" title="lmprepro:attributes" data-wiki-id="lmprepro:attributes">Strom skupin atributů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">Interaktivní analýza</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmtask/start.html" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Modelování</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmtask/task.html" class="wikilink1" title="lmtask:task" data-wiki-id="lmtask:task">Analytická úloha</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/cedent.html" class="wikilink1" title="lmtask:settings:cedent" data-wiki-id="lmtask:settings:cedent">Výběr atributů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/ftcedenthierarchy.html" class="wikilink1" title="lmtask:settings:ftcedenthierarchy" data-wiki-id="lmtask:settings:ftcedenthierarchy">Zadávání cedentů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/ftcoefficient.html" class="wikilink1" title="lmtask:settings:ftcoefficient" data-wiki-id="lmtask:settings:ftcoefficient">Zadávání koeficientů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmtask/start.html#prohlizeni_vysledku" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Prohlížení výsledků</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Analytické procedury </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../mcf/start.html" class="wikilink1" title="mcf:start" data-wiki-id="mcf:start">CF-Miner</a> <img src="../../mcf/tasksubtypecf.tok.59dee6_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mkl/start.html" class="wikilink1" title="mkl:start" data-wiki-id="mkl:start">KL-Miner</a> <img src="../../mkl/tasksubtypekl.tok.b39fa5_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mft/start.html" class="wikilink1" title="mft:start" data-wiki-id="mft:start">4ft-Miner</a> <img src="../../mft/tasksubtypeft.tok.02d723_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mmc/start.html" class="wikilink1" title="mmc:start" data-wiki-id="mmc:start">MCluster-Miner</a> <img src="../../mmc/tasksubtypemc.tok.677b81_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../met/start.html" class="wikilink1" title="met:start" data-wiki-id="met:start">ETree-Miner</a> <img src="../../met/tasksubtypeet.tok.aaa210_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdc/start.html" class="wikilink1" title="mdc:start" data-wiki-id="mdc:start">SDCF-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdk/start.html" class="wikilink1" title="mdk:start" data-wiki-id="mdk:start">SDKL-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdf/start.html" class="wikilink1" title="mdf:start" data-wiki-id="mdf:start">SD4ft-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../maf/start.html" class="wikilink1" title="maf:start" data-wiki-id="maf:start">Ac4ft-Miner</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Pokročilé funkce </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../lmcl/start.html" class="wikilink1" title="lmcl:start" data-wiki-id="lmcl:start">Skriptovací jazyk</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../imex/start" class="wikilink2" title="imex:start" rel="nofollow" data-wiki-id="imex:start">Import a export</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mrm/start.html" class="wikilink1" title="mrm:start" data-wiki-id="mrm:start">Generování umělých dat</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Výzkum a vývoj </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../rad/start" class="wikilink2" title="rad:start" rel="nofollow" data-wiki-id="rad:start">Směry výzkumu</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../wiki/napoveda.html" class="wikilink1" title="wiki:napoveda" data-wiki-id="wiki:napoveda">Tvorba stránek</a></div>
+</li>
+</ul>
+<hr />
+                                            </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>lmdemo:hotel2015:lmianalysis</span></div>
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Obsah</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#interaktivni_analyza">Interaktivní analýza</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#scatter-plot_analyza">Scatter-plot analýza</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#omezeni_podmnoziny_zaznamu">Omezení podmnožiny záznamů</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#analyza_hlavnich_komponent">Analýza hlavních komponent</a></div></li>
+<li class="level2"><div class="li"><a href="#korelacni_analyza_atributu">Korelační analýza atributů</a></div></li>
+<li class="level2"><div class="li"><a href="#interaktivni_frekvencni_analyza">Interaktivní frekvenční analýza</a></div></li>
+<li class="level2"><div class="li"><a href="#interaktivni_cf_analyza">Interaktivní CF analýza</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#omezeni_podmnoziny_zaznamu1">Omezení podmnožiny záznamů</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#interaktivni_kl_analyza">Interaktivní KL analýza</a></div></li>
+<li class="level2"><div class="li"><a href="#kontingencni_analyza_dvou_booleovskych_atributu">Kontingenční analýza dvou booleovských atributů</a></div></li>
+<li class="level2"><div class="li"><a href="#interaktivni_tvorba_rozhodovaciho_stromu">Interaktivní tvorba rozhodovacího stromu</a></div></li>
+<li class="level2"><div class="li"><a href="#interaktivni_analyza_geografickych_dat">Interaktivní analýza geografických dat</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#analyza_bodu">Analýza bodů</a></div></li>
+<li class="level3"><div class="li"><a href="#analyza_oblasti">Analýza oblastí</a></div></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="interaktivni_analyza">Interaktivní analýza</h1>
+<div class="level1">
+
+<p>
+<img src="../example.tok.88daf5_w.32.png" class="medialeft" alt="" width="32" /> Funkce pro <a href="../../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">interaktivní analýzu</a> nabízí další možnosti pro bližší seznámení s daty. Nejde o <em>data-mingovou</em> analýzu v pravém slova smyslu, protože při interaktivní analýze zkoušíme různé pohledy na data a omezení zkoumané množiny ručně. Svoji povahou je podobná <em>OLAP-analýze</em>. <a href="../../lmtask/start.html" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Analytické úlohy</a> naproti tomu automaticky prověřují miliony a miliardy různých kombinací na základě námi připraveného zadání.
+</p>
+
+<p>
+Smyslem interaktivní analýzy je blíže data poznat a zejména se nechat inspirovat pro <a href="start.html#analyticke_procedury" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">formulaci analytických otázek a zadávání analytických úloh</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="scatter-plot_analyza">Scatter-plot analýza</h2>
+<div class="level2">
+
+<p>
+Příkladem využití <a href="../../lmianalysis/scatterplot.html" class="wikilink1" title="lmianalysis:scatterplot" data-wiki-id="lmianalysis:scatterplot">Scatter-plot analýzy</a> je zobrazení závislosti mezi dnem začátku pobytu a teplotou.
+</p>
+
+<p>
+<a href="lmianalysis.scatter-plot.pdayofrange-mteplota.png" class="media" title="lmdemo:hotel2015:lmianalysis.scatter-plot.pdayofrange-mteplota.png"><img src="lmianalysis.scatter-plot.pdayofrange-mteplota.tok.e7e130_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Podobný graf jsme už viděli ve fázi <a href="explore.html#mteplota" class="wikilink1" title="lmdemo:hotel2015:explore" data-wiki-id="lmdemo:hotel2015:explore">seznámení s propojenými daty</a>. Tehdy jsme však trend viděli pouze proto, že data byla v importovaném souboru seřazena (což jsme zjistili zobrazením hodnot ve sloupci <strong>PPobytOd.DayOfRange</strong>). 
+</p>
+
+<p>
+Ve Scatter-plot analýze vidíme vztah obou sledovaných hodnot (<strong>PPobytOd.DayOfRange</strong> a <strong>MTeplota</strong>) bez ohledu na pořadí záznamů v databázové tabulce.
+</p>
+
+</div>
+
+<h3 class="sectionedit3" id="omezeni_podmnoziny_zaznamu">Omezení podmnožiny záznamů</h3>
+<div class="level3">
+
+<p>
+Průběh teplot si dále můžeme nechat zobrazit pro různé typy oblohy v atributu <strong>MObloha</strong>. Vidíme, jak se liší průměrná denní teplota.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="analyza_hlavnich_komponent">Analýza hlavních komponent</h2>
+<div class="level2">
+
+<p>
+<a href="../../lmianalysis/pca.html" class="wikilink1" title="lmianalysis:pca" data-wiki-id="lmianalysis:pca">Analýzu hlavních komponent</a> můžeme použít pro zjištění závislostí mezi dílčími a celkovým hodnocení. Otázka zní – lze z dílčích hodnocení spolehlivě odhadnout celkové hodnocení?
+</p>
+
+<p>
+Na záložce <a href="../../lmianalysis/pca.html" class="wikilink1" title="lmianalysis:pca" data-wiki-id="lmianalysis:pca">PCA</a> pomocí tlačítka <code>Columns</code> vložíme do analýzy všechny čtyři sloupce dílčího hodnocení. Zároveň si body necháme obarvit podle celkového hodnocení (atribut <strong>DHodnoceni</strong>).
+</p>
+
+<p>
+<a href="lmianalysis.pca.dhodnoceni.png" class="media" title="lmdemo:hotel2015:lmianalysis.pca.dhodnoceni.png"><img src="lmianalysis.pca.dhodnoceni.tok.5e2919_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Nyní vidíme, že dílčí hodnocení skutečně s velkou jistotou určují celkové hodnocení. Spokojení hosté (zelený „mrak“ vpravo) jsou jasně odlišitelní, zatímco mezi průměrem a nespokojenými je částečný překryv.
+</p>
+
+<p>
+I zde můžeme zkoušet, jak se shluky mění pro různé podmnožiny – např. pro hosty bez stravy, pro hosty mimo sezónu atp. K dispozici pro definici podmnožiny máme všechny atributy vytvořené ve <a href="attributes.html" class="wikilink1" title="lmdemo:hotel2015:attributes" data-wiki-id="lmdemo:hotel2015:attributes">fázi předzpracování</a>. Protože je atributů hodně a ještě více je jejich kombinací, bývá pro nalezení nejlepší vhodné použít <a href="task/mc.html" class="wikilink1" title="lmdemo:hotel2015:task:mc" data-wiki-id="lmdemo:hotel2015:task:mc">analytickou proceduru MCluster-Miner</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="korelacni_analyza_atributu">Korelační analýza atributů</h2>
+<div class="level2">
+
+<p>
+Přesuneme se od analýzy hodnot ve sloupcích k interaktivní analýze kategorií atributů.
+</p>
+
+<p>
+V souvislosti s právě provedenou analýzou hlavních komponent budeme chtít vypočítat korelační koeficienty mezi atributy ve skupině <strong>Hodnocení</strong>, tedy korelační koeficienty mezi celkovým a dílčími hodnoceními.
+</p>
+
+<p>
+<a href="lmianalysis.klcorrelations.dhodnoceni.png" class="media" title="lmdemo:hotel2015:lmianalysis.klcorrelations.dhodnoceni.png"><img src="lmianalysis.klcorrelations.dhodnoceni.tok.423cfe_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Vidíme, že bude nejlépe s celkovým hodnocením koreluje dílčí hodnocení personálu spolu s dílčím hodnocením ubytování. Naopak dílčí hodnocení možností vyžití v okolí až takovou korelaci nevykazuje.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="interaktivni_frekvencni_analyza">Interaktivní frekvenční analýza</h2>
+<div class="level2">
+
+<p>
+Nyní zaměříme svoji pozornost na atributy ze skupiny <strong>Host</strong>. Nejprve si zobrazíme <a href="../../lmianalysis/fa.html" class="wikilink1" title="lmianalysis:fa" data-wiki-id="lmianalysis:fa">frekvenční analýzu</a> kategorií atributu (resp. atributů). Nejprve vybereme pomocí tlačítka <code>Attributes</code> atribut <strong>HStat</strong>.
+</p>
+
+<p>
+<a href="lmianalysis.fa.hstat.png" class="media" title="lmdemo:hotel2015:lmianalysis.fa.hstat.png"><img src="lmianalysis.fa.hstat.tok.2a3f77_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+I tento graf jsme už měli možnost vidět při zobrazení <a href="explore.html#hstat" class="wikilink1" title="lmdemo:hotel2015:explore" data-wiki-id="lmdemo:hotel2015:explore">detailních informací o sloupci</a> <strong>HStat</strong>. Je však důležité mít na paměti, že tentokrát se díváme na frekvence kategorií atributů, které mohou sdružovat více hodnot původního databázového sloupce, nebo naopak některé ignorovat (i když v tomto případě tomu tak není).
+</p>
+
+<p>
+Navíc však můžeme přidat ještě dichotomický atribut <strong>PSezona_b</strong> a zkoumat kombinace četnosti hostů podle státu a toho, zda přijeli v sezóně, či mimo ni.
+</p>
+
+<p>
+<a href="lmianalysis.fa.hstat-psezona.png" class="media" title="lmdemo:hotel2015:lmianalysis.fa.hstat-psezona.png"><img src="lmianalysis.fa.hstat-psezona.tok.cf6631_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="interaktivni_cf_analyza">Interaktivní CF analýza</h2>
+<div class="level2">
+
+<p>
+Zajímá-li nás rozdělení frekvencí kategorií pouze jednoho atributu, může být přehlednější zobrazení záložky s <a href="../../lmianalysis/cf.html" class="wikilink1" title="lmianalysis:cf" data-wiki-id="lmianalysis:cf">CF analýzou</a>. Stejně jako ostatní interaktivní analýzy ji můžeme otevřít z menu <code>Interactive Analysis</code>, ale obvykle bude pohodlnější použít tlačítko <code>Show CF</code> přímo na záložce atributu.
+</p>
+
+<p>
+<a href="lmianalysis.cf.mteplota_exp.png" class="media" title="lmdemo:hotel2015:lmianalysis.cf.mteplota_exp.png"><img src="lmianalysis.cf.mteplota_exp.tok.3f046e_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Zobrazíme se například <em>CF analýzu</em> pro atribut <strong>MTeplota_exp</strong> s expertním rozdělením teplot. Vidíme, že pro období extrémních mrazů máme 46 pobytů, kdežto pro extrémní vedra pouze 11.
+</p>
+
+</div>
+
+<h3 class="sectionedit8" id="omezeni_podmnoziny_zaznamu1">Omezení podmnožiny záznamů</h3>
+<div class="level3">
+
+<p>
+Když však omezíme podmnožinu záznamů pouze na spokojené hosty (atribut <strong>DHodnoceni</strong> = <em>spokojen</em>) vidíme, že ze 46 pobytů za extrémních mrazů byl pouze 9 spokojených hostů. To je možná inspirace pro hlubší analýzu.
+</p>
+
+<p>
+<a href="lmianalysis.cf.mteplota_exp.dhodnoceni.png" class="media" title="lmdemo:hotel2015:lmianalysis.cf.mteplota_exp.dhodnoceni.png"><img src="lmianalysis.cf.mteplota_exp.dhodnoceni.tok.022a5a_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Zároveň však vidíme, že spokojení hosté jsou spíše při nižších teplotách. Pro teplejší dny spokojených hostů ubývá, přestože hostů je přibližně stejně v zimě i v létě (viz obrázek výše).
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="interaktivni_kl_analyza">Interaktivní KL analýza</h2>
+<div class="level2">
+
+<p>
+Četnosti kombinací kategorií dvou atributů zkoumáme pomocí kontingenční <a href="../../lmianalysis/kl.html" class="wikilink1" title="lmianalysis:kl" data-wiki-id="lmianalysis:kl">KL analýzy</a>. Na záložce vybereme z rozbalovacích nabídek první (řádkový) a druhý (sloupcový) atribut, například <strong>POsobonoci_ef5</strong> a <strong>PCenaCelkem_ef5</strong>.  
+</p>
+
+<p>
+<a href="lmianalysis.kl.posobonoci_ef5-pcenacelkem_ef5.png" class="media" title="lmdemo:hotel2015:lmianalysis.kl.posobonoci_ef5-pcenacelkem_ef5.png"><img src="lmianalysis.kl.posobonoci_ef5-pcenacelkem_ef5.tok.e8cd66_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Na obrázku vidíme téměř dokonalou podobu přímé ordinální závislosti mezi počtem osobonocí a celkovou cenou pobytu. Ta se vyznačuje nahromaděním vyšších četností přibližně na hlavní diagonále kontingenční tabulky. Jde o logický důsledek toho, jakým způsobem je cena za ubytování počítána.
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="kontingencni_analyza_dvou_booleovskych_atributu">Kontingenční analýza dvou booleovských atributů</h2>
+<div class="level2">
+
+<p>
+<img src="../../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" />
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="interaktivni_tvorba_rozhodovaciho_stromu">Interaktivní tvorba rozhodovacího stromu</h2>
+<div class="level2">
+
+<p>
+Jak jsme si ukázali v <a href="lmianalysis.html#analyza_hlavnich_komponent" class="wikilink1" title="lmdemo:hotel2015:lmianalysis" data-wiki-id="lmdemo:hotel2015:lmianalysis">analýze hlavních komponent</a>, jsou v dílčích hodnoceních jasně odlišitelné shluky. Přirozená otázka proto je, zda lze vytvořit rozhodovací strom, který s velkou mírou přesnosti dokáže z dílčích hodnocení určit hodnocení celkové. 
+</p>
+
+<p>
+Otevřeme tedy záložku pro <a href="../../lmianalysis/et.html" class="wikilink1" title="lmianalysis:et" data-wiki-id="lmianalysis:et">interaktivní vytváření rozhodovacího stromu</a> a jako první krok zkontrolujeme, že je správně zadaná cílová třída <strong>DHodnoceni</strong> (v datech Hotel tomu tak je rovnou). 
+</p>
+
+<p>
+Protože strom budeme vytvářet ručně, tak není vhodné použít atributy s mnoha kategoriemi, které by vedly k příliš košatému stromu. Použijeme proto <a href="attributes.html#hromadne_pridani_atributu_dilcich_hodnoceni" class="wikilink1" title="lmdemo:hotel2015:attributes" data-wiki-id="lmdemo:hotel2015:attributes">dříve připravené atributy dílčích hodnocení se třemi kategoriemi jako ekvifrekvenční intervaly</a> (přípona <em>_ef3</em>). 
+</p>
+
+<p>
+Aby nás ostatní atributy při vytváření stromu nemátly, tak pomocí tlačítka <code>Available attributes</code> nejprve všechny atributy přesuneme do levého seznamu, abychom zpět do pravého přesunuli pouze <strong>DUbytovani_ef3</strong>, <strong>DStrava_ef3</strong>, <strong>DPersonal_ef3</strong> a <strong>DZabava_ef3</strong>. V seznamu atributů, kterou jsou k dispozici pro vytváření stromu, jsou nyní pouze tyto čtyři atributy a jsou seřazeny podle významnosti (vhodnosti pro použití ve stromu na daném místě).
+</p>
+
+<p>
+Jako nejvhodnější se nabízí atribut <strong>DPersonal_ef3</strong>, který použijeme pro rozvinutí kořene stromu.
+</p>
+
+<p>
+<a href="lmianalysis.et.dhodnoceni.01.dpersonal.png" class="media" title="lmdemo:hotel2015:lmianalysis.et.dhodnoceni.01.dpersonal.png"><img src="lmianalysis.et.dhodnoceni.01.dpersonal.tok.da73ff_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Po přidání atributu vidíme, že už takto jednoduchý strom dosahuje přesnosti ve výši 83,2 %. Zároveň první dva listy (<em>nespokojen</em> a <em>průměr</em>) dosahují čistoty 86,2 % a 95,8 %. Problém je s posledním listem (<em>spokojen</em>), který má čistotu pouze 67,6 %. Použijeme proto další nabízený atribut ze seznamu – <strong>DUbytovani_ef3</strong> a uzel rozvineme. Nyní již kvalita stromu stoupla na 91,3 %, jak je vidět na dalším obrázku.
+</p>
+
+<p>
+<a href="lmianalysis.et.dhodnoceni.02.dpersonal.dubytovani.png" class="media" title="lmdemo:hotel2015:lmianalysis.et.dhodnoceni.02.dpersonal.dubytovani.png"><img src="lmianalysis.et.dhodnoceni.02.dpersonal.dubytovani.tok.9a8a28_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Problematický je opět poslední list (<em>spokojen</em>), u kterého bychom mohli zvážit další rozvinutí. Lepší však bude použít <a href="task/et.html" class="wikilink1" title="lmdemo:hotel2015:task:et" data-wiki-id="lmdemo:hotel2015:task:et">analytickou proceduru ETree-Miner</a>, která pro nás automaticky vytvoří nejlepší strom, případně i s použitím atributů s více kategoriemi.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="interaktivni_analyza_geografickych_dat">Interaktivní analýza geografických dat</h2>
+<div class="level2">
+
+<p>
+V analyzovaných <a href="../../lmdata/hotel2015.html#datech_hotel" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">datech Hotel</a> jsou přímo <a href="../../lmdata/hotel2015.html#pobyty" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">geografické souřadnice města</a>, ze kterého host pochází. Dále jsou v datech i názvy států, které nepřímo reprezentují geografické oblasti na mapě. A konečně jsme si i vytvořili <a href="columnderived.html" class="wikilink1" title="lmdemo:hotel2015:columnderived" data-wiki-id="lmdemo:hotel2015:columnderived">odvozené sloupce z geografických dat</a> s názvy <a href="columnderived.html#kraj_ze_ktereho_host_pochazi" class="wikilink1" title="lmdemo:hotel2015:columnderived" data-wiki-id="lmdemo:hotel2015:columnderived">HKraj</a>, <a href="columnderived.html#vzdalenost_od_bydliste_hosta_k_nejblizsimu_hotelu" class="wikilink1" title="lmdemo:hotel2015:columnderived" data-wiki-id="lmdemo:hotel2015:columnderived">HNejblizsiHotelVzdalenost</a> a <a href="columnderived.html#nazev_nejblizsiho_hotelu_od_bydliste_hosta" class="wikilink1" title="lmdemo:hotel2015:columnderived" data-wiki-id="lmdemo:hotel2015:columnderived">HNejblizsiHotelNazev</a>.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="analyza_bodu">Analýza bodů</h3>
+<div class="level3">
+
+<p>
+Nejprve se zaměříme na souřadnice měst a použijeme <a href="../../lmianalysis/geodata2d.html" class="wikilink1" title="lmianalysis:geodata2d" data-wiki-id="lmianalysis:geodata2d">interaktivní analýzu geografických bodů</a>. Protože souřadnice jsou ve sloupcích <strong>HMesto_X</strong> a <strong>HMesto_Y</strong> (tedy s názvem končícím na <em>_X</em> a <em>_Y</em>), vyberou se automaticky v rozbalovacích nabídkách <code>X-axis values</code> a <code>Y-axis values</code>. Proto se po otevření <a href="../../lmianalysis/geodata2d.html" class="wikilink1" title="lmianalysis:geodata2d" data-wiki-id="lmianalysis:geodata2d">záložky</a> zobrazí rovnou města jako body a v případě dostupného připojení na internet se i automaticky stáhne mapový podklad z některé volně dostupné internetové mapové služby.
+</p>
+
+<p>
+<a href="geodata2d.hmesto.hstat.bezhranic.png" class="media" title="lmdemo:hotel2015:geodata2d.hmesto.hstat.bezhranic.png"><img src="geodata2d.hmesto.hstat.bezhranic.tok.290cd6_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Aby záložka vypadala shodně jako na obrázku, musíme ještě v rozbalovací nabídce <code>Colorize points based on</code> vybrat atribut <strong>HStat</strong>, aby se body obarvily podle státu, do kterého město patří. A dále musíme zaškrtnout volbu <code>Add jitter</code>, aby byl lépe patrný přibližný počet záznamů z jednoho města (v opačném případě se body pro všechny záznamy z jednoho města překrývají a vidíme pouze jeden bod).
+</p>
+
+<p>
+Následně do mapy přidáme vektorovou vrstvu s hranicemi států. K tomu použijeme tlačítko <code>Map Layers</code>. Objeví se dialogové okno pro <a href="../../lmianalysis/geodata2d.html#nastaveni_mapovych_vrstev" class="wikilink1" title="lmianalysis:geodata2d" data-wiki-id="lmianalysis:geodata2d">nastavení mapových vrstev</a>, ve kterém vybereme a z levého do pravého seznamu přesuneme vektorovou vrstvu s hranicemi států střední Evropy (<em>Europe/Central, states</em>).
+</p>
+
+<p>
+<a href="geodata2d.hmesto.hstat.png" class="media" title="lmdemo:hotel2015:geodata2d.hmesto.hstat.png"><img src="geodata2d.hmesto.hstat.tok.91240d_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+</div>
+
+<h4 id="zmena_obarveni_a_pridani_dalsi_mapove_vrstvy">Změna obarvení a přidání další mapové vrstvy</h4>
+<div class="level4">
+
+<p>
+Nyní změníme způsob, kterým jsou body obarveny. V rozbalovací nabídce <code>Colorize points based on</code> vybereme atribut <strong>HNejblizsiHotelNazev</strong>. Body budou nyní obarveny podle toho, ke kterému z hotelů má host ze svého bydliště nejblíže. 
+</p>
+
+<p>
+Abychom tomu lépe porozuměli, přidáme do mapy i pozice těchto hotelů. Pomocí tlačítka <code>Map Layers</code> vyvoláme dialogové okno pro <a href="../../lmianalysis/geodata2d.html#nastaveni_mapovych_vrstev" class="wikilink1" title="lmianalysis:geodata2d" data-wiki-id="lmianalysis:geodata2d">nastavení mapových vrstev</a>. Do seznamu vrstev nejprve pomocí tlačítka <code>Add</code> přidáme novou vrstvu <strong>Hotel.Konkurence</strong>. Data pro ní jsou v souboru <code>Hotel.Konkurence.kml</code>, který jsme již použili při vytváření <a href="columnderived.html#vzdalenost_od_bydliste_hosta_k_nejblizsimu_hotelu" class="wikilink1" title="lmdemo:hotel2015:columnderived" data-wiki-id="lmdemo:hotel2015:columnderived">odvozených sloupců</a> a nalezneme jej ve složce s daty Hotel. Barvu bodů změníme na nějakou výraznou (např. fialovou) a velikost zvýšíme na pět bodů.
+</p>
+
+<p>
+<a href="lmianalysis.vectorlayer.hotel.konkurence.id.lmdemo_3Ahotel2015_3Almianalysis.png.detail.html?id=lmdemo%3Ahotel2015%3Almianalysis&media=lmdemo:hotel2015:lmianalysis.vectorlayer.hotel.konkurence.png" class="media" title="lmdemo:hotel2015:lmianalysis.vectorlayer.hotel.konkurence.png"><img src="lmianalysis.vectorlayer.hotel.konkurence.tok.d33990_w.400.png" class="mediacenter" alt="" width="400" /></a>
+</p>
+
+<p>
+Po potvrzení zadání nové vrstvy ji ještě přesuneme do seznamu viditelných vrstev vpravo.
+</p>
+
+<p>
+<a href="lmianalysis.geodata2d.hmesto.hstat.hnejblizsihotelnazev.id.lmdemo_3Ahotel2015_3Almianalysis.png.detail.html?id=lmdemo%3Ahotel2015%3Almianalysis&media=lmdemo:hotel2015:lmianalysis.geodata2d.hmesto.hstat.hnejblizsihotelnazev.png" class="media" title="lmdemo:hotel2015:lmianalysis.geodata2d.hmesto.hstat.hnejblizsihotelnazev.png"><img src="lmianalysis.geodata2d.hmesto.hstat.hnejblizsihotelnazev.tok.1f4f73_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Nyní názorně vidíme jak pozice hotelů, tak pomocí barev i to, ke kterému z nich má každý z hostů ze svého bydliště nejblíže.
+</p>
+
+</div>
+
+<h3 class="sectionedit14" id="analyza_oblasti">Analýza oblastí</h3>
+<div class="level3">
+
+<p>
+Nyní se podíváme na atribut <strong>HKraj</strong>, který obsahuje jako své kategorie názvy krajů, ze kterých přijeli hosté z České republiky. Kraje představují oblasti na mapě, které mohou být vykresleny různým barevným odstínem podle četnosti záznamů (podobně jako barevná tabulka v <a href="../../lmianalysis/cf.html" class="wikilink1" title="lmianalysis:cf" data-wiki-id="lmianalysis:cf">CF analýze</a>). Toto umožňuje záložka <a href="../../lmianalysis/geodatacf.html" class="wikilink1" title="lmianalysis:geodatacf" data-wiki-id="lmianalysis:geodatacf">interaktivní geografická analýza oblastí</a>.
+</p>
+
+<p>
+Jako atribut, pro který se interaktivní analýza oblastí má počítat, zvolíme <strong>HKraj</strong>. Pomocí tlačítka <code>Map Layers</code> pak omezíme mapu pouze na kraje – vrstva <em>Ceska republika, kraje</em>. 
+</p>
+
+<p>
+<a href="lmianalysis.geodatacf.hkraj.id.lmdemo_3Ahotel2015_3Almianalysis.png.detail.html?id=lmdemo%3Ahotel2015%3Almianalysis&media=lmdemo:hotel2015:lmianalysis.geodatacf.hkraj.png" class="media" title="lmdemo:hotel2015:lmianalysis.geodatacf.hkraj.png"><img src="lmianalysis.geodatacf.hkraj.tok.2281e6_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Barevné odstíny jednotlivých krajů odpovídají četnosti záznamů, tedy počtu hostů. 
+</p>
+
+</div>
+
+<h4 id="agregacni_funkce">Agregační funkce</h4>
+<div class="level4">
+
+<p>
+Pomocí volby <code>Aggregate function</code> můžeme změnit způsob výpočtu barevného odstínu oblasti. Například je můžeme chtít nastavit podle výše celkových tržeb, a proto zvolíme agregační funkce <em>Sum</em> a atribut <strong>PCenaCelkem_edc10</strong>. Zároveň nás mohou zajímat pouze spokojení hosté, a proto v nabídce <code>Use attribute for condition</code> vybereme <strong>DHodnoceni</strong> a posuvníkem nastavíme kategorii <em>spokojen</em>.
+</p>
+
+<p>
+<a href="lmianalysis.geodatacf.hkraj.sum.pcenacelkem.dhodnoceni.spokojen.png" class="media" title="lmdemo:hotel2015:lmianalysis.geodatacf.hkraj.sum.pcenacelkem.dhodnoceni.spokojen.png"><img src="lmianalysis.geodatacf.hkraj.sum.pcenacelkem.dhodnoceni.spokojen.tok.26ea32_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Necháváme na uživateli, aby se zamyslel nad správnou interpretací trochu odlišného rozdělení barevných odstínů jednotlivých krajů.
+</p>
+
+</div>
+
+<h4 id="volba_vektorove_vrstvy_oblasti">Volba vektorové vrstvy oblastí</h4>
+<div class="level4">
+
+<p>
+<strong>Upozornění:</strong> Toto je pokročilejší funkce, kterou není třeba v základním kurzu 4iz260 procházet.
+</p>
+
+<p>
+Atribut <strong>HStat</strong> obsahuje výčet názvů států, ze kterých hosté přijeli. Státy také představují oblasti na mapě, které můžeme nechat zaobrazit na záložce <a href="../../lmianalysis/geodatacf.html" class="wikilink1" title="lmianalysis:geodatacf" data-wiki-id="lmianalysis:geodatacf">interaktivní geografická analýza oblastí</a>.
+</p>
+
+<p>
+Než však záložku otevřeme, musíme nejprve rozmyslet, kterou vektorovou mapovou vrstvu použijeme pro zobrazení oblastí států. Vzhledem k omezení států pouze na střední Evropu, bude stačit vrstva <em>Europe/Central, states</em>. Důležité však je, jak jsou v definičním souboru této vrstvy pojmenovány jednotlivé oblasti (v tomto případě státy). Musíme totiž zaručit, že názvy kategorií vybraného atributu budou odpovídat těmto názvům.
+</p>
+
+<p>
+V základní složce systému LISp-Miner nalezneme podsložku <code>Maps/Vector</code> a v ní soubor <code>Europe.Central Europe.States.kml</code>. Soubory <a href="https://developers.google.com/kml/documentation" class="urlextern" title="https://developers.google.com/kml/documentation" rel="ugc nofollow">Keyhole Markup Language</a> jsou XML soubory a můžeme je otevřít v libovolném textovém editoru. 
+</p>
+
+<p>
+<a href="geodatacf.kml.name.sipka.png" class="media" title="lmdemo:hotel2015:geodatacf.kml.name.sipka.png"><img src="geodatacf.kml.name.sipka.tok.e7ab4e_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Na obrázku vidíme začátek souboru <code>Europe.Central Europe.States.kml</code>. Hvězdičkami jsou označené <em>tagy</em> <code>&lt;name&gt;</code> definující názvy oblastí. Vidíme, že státy jsou pojmenovány anglicky. Přitom v námi vytvořeném atributu <a href="attributes.html#host_bydliste_stat" class="wikilink1" title="lmdemo:hotel2015:attributes" data-wiki-id="lmdemo:hotel2015:attributes">HStat</a> máme pojmenované kategorie česky (jak byly i přímo v datech). Proto vytvoříme <a href="../../lmprepro/attribute/clone.html" class="wikilink1" title="lmprepro:attribute:clone" data-wiki-id="lmprepro:attribute:clone">klon atributu</a> <strong>HStat</strong>, který pojmenujeme <strong>HStat_En</strong> a pomocí funkce pro <a href="../../lmprepro/attribute/categorymanual.html#hromadne_prejmenovani_kategorii" class="wikilink1" title="lmprepro:attribute:categorymanual" data-wiki-id="lmprepro:attribute:categorymanual">hromadné přejmenování kategorií</a> nahradíme české názvy za anglické.
+</p>
+
+<p>
+<a href="category.batchrename.hstat_en.png" class="media" title="lmdemo:hotel2015:category.batchrename.hstat_en.png"><img src="category.batchrename.hstat_en.tok.4e983a_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Nyní již můžeme otevřít záložku <a href="../../lmianalysis/geodatacf.html" class="wikilink1" title="lmianalysis:geodatacf" data-wiki-id="lmianalysis:geodatacf">interaktivní geografické analýzy oblastí</a> a nezapomeneme změnit atribut v rozbalovací nabídce <code>Attribute</code> na <strong>HStat_En</strong>.
+</p>
+
+<p>
+<a href="geodatacf.hstat_en.evropa.osm.png" class="media" title="lmdemo:hotel2015:geodatacf.hstat_en.evropa.osm.png"><img src="geodatacf.hstat_en.evropa.osm.tok.ed18af_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Protože přednastavenou vektorou vrstvou je celá Evropa, opravíme pomocí tlačítka <code>Map Layers</code> pouze na <em>Europe/Central, states</em>. 
+</p>
+<hr />
+
+<p>
+<strong>Související témata:</strong>
+</p>
+
+<p>
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel: Úvodní přehledový postup analýzy</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="../../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">Interaktivní analýza</a><br/>
+
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lmdemo/hotel2015/lmianalysis.txt</bdi> · Poslední úprava: 2017/01/22 21:51 (upraveno mimo DokuWiki)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Nástroje pro stránku</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="lmianalysis.html" title="Zdrojový kód stránky [v]" rel="nofollow" accesskey="v"><span>Zdrojový kód stránky</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="lmianalysis.html" title="Starší verze [o]" rel="nofollow" accesskey="o"><span>Starší verze</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="lmianalysis.html" title="Zpětné odkazy" rel="nofollow"><span>Zpětné odkazy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="siteexport_addpage"><a href="lmianalysis.html" title="Export Page to HTML/PDF" rel="nofollow"><span>Export Page to HTML/PDF</span><svg width="61px" height="51px" viewBox="0 0 61 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><path d="M26.1891503,39.0065635 L26.0876578,38.9773206 L60.6523866,1.23972885 L60.4321374,2.11844376 L60.476442,2.07071678 L60.4265202,2.14085429 L49.5024876,45.7237994 L32.8255882,40.9187101 L26,50.508302 L26,39.2103249 L26.1891503,39.0065635 Z M60.9727675,0.862917243 L22.2676619,38.2155059 L-0.00245042233,30.2214566 L60.9727675,0.862917243 Z" id="Paper-Plane"></path></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Nahoru [t]" rel="nofollow" accesskey="t"><span>Nahoru</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Kromě míst, kde je explicitně uvedeno jinak, je obsah této wiki licencován pod následující licencí: <bdi><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img src="../../lib/images/license/button/cc-by-sa.png" alt="CC Attribution-Share Alike 4.0 International" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="https://php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="../../check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="../../css-validator/check/referer.profile.css3?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+            alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="../../lib/exe/taskrunner.1667081893.gif?1667081893" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>

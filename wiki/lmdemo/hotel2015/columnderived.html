@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>lmdemo:hotel2015:columnderived [LISp-Miner]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="lmdemo,hotel2015,columnderived"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../../lib/exe/opensearch.html" title="LISp-Miner"/>
+<link rel="start" href="columnderived.html"/>
+<link rel="contents" href="columnderived.html" title="Mapa stránek"/>
+<link rel="manifest" href="../../lib/exe/manifest.html"/>
+<link rel="alternate" type="application/rss+xml" title="Poslední úpravy" />
+<link rel="alternate" type="application/rss+xml" title="Aktuální jmenný prostor" />
+<link rel="alternate" type="text/html" title="Čisté HTML" href="columnderived.html"/>
+<link rel="alternate" type="text/plain" title="Wiki jazyk" href="columnderived.html"/>
+<link rel="canonical" href="https://lispminer.vse.cz/wiki/doku.php?id=lmdemo:hotel2015:columnderived"/>
+<link rel="stylesheet" href="../../lib/exe/css.php.t.dokuwiki.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='lmdemo:hotel2015';var JSINFO = {"id":"lmdemo:hotel2015:columnderived","namespace":"lmdemo:hotel2015","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script charset="utf-8" src="../../lib/exe/jquery.php.t.dokuwiki.js"></script>
+<script charset="utf-8" src="../../lib/exe/js.php.t.dokuwiki.js"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../../lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="../../lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">jít k obsahu</a></li>
+        </ul>
+
+        <h1><a href="../../start.html"  accesskey="h" title="[H]"><img src="../../lib/tpl/dokuwiki/images/logo.png" width="64" height="64" alt="" /> <span>LISp-Miner</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Uživatelské nástroje</h3>
+                <ul>
+                    <li class="action login"><a href="columnderived.html" title="Přihlásit se" rel="nofollow"><span>Přihlásit se</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Nástroje pro tento web</h3>
+            <form action="../../start.html" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="lmdemo:hotel2015:columnderived" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Hledat" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Hledat">Hledat</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="../..//wiki/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="lmdemo:hotel2015:columnderived" /><select name="do" class="edit quickselect" title="Nástroje"><option value="">Nástroje</option><optgroup label="Nástroje pro stránku"><option value="edit">Zdrojový kód stránky</option><option value="revisions">Starší verze</option><option value="siteexport_addpage">Export Page to HTML/PDF</option><option value="backlink">Zpětné odkazy</option></optgroup><optgroup label="Nástroje pro tento web"><option value="recent">Poslední úpravy</option><option value="media">Správa médií</option><option value="index">Mapa stránek</option></optgroup><optgroup label="Uživatelské nástroje"><option value="login">Přihlásit se</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li class="action recent"><a href="columnderived.html" title="Poslední úpravy [r]" rel="nofollow" accesskey="r">Poslední úpravy</a></li><li class="action media"><a href="columnderived.html" title="Správa médií" rel="nofollow">Správa médií</a></li><li class="action index"><a href="columnderived.html" title="Mapa stránek [x]" rel="nofollow" accesskey="x">Mapa stránek</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Historie:</span> <span class="bcsep">•</span> <bdi><a href="attributes/pobytzacatek.html"  class="breadcrumbs" title="lmdemo:hotel2015:attributes:pobytzacatek">pobytzacatek</a></bdi> <span class="bcsep">•</span> <bdi><a href="attributes/smenarna.html"  class="breadcrumbs" title="lmdemo:hotel2015:attributes:smenarna">smenarna</a></bdi> <span class="bcsep">•</span> <bdi><a href="task/cf.html"  class="breadcrumbs" title="lmdemo:hotel2015:task:cf">cf</a></bdi> <span class="bcsep">•</span> <bdi><a href="task/et.html"  class="breadcrumbs" title="lmdemo:hotel2015:task:et">et</a></bdi> <span class="bcsep">•</span> <bdi><a href="task/ft.html"  class="breadcrumbs" title="lmdemo:hotel2015:task:ft">ft</a></bdi> <span class="bcsep">•</span> <bdi><a href="task/kl.html"  class="breadcrumbs" title="lmdemo:hotel2015:task:kl">kl</a></bdi> <span class="bcsep">•</span> <bdi><a href="task/mc.html"  class="breadcrumbs" title="lmdemo:hotel2015:task:mc">mc</a></bdi> <span class="bcsep">•</span> <bdi><a href="attributegroups.html"  class="breadcrumbs" title="lmdemo:hotel2015:attributegroups">attributegroups</a></bdi> <span class="bcsep">•</span> <bdi><a href="attributes.html"  class="breadcrumbs" title="lmdemo:hotel2015:attributes">attributes</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="columnderived.html"  class="breadcrumbs" title="lmdemo:hotel2015:columnderived">columnderived</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle">Postranní lišta</h3>
+                    <div class="content"><div class="group">
+                                                                        
+
+
+<p>
+<strong> Začínáme </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../start.html" class="wikilink1" title="start" data-wiki-id="start">Úvodní stránka</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmbase/instalace.html" class="wikilink1" title="lmbase:instalace" data-wiki-id="lmbase:instalace">Instalace systému</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmbase/start.html" class="wikilink1" title="lmbase:start" data-wiki-id="lmbase:start">Základy ovládání</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmbase/lmworkspace.html" class="wikilink1" title="lmbase:lmworkspace" data-wiki-id="lmbase:lmworkspace">LM Workspace</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmdata/start.html" class="wikilink1" title="lmdata:start" data-wiki-id="lmdata:start">Demonstrační data</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../start.html" class="wikilink1" title="lmdemo:start" data-wiki-id="lmdemo:start">Ukázkové postupy</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong> Systém LISp-Miner a proces DZD </strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="../../lmexplore/start.html" class="wikilink1" title="lmexplore:start" data-wiki-id="lmexplore:start">Seznámení s daty</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmexplore/import.html" class="wikilink1" title="lmexplore:import" data-wiki-id="lmexplore:import">Načtení dat</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmexplore/importtxt.html" class="wikilink1" title="lmexplore:importtxt" data-wiki-id="lmexplore:importtxt">Načtení dat z TXT</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmprepro/start.html" class="wikilink1" title="lmprepro:start" data-wiki-id="lmprepro:start">Předzpracování dat</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">Výpočet odvozených hodnot</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmprepro/attribute.html" class="wikilink1" title="lmprepro:attribute" data-wiki-id="lmprepro:attribute">Atribut a jeho kategorie</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmprepro/attributes.html" class="wikilink1" title="lmprepro:attributes" data-wiki-id="lmprepro:attributes">Strom skupin atributů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">Interaktivní analýza</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../../lmtask/start.html" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Modelování</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../../lmtask/task.html" class="wikilink1" title="lmtask:task" data-wiki-id="lmtask:task">Analytická úloha</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/cedent.html" class="wikilink1" title="lmtask:settings:cedent" data-wiki-id="lmtask:settings:cedent">Výběr atributů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/ftcedenthierarchy.html" class="wikilink1" title="lmtask:settings:ftcedenthierarchy" data-wiki-id="lmtask:settings:ftcedenthierarchy">Zadávání cedentů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../../lmtask/settings/ftcoefficient.html" class="wikilink1" title="lmtask:settings:ftcoefficient" data-wiki-id="lmtask:settings:ftcoefficient">Zadávání koeficientů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../../lmtask/start.html#prohlizeni_vysledku" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Prohlížení výsledků</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Analytické procedury </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../mcf/start.html" class="wikilink1" title="mcf:start" data-wiki-id="mcf:start">CF-Miner</a> <img src="../../mcf/tasksubtypecf.tok.59dee6_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mkl/start.html" class="wikilink1" title="mkl:start" data-wiki-id="mkl:start">KL-Miner</a> <img src="../../mkl/tasksubtypekl.tok.b39fa5_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mft/start.html" class="wikilink1" title="mft:start" data-wiki-id="mft:start">4ft-Miner</a> <img src="../../mft/tasksubtypeft.tok.02d723_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mmc/start.html" class="wikilink1" title="mmc:start" data-wiki-id="mmc:start">MCluster-Miner</a> <img src="../../mmc/tasksubtypemc.tok.677b81_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../met/start.html" class="wikilink1" title="met:start" data-wiki-id="met:start">ETree-Miner</a> <img src="../../met/tasksubtypeet.tok.aaa210_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdc/start.html" class="wikilink1" title="mdc:start" data-wiki-id="mdc:start">SDCF-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdk/start.html" class="wikilink1" title="mdk:start" data-wiki-id="mdk:start">SDKL-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mdf/start.html" class="wikilink1" title="mdf:start" data-wiki-id="mdf:start">SD4ft-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../maf/start.html" class="wikilink1" title="maf:start" data-wiki-id="maf:start">Ac4ft-Miner</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Pokročilé funkce </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../lmcl/start.html" class="wikilink1" title="lmcl:start" data-wiki-id="lmcl:start">Skriptovací jazyk</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../imex/start" class="wikilink2" title="imex:start" rel="nofollow" data-wiki-id="imex:start">Import a export</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../mrm/start.html" class="wikilink1" title="mrm:start" data-wiki-id="mrm:start">Generování umělých dat</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Výzkum a vývoj </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../../rad/start" class="wikilink2" title="rad:start" rel="nofollow" data-wiki-id="rad:start">Směry výzkumu</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../../wiki/napoveda.html" class="wikilink1" title="wiki:napoveda" data-wiki-id="wiki:napoveda">Tvorba stránek</a></div>
+</li>
+</ul>
+<hr />
+                                            </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>lmdemo:hotel2015:columnderived</span></div>
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Obsah</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#demo_hotelvypocet_odvozenych_hodnot">Demo Hotel: Výpočet odvozených hodnot</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#jednotkove_ceny">Jednotkové ceny</a></div></li>
+<li class="level2"><div class="li"><a href="#cena_v_eurech">Cena v eurech</a></div></li>
+<li class="level2"><div class="li"><a href="#jednotkova_cena_v_eurech">Jednotková cena v eurech</a></div></li>
+<li class="level2"><div class="li"><a href="#pocet_osobonoci">Počet osobonocí</a></div></li>
+<li class="level2"><div class="li"><a href="#sezona">Sezóna</a></div></li>
+<li class="level2"><div class="li"><a href="#pobyt_pres_sobotni_noc">Pobyt přes sobotní noc</a></div></li>
+<li class="level2"><div class="li"><a href="#turnusovy_pobyt">Turnusový pobyt</a></div></li>
+<li class="level2"><div class="li"><a href="#pocet_pobytu_ktere_zacaly_ve_stejny_den">Počet pobytů, které začaly ve stejný den</a></div></li>
+<li class="level2"><div class="li"><a href="#kraj_ze_ktereho_host_pochazi">Kraj, ze kterého host pochází</a></div></li>
+<li class="level2"><div class="li"><a href="#vzdalenost_od_bydliste_hosta_k_nejblizsimu_hotelu">Vzdálenost od bydliště hosta k nejbližšímu hotelu</a></div></li>
+<li class="level2"><div class="li"><a href="#nazev_nejblizsiho_hotelu_od_bydliste_hosta">Název nejbližšího hotelu od bydliště hosta</a></div></li>
+<li class="level2"><div class="li"><a href="#overeni_obsahu_metabaze">Ověření obsahu metabáze</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="demo_hotelvypocet_odvozenych_hodnot">Demo Hotel: Výpočet odvozených hodnot</h1>
+<div class="level1">
+
+<p>
+<img src="../example.tok.88daf5_w.32.png" class="medialeft" alt="" width="32" /> Přidání <a href="../../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">výpočtu odvozených hodnot</a> zvýší šanci na objevení skutečně zajímavých vztahů. Příklad vypočtené odvozené hodnoty je sloupec <strong>PCenaCelkem</strong>, který sice už v datech existuje, ale bylo by jej možné spočítat jako:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>PCenaCelkem = PCenaPobyt + PCenaStrava – PCenaSleva</em>.</div>
+</li>
+</ul>
+
+<p>
+Jako opravdu odvozené hodnoty můžeme spočítat <a href="#jednotkove_ceny" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">jednotkové ceny</a> ubytování a stravy za noc a osobu. Díky přidání externích dat o směnném kurzu můžeme z dostupných hodnot vypočítat <a href="#cena_v_eurech" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">cenu v eurech</a>.  
+</p>
+
+<p>
+V souvislosti s <a href="../../lmdata/hotel2015.html#domenove_znalosti" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">doménovými znalostmi</a> musíme být dále schopni o každém pobytu rozhodnout, zda proběhl v <a href="#sezona" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">sezóně</a>, zda jde o <a href="#turnusovy_pobyt" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">turnusový pobyt</a> a zda jde o <a href="#pobyt_pres_sobotni_noc" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">pobyt přes sobotní noc</a>.
+</p>
+
+<p>
+Konečně můžeme pro každý pobyt vypočítat i odvozenou hodnotu udávající, <a href="#pocet_pobytu_ktere_zacaly_ve_stejny_den" title="lmdemo:hotel2015:columnderived ↵" class="wikilink1">kolik pobytů celkem začalo v hotelu ve stejný den</a>.
+</p>
+
+<p>
+<strong>Pozor!</strong> Před zadávání odvozených hodnot ještě jednou zkontrolujeme, že pracuje až se spojeným databázovým pohledem <strong>HotelPlusExterni</strong>, nikoliv s některou z původních tabulek.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="jednotkove_ceny">Jednotkové ceny</h2>
+<div class="level2">
+
+<p>
+Jednotková cena je typickým příkladem odvozené hodnoty. V celkové ceně za ubytování se promítá najednou více faktorů – délka pobytu, počet osob i aktuální ceník. Pokud budeme chtít analyzovat vliv změny ceníku na chování hostů, musíme cenu nejprve očistit od zbylých dvou faktorů. Tím dostáváme jednotkovou cenu za ubytování, kterou pojmenujeme <strong>PCenaUbytovaniJednotkova</strong> a počítat se bude jako <em>PCenaUbytovani / (POsob * PNoci)</em>. 
+</p>
+
+<p>
+Nový sloupec <strong>PCenaUbytovaniJednotkova</strong> s <a href="../../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">vypočtenou hodnotou</a> přidáme na záložce s <a href="../../lmexplore/table.html" class="wikilink1" title="lmexplore:table" data-wiki-id="lmexplore:table">detailem tabulky</a> pomocí tlačítka <code>Add expr.</code>.
+</p>
+
+<p>
+<a href="databasecolumnderived.pcenaubytovanijednotkova.png" class="media" title="lmdemo:hotel2015:databasecolumnderived.pcenaubytovanijednotkova.png"><img src="databasecolumnderived.pcenaubytovanijednotkova.tok.ddace9_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Nejprve zadáme název – v tomto případě <strong>PCenaUbytovaniJednotkova</strong>. Následně zadáme matematický výraz <em>PCenaUbytovani / (POsob * PNoci)</em>, kterým se mají odvozené hodnoty počítat. Při zadávání výrazu se nabízejí názvy existujících sloupců. Vybírat je můžeme i z rozbalovací nabídky. Konečně zvolíme vhodný datový typ – musíme si uvědomit, že výsledkem dělení může být desetinné číslo, takže správnou volbou je pouze datový typ <em>decimal number</em>.
+</p>
+
+<p>
+Po stisku tlačítka <code>OK</code> se do seznamu sloupců přidá nový (odvozený) sloupec <strong>PCenaUbytovaniJednotkova</strong> a rovnou se i objeví záložka se <a href="../../lmexplore/column.html" class="wikilink1" title="lmexplore:column" data-wiki-id="lmexplore:column">základními charakteristikami sloupce</a>. Z té na první pohled vidíme, že základní cena za noc byla po celý rok 2012 ve výši 1210 Kč a od 1. ledna 2013 vzrostla na 1450. 
+</p>
+
+<p>
+<a href="databasecolumn.pcenaubytovanijednotkova.png" class="media" title="lmdemo:hotel2015:databasecolumn.pcenaubytovanijednotkova.png"><img src="databasecolumn.pcenaubytovanijednotkova.tok.045bc0_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Tato informace nebyla z původních dat na první pohled patrná. Teprve výpočtem odvozené hodnoty se stala zřejmou.
+</p>
+
+<p>
+Podobně můžeme přidat i jednotkovou cena za stravu <strong>PCenaStravaJednotkova</strong> spočtena jako <em>PCenaStrava / (POsob * PNoci)</em>. Necháváme na uživateli, aby si zkusil přidat odvozený sloupec pro jednotkovou cenu za stravu sám. Z něj by pak mělo být zřejmé, že celá řada hostů za stravu neplatila a u zbylých je opět vidět skokové zdražení ceníkové ceny od 1. ledna 2013.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="cena_v_eurech">Cena v eurech</h2>
+<div class="level2">
+
+<p>
+Pro cizince z okolních zemí není důležitá cena v korunách, ale v eurech. Ta je ovlivněna vývojem kurzu koruny a může se výrazně měnit, aniž by došlo k jakékoliv změně ceníku hotelu. 
+</p>
+
+<p>
+Protože pracujeme databázovým pohledem <strong>HotelPlusExterni</strong>, tak máme k dispozici jak cenu, tak i směnný kurz. Pro výpočet ceny v eurech platí vztah <strong>PCenaCelkemEUR</strong> = <strong>PCenaCelkem</strong> / <strong>SEUR</strong>. 
+</p>
+
+<p>
+<a href="databasecolumnderived.pcenacelkemeur.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumnderived.pcenacelkemeur.png" class="media" title="lmdemo:hotel2015:databasecolumnderived.pcenacelkemeur.png"><img src="databasecolumnderived.pcenacelkemeur.tok.b5ee28_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Právě přidaný odvozený sloupec <strong>PCenaCelkemEUR</strong> však v sobě opět kombinuje několik faktorů. V tomto případě je to kromě počtu osob a nocí i fakt, že v celkové ceně je i cena za stavu a případná sleva. Chceme-li analyzovat vliv vývoje směnného kurzu na cizince, bude patrně lepší použít opět jednotkovou cenu, navíc nejprve jednotkovou cenu pouze za samotné ubytování. 
+</p>
+
+<p>
+Podobným způsobem bychom mohli vytvořit i odvozené sloupce s částkami v eurech pro cenu za ubytování (<strong>PCenaUbytovaniEUR</strong>), cenu za stravu (<strong>PCenaStravaEUR</strong>) a pro slevu (<strong>PCenaSlevaEUR</strong>), ale momentálně nejsou dále využívány a tento krok můžeme přeskočit.
+</p>
+
+</div>
+
+<h2 class="sectionedit4" id="jednotkova_cena_v_eurech">Jednotková cena v eurech</h2>
+<div class="level2">
+
+<p>
+Matematický výraz pro výpočet jednotkové ceny za ubytování v eurech bude <em>PCenaUbytovani / (POsob * PNoci * SEUR)</em>. Vytvoříme tedy odvozený sloupec <strong>PCenaUbytovaniJednotkovaEUR</strong> (datový typ <em>desetinné číslo</em>) a necháme si zobrazit záložku s <a href="../../lmexplore/column.html" class="wikilink1" title="lmexplore:column" data-wiki-id="lmexplore:column">detailu nově přidaného sloupce</a>.
+</p>
+
+<p>
+<a href="databasecolumn.pcenaubytovanijednotkovaeur.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.pcenaubytovanijednotkovaeur.png" class="media" title="lmdemo:hotel2015:databasecolumn.pcenaubytovanijednotkovaeur.png"><img src="databasecolumn.pcenaubytovanijednotkovaeur.tok.53d701_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Nyní zcela jasně vidíme, jak se měnila v průběhu obou let cena v eurech pro cizince. Patrné jsou výkyvy během obou roků i změna základní ceníkové ceny v Kč k 1. lednu 2013. Zajímavý je pak prudký pokles ceny v eurech na podzim 2013, kdy došlo k intervenci ČNB a k oslabení kurzu koruny.
+</p>
+
+<p>
+Analogicky vytvoříme i odvozený sloupec <strong>PCenaStravaJednotkovaEUR</strong>.
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="pocet_osobonoci">Počet osobonocí</h2>
+<div class="level2">
+
+<p>
+Všechny jednotkové ceny byly vypočteny za použití násobku počtu osob a nocí. I tato hodnota může být pro další analýzy zajímavá, a proto ji přidáme jako další odvozený sloupec <strong>POsobonoci</strong>.
+</p>
+
+<p>
+<a href="databasecolumnderived.posobonoci.png" class="media" title="lmdemo:hotel2015:databasecolumnderived.posobonoci.png"><img src="databasecolumnderived.posobonoci.tok.0f9d41_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+V tomto případě může být výsledkem pouze celé číslo, takže zadáme datový typ <em>integer number</em>.
+</p>
+
+</div>
+
+<h2 class="sectionedit6" id="sezona">Sezóna</h2>
+<div class="level2">
+
+<p>
+Z <a href="../../lmdata/hotel2015.html#domenove_znalosti" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">doménových znalostí</a> vyplývá, že sezóna je v období červen až srpen a prosinec až únor. 
+</p>
+
+<p>
+Výraz pro výpočet odvozeného sloupce proto bude:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em> ((Month(PPobytOd) &gt; 5) and (Month(PPobytOd) &lt; 9)) or ((Month(PPobytOd) &lt; 3) or (Month(PPobytOd) = 12))</em></div>
+</li>
+</ul>
+
+<p>
+Obvyklým způsobem tedy můžeme přidat odvozený sloupec <strong>PSezona</strong> a jeho datový typ nastavit na <em>boolean</em>. 
+</p>
+
+<p>
+<a href="databasecolumnderived.psezona.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumnderived.psezona.png" class="media" title="lmdemo:hotel2015:databasecolumnderived.psezona.png"><img src="databasecolumnderived.psezona.tok.798815_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+<strong>Poznámka:</strong> Pokud si chceme ušetřit práci se zadáváním dlouhého logického výrazu, můžeme počkat až na vytváření atributů a binární atribut <strong>PSezona_b</strong> <a href="attributes/pobytzacatek.html#psezona_b" class="wikilink1" title="lmdemo:hotel2015:attributes:pobytzacatek" data-wiki-id="lmdemo:hotel2015:attributes:pobytzacatek">vytvořit až později</a>.
+</p>
+
+<p>
+V případě vytvoření odvozeného sloupce <strong>PSezona</strong> vidíme střídání období sezóny a mimo sezónu.
+</p>
+
+<p>
+<a href="databasecolumn.psezona.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.psezona.png" class="media" title="lmdemo:hotel2015:databasecolumn.psezona.png"><img src="databasecolumn.psezona.tok.1617bf_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit7" id="pobyt_pres_sobotni_noc">Pobyt přes sobotní noc</h2>
+<div class="level2">
+
+<p>
+Z <a href="../../lmdata/hotel2015.html#domenove_znalosti" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">doménových znalostí</a> také vyplývá, že pro hoteliéry jsou zajímaví hosté, kteří zůstávají přes alespoň jednu sobotní noc. Při analýze bychom tedy měli být schopni takového hosty rozpozat a s využitím této znalosti formulovat vhodné analytické otázky.
+</p>
+
+<p>
+Výraz pro výpočet odvozeného sloupce bude vypadat takto:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>(Weekday(PPobytOd,2) mod 7+ PNoci) &gt; 6</em></div>
+</li>
+</ul>
+
+<p>
+Pomocí VBA funkce <em>Weekday</em> zjistíme den týdne pro začátek pobytu <strong>PPobytOd</strong>. Hodnota <em>2</em> jako druhý parametr zajistí, že Access použije jako počáteční den týdne pondělí (jinak by to byla neděle). Dostaneme tedy den týdne reprezentovaný číslem od 1 (pondělí) do 7 (neděle). Uděláme-li <em>modulo</em> 7 budou hodnoty 1 (pondělí), 2 (úterý)… až 6 (sobota), ale 0 pro neděli. Přičteme-li k tomuto číslo počet nocí, po které host zůstával, musíme dostat hodnotu větší než 6.
+</p>
+
+<p>
+Přidáme tedy odvozený sloupec <strong>PPresSobotniNoc</strong> a jeho datový typ nastavit na <em>boolean</em>.
+</p>
+
+<p>
+<a href="databasecolumn.ppressobotninoc.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.ppressobotninoc.png" class="media" title="lmdemo:hotel2015:databasecolumn.ppressobotninoc.png"><img src="databasecolumn.ppressobotninoc.tok.1b51eb_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Vidíme, že pobyty trvající přes sobotní noc výrazně převažují.
+</p>
+
+</div>
+
+<h2 class="sectionedit8" id="turnusovy_pobyt">Turnusový pobyt</h2>
+<div class="level2">
+
+<p>
+Další odvozenou hodnotou je zjištění, zda jde o turnusový pobyt. 
+</p>
+
+<p>
+Výraz pro výpočet odvozeného sloupce bude vypadat takto:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>(Weekday(PPobytOd, 2) = 6) and (PNoci mod 7 = 0)</em></div>
+</li>
+</ul>
+
+<p>
+Hodnota dne v týdnu pro začátek pobytu musí být sobota (číslo 6 počítáno od pondělí, při volání funkce <em>Weekday</em> v systému MS Access musíme jako druhý parametr dát <em>2</em>, aby byl začátek týdne v pondělí). A zároveň musí být počet nocí beze zbytku dělitelný sedmi. 
+</p>
+
+<p>
+<a href="databasecolumn.pturnus.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.pturnus.png" class="media" title="lmdemo:hotel2015:databasecolumn.pturnus.png"><img src="databasecolumn.pturnus.tok.185c2f_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Přidáme další odvozený sloupec <strong>PTurnus</strong> a jeho datový typ nastavíme na <em>boolean</em>.
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="pocet_pobytu_ktere_zacaly_ve_stejny_den">Počet pobytů, které začaly ve stejný den</h2>
+<div class="level2">
+
+<p>
+Doposud jsme zadávali pouze <a href="../../lmexplore/columnexpr.html" class="wikilink1" title="lmexplore:columnexpr" data-wiki-id="lmexplore:columnexpr">odvozené sloupce vypočtené pomocí matematického výrazu</a>. Nyní však musíme použít <a href="../../lmexplore/columnquery.html" class="wikilink1" title="lmexplore:columnquery" data-wiki-id="lmexplore:columnquery">odvozený sloupec založený na vnořeném SQL dotazu</a>. Proto pro přidání sloupce použijeme tentokrát tlačítko <code>Add query</code>. Sloupec nazveme <strong>PPocetPobytuDen</strong> a SQL dotaz pro výpočet odvozeného sloupce bude vypadat takto:
+</p>
+<ul>
+<li class="level1"><div class="li"> <em>SELECT Count(*) FROM Hotel WHERE PPobytOd= @PPobytOd</em></div>
+</li>
+</ul>
+
+<p>
+Pro každý pobyt se zjistí datum začátku (parametr @PPobytOd) a provede se SQL dotaz nad tabulkou Hotel, který spočte všechny pobyty začínající v daný den.  
+</p>
+
+<p>
+<a href="databasecolumnquery.ppocetpobytuden.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumnquery.ppocetpobytuden.png" class="media" title="lmdemo:hotel2015:databasecolumnquery.ppocetpobytuden.png"><img src="databasecolumnquery.ppocetpobytuden.tok.96430f_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Datový typ nastavíme na <em>integer number</em>.
+</p>
+
+</div>
+
+<h2 class="sectionedit10" id="kraj_ze_ktereho_host_pochazi">Kraj, ze kterého host pochází</h2>
+<div class="level2">
+
+<p>
+V údajích o <a href="../../lmdata/hotel2015.html#pobyty" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">bydlišti hosta</a> jsou i geografické souřadnice jeho domovského města. Ty můžeme u hostů z České republiky použít pro zjištění, ze kterého kraje host pochází. Vytvoříme <a href="../../lmexplore/columngeo.html" class="wikilink1" title="lmexplore:columngeo" data-wiki-id="lmexplore:columngeo">odvozený sloupec z geografických dat</a> využívající mapový soubor s hranicemi krajů. Pro každého hosta se zjistí, do které oblasti (kraje) patří bod se souřadnicemi jeho bydliště (u zahraničních hostů bude nastavena hodnota <code>NULL</code>). 
+</p>
+
+<p>
+Pomocí tlačítka <code>Add geo</code> vytvoříme sloupec <strong>HKraj</strong> a jeho parametry nastavíme: 
+</p>
+
+<p>
+<a href="databasecolumngeo.hkraj.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumngeo.hkraj.png" class="media" title="lmdemo:hotel2015:databasecolumngeo.hkraj.png"><img src="databasecolumngeo.hkraj.tok.b8f216_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Důležité je nastavit typ počítané geografické relace – v tomto případě zjištění názvu oblasti, do které bod patří (volba <code>In-Polygon name</code>). 
+</p>
+
+<p>
+Způsob výpočtu vzdáleností můžeme v tomto případě ignorovat a ponechat na výchozí hodnotě. 
+</p>
+
+<p>
+Důležité je nastavit sloupce, ve kterých jsou geografické souřadnice bodu. V našem případě jde o <strong>HMesto_X</strong> a <strong>HMesto_Y</strong>.
+</p>
+
+<p>
+Nakonec musíme ještě dohledat mapový soubor s definicemi hranic krajů. Součástí instalace systému LISp-Miner takový soubor je a jmenuje se <code>Ceska republika.Kraje.kml</code>. Nalezneme jej v podsložce <code>Maps\Vector</code> v základní složce systému LISp-Miner. Více viz <a href="../../lmbase/geodata.html" class="wikilink1" title="lmbase:geodata" data-wiki-id="lmbase:geodata">Práce s geografickými daty</a>.
+</p>
+
+<p>
+Pokud jsme zadali vše správně, objeví se po stisku tlačítka <code>OK</code> záložka nového sloupce.
+</p>
+
+<p>
+<a href="databasecolumn.hkraj.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.hkraj.png" class="media" title="lmdemo:hotel2015:databasecolumn.hkraj.png"><img src="databasecolumn.hkraj.tok.91c1df_w.800.png" class="medialeft" alt="" width="800" /></a>
+</p>
+
+<p>
+Všimněme si, že pro všechny zahraniční hosty nemohl být kraj určen (souřadnice města bydliště nepatří do žádného z krajů), a proto je ve sloupci hodnota <code>NULL</code>.
+</p>
+
+</div>
+
+<h2 class="sectionedit11" id="vzdalenost_od_bydliste_hosta_k_nejblizsimu_hotelu">Vzdálenost od bydliště hosta k nejbližšímu hotelu</h2>
+<div class="level2">
+
+<p>
+Souřadnice bydliště hosta můžeme využít i dalším způsobem. Součástí ukázkových dat Hotel je i <a href="../../lmdata/hotel2015.html#konkurence" class="wikilink1" title="lmdata:hotel2015" data-wiki-id="lmdata:hotel2015">mapový soubor</a> se souřadnicemi našeho hotelů a jeho hlavních konkurentů. Pokud jsme tak ještě neudělali, stáhneme soubor <a href="http://lispminer.vse.cz/data/Hotel/Hotel.Konkurence.kml" class="urlextern" title="http://lispminer.vse.cz/data/Hotel/Hotel.Konkurence.kml" rel="ugc nofollow">Hotel.Konkurence.kml</a> a uložíme do složky s daty Hotel. 
+</p>
+
+<p>
+Vhodným nastavením parametrů <a href="../../lmexplore/columngeo.html" class="wikilink1" title="lmexplore:columngeo" data-wiki-id="lmexplore:columngeo">odvozeného sloupce z geografických dat</a> můžeme nechat pro každého hosta spočítat buď vzdálenost k nejbližšímu z těchto hotelů, nebo jeho název. 
+Pomocí tlačítka <code>Add geo</code> vytvoříme sloupec <strong>HNejblizsiHotelVzdalenost</strong> a jeho parametry nastavíme takto: 
+</p>
+
+<p>
+<a href="databasecolumngeo.hnejblizsihotelvzdalenost.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumngeo.hnejblizsihotelvzdalenost.png" class="media" title="lmdemo:hotel2015:databasecolumngeo.hnejblizsihotelvzdalenost.png"><img src="databasecolumngeo.hnejblizsihotelvzdalenost.tok.2d6081_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+<p>
+Důležité je opět nastavit správný typ počítané geografické relace – tentokrát jde o výpočet vzdálenosti k nejbližšímu bodu (volba <code>Closest-Point distance</code>). Při výpočtu vzdáleností je navíc nutné vzít v úvahu i případné zakřivení zeměkoule. Jde-li opravdu o geografické souřadnice a očekávané vzdálenosti překračují 100 km, tak jako způsob výpočtu zvolíme <code>Haversine</code>.
+</p>
+
+<p>
+Důležité je nastavit sloupce, ve kterých jsou geografické souřadnice bodu. Opět jde o <strong>HMesto_X</strong> a <strong>HMesto_Y</strong>.
+</p>
+
+<p>
+Nakonec musíme ještě dohledat mapový soubor s definicemi souřadnic zájmových bodů (pozic hotelů). Soubor <code>Hotel.Konkurence.kml</code> nalezneme pomocí tlačítka <code>Browse</code> ve složce s daty Hotel. 
+</p>
+
+<p>
+Po stisku tlačítka <code>OK</code> se objeví záložka nového odvozeného sloupce.
+</p>
+
+</div>
+
+<h2 class="sectionedit12" id="nazev_nejblizsiho_hotelu_od_bydliste_hosta">Název nejbližšího hotelu od bydliště hosta</h2>
+<div class="level2">
+
+<p>
+Zcela stejným způsobem přidáme i <a href="../../lmexplore/columngeo.html" class="wikilink1" title="lmexplore:columngeo" data-wiki-id="lmexplore:columngeo">odvozený sloupec</a> <strong>HNejblizsiHotelNazev</strong> obsahující název nejbližšího hotelu od bydliště hosta. 
+</p>
+
+<p>
+Jedinou odlišností je jiný typ počítané geografické relace – tentokrát jde o název bodu (volba <code>Closest-Point name</code>). Nezapomeňme opět změnit i způsob výpočtu vzdálenosti na <code>Haversine</code>.
+</p>
+
+<p>
+<a href="databasecolumn.hnejblizsihotelnazev.id.lmdemo_3Ahotel2015_3Acolumnderived.png.detail.html?id=lmdemo%3Ahotel2015%3Acolumnderived&media=lmdemo:hotel2015:databasecolumn.hnejblizsihotelnazev.png" class="media" title="lmdemo:hotel2015:databasecolumn.hnejblizsihotelnazev.png"><img src="databasecolumn.hnejblizsihotelnazev.tok.8a5f7b_w.800.png" class="mediacenter" alt="" width="800" /></a>
+</p>
+
+</div>
+
+<h2 class="sectionedit13" id="overeni_obsahu_metabaze">Ověření obsahu metabáze</h2>
+<div class="level2">
+
+<p>
+Správnost provedených kroků zkontrolujeme pomocí tlačítka <code>Ctrl+F9</code> a výběrem správné položky ze seznamu šablon pro <a href="../../lmbase/mbcv.html" class="wikilink1" title="lmbase:mbcv" data-wiki-id="lmbase:mbcv">ověření obsahu metabáze</a>:
+</p>
+
+<p>
+<img src="../../lmbase/mbcv.tok.dd1729_w.32.png" class="media" alt="" width="32" /> MBCV: <strong>Demo Hotel 02 Data Prepro 01 Odvozené hodnoty</strong> (<a href="http://lispminer.vse.cz/data/Hotel/Hotel.MBCV.zip" class="urlextern" title="http://lispminer.vse.cz/data/Hotel/Hotel.MBCV.zip" rel="ugc nofollow">Hotel.MBVC.zip</a>)<br/>
+
+</p>
+<hr />
+
+<p>
+<strong>Související témata:</strong>
+</p>
+
+<p>
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="attributegroups.html" class="wikilink1" title="lmdemo:hotel2015:attributegroups" data-wiki-id="lmdemo:hotel2015:attributegroups">Demo Hotel: Vytvoření skupin atributů</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="attributes.html" class="wikilink1" title="lmdemo:hotel2015:attributes" data-wiki-id="lmdemo:hotel2015:attributes">Demo Hotel: Vytvoření atributů a jejich kategorií</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel: Úvodní přehledový postup analýzy</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="../../lmprepro/start.html" class="wikilink1" title="lmprepro:start" data-wiki-id="lmprepro:start">Předzpracování dat</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="../../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">Výpočet odvozených hodnot</a><br/>
+
+<img src="../../lmbase/seealso.tok.d55428_w.32.png" class="media" alt="" width="32" /> <a href="../../lmbase/geodata.html" class="wikilink1" title="lmbase:geodata" data-wiki-id="lmbase:geodata">Práce s geografickými daty</a><br/>
+
+</p>
+
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>lmdemo/hotel2015/columnderived.txt</bdi> · Poslední úprava: 2017/02/19 18:27 (upraveno mimo DokuWiki)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Nástroje pro stránku</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="columnderived.html" title="Zdrojový kód stránky [v]" rel="nofollow" accesskey="v"><span>Zdrojový kód stránky</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="columnderived.html" title="Starší verze [o]" rel="nofollow" accesskey="o"><span>Starší verze</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="columnderived.html" title="Zpětné odkazy" rel="nofollow"><span>Zpětné odkazy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="siteexport_addpage"><a href="columnderived.html" title="Export Page to HTML/PDF" rel="nofollow"><span>Export Page to HTML/PDF</span><svg width="61px" height="51px" viewBox="0 0 61 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><path d="M26.1891503,39.0065635 L26.0876578,38.9773206 L60.6523866,1.23972885 L60.4321374,2.11844376 L60.476442,2.07071678 L60.4265202,2.14085429 L49.5024876,45.7237994 L32.8255882,40.9187101 L26,50.508302 L26,39.2103249 L26.1891503,39.0065635 Z M60.9727675,0.862917243 L22.2676619,38.2155059 L-0.00245042233,30.2214566 L60.9727675,0.862917243 Z" id="Paper-Plane"></path></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Nahoru [t]" rel="nofollow" accesskey="t"><span>Nahoru</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Kromě míst, kde je explicitně uvedeno jinak, je obsah této wiki licencován pod následující licencí: <bdi><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img src="../../lib/images/license/button/cc-by-sa.png" alt="CC Attribution-Share Alike 4.0 International" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../../lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="https://php.net" title="Powered by PHP" ><img
+            src="../../lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="../../check/referer" title="Valid HTML5" ><img
+            src="../../lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="../../css-validator/check/referer.profile.css3?profile=css3" title="Valid CSS" ><img
+            src="../../lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../../lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+            alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="../../lib/exe/taskrunner.1667081885.gif?1667081885" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>

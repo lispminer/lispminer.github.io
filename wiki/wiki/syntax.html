@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="cs" dir="ltr" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>wiki:syntax [LISp-Miner]</title>
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+    <meta name="generator" content="DokuWiki"/>
+<meta name="theme-color" content="#008800"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="wiki,syntax"/>
+<link rel="search" type="application/opensearchdescription+xml" href="../lib/exe/opensearch.html" title="LISp-Miner"/>
+<link rel="start" href="syntax.html"/>
+<link rel="contents" href="syntax.html" title="Mapa stránek"/>
+<link rel="manifest" href="../lib/exe/manifest.html"/>
+<link rel="alternate" type="application/rss+xml" title="Poslední úpravy" />
+<link rel="alternate" type="application/rss+xml" title="Aktuální jmenný prostor" />
+<link rel="alternate" type="text/html" title="Čisté HTML" href="syntax.html"/>
+<link rel="alternate" type="text/plain" title="Wiki jazyk" href="syntax.html"/>
+<link rel="canonical" href="https://lispminer.vse.cz/wiki/doku.php?id=wiki:syntax"/>
+<link rel="stylesheet" href="../lib/exe/css.php.t.dokuwiki.css"/>
+<!--[if gte IE 9]><!-->
+<script >/*<![CDATA[*/var NS='wiki';var JSINFO = {"id":"wiki:syntax","namespace":"wiki","ACT":"show","useHeadingNavigation":0,"useHeadingContent":0};
+/*!]]>*/</script>
+<script charset="utf-8" src="../lib/exe/jquery.php.t.dokuwiki.js"></script>
+<script charset="utf-8" src="../lib/exe/js.php.t.dokuwiki.js"></script>
+<!--<![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="../lib/tpl/dokuwiki/images/favicon.ico" />
+<link rel="apple-touch-icon" href="../lib/tpl/dokuwiki/images/apple-touch-icon.png" />
+    </head>
+
+<body>
+    <div id="dokuwiki__site"><div id="dokuwiki__top" class="site dokuwiki mode_show tpl_dokuwiki    showSidebar hasSidebar">
+
+        
+<!-- ********** HEADER ********** -->
+<div id="dokuwiki__header"><div class="pad group">
+
+    
+    <div class="headings group">
+        <ul class="a11y skip">
+            <li><a href="#dokuwiki__content">jít k obsahu</a></li>
+        </ul>
+
+        <h1><a href="../start.html"  accesskey="h" title="[H]"><img src="../lib/tpl/dokuwiki/images/logo.png" width="64" height="64" alt="" /> <span>LISp-Miner</span></a></h1>
+            </div>
+
+    <div class="tools group">
+        <!-- USER TOOLS -->
+                    <div id="dokuwiki__usertools">
+                <h3 class="a11y">Uživatelské nástroje</h3>
+                <ul>
+                    <li class="action login"><a href="syntax.html" title="Přihlásit se" rel="nofollow"><span>Přihlásit se</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 17.25V14H3v-4h7V6.75L15.25 12 10 17.25M8 2h9a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-4h2v4h9V4H8v4H6V4a2 2 0 0 1 2-2z"/></svg></a></li>                </ul>
+            </div>
+        
+        <!-- SITE TOOLS -->
+        <div id="dokuwiki__sitetools">
+            <h3 class="a11y">Nástroje pro tento web</h3>
+            <form action="../start.html" method="get" role="search" class="search doku_form" id="dw__search" accept-charset="utf-8"><input type="hidden" name="do" value="search" /><input type="hidden" name="id" value="wiki:syntax" /><div class="no"><input name="q" type="text" class="edit" title="[F]" accesskey="f" placeholder="Hledat" autocomplete="on" id="qsearch__in" value="" /><button value="1" type="submit" title="Hledat">Hledat</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>            <div class="mobileTools">
+                <form action="..//wiki/doku.html.doku.php.html" method="get" accept-charset="utf-8"><div class="no"><input type="hidden" name="id" value="wiki:syntax" /><select name="do" class="edit quickselect" title="Nástroje"><option value="">Nástroje</option><optgroup label="Nástroje pro stránku"><option value="edit">Zdrojový kód stránky</option><option value="revisions">Starší verze</option><option value="siteexport_addpage">Export Page to HTML/PDF</option><option value="backlink">Zpětné odkazy</option></optgroup><optgroup label="Nástroje pro tento web"><option value="recent">Poslední úpravy</option><option value="media">Správa médií</option><option value="index">Mapa stránek</option></optgroup><optgroup label="Uživatelské nástroje"><option value="login">Přihlásit se</option></optgroup></select><button type="submit">&gt;</button></div></form>            </div>
+            <ul>
+                <li class="action recent"><a href="syntax.html" title="Poslední úpravy [r]" rel="nofollow" accesskey="r">Poslední úpravy</a></li><li class="action media"><a href="syntax.html" title="Správa médií" rel="nofollow">Správa médií</a></li><li class="action index"><a href="syntax.html" title="Mapa stránek [x]" rel="nofollow" accesskey="x">Mapa stránek</a></li>            </ul>
+        </div>
+
+    </div>
+
+    <!-- BREADCRUMBS -->
+            <div class="breadcrumbs">
+                                        <div class="trace"><span class="bchead">Historie:</span> <span class="bcsep">•</span> <bdi><a href="../mrm/ui/rmcharib.html"  class="breadcrumbs" title="mrm:ui:rmcharib">rmcharib</a></bdi> <span class="bcsep">•</span> <bdi><a href="../mrm/ui/start.html"  class="breadcrumbs" title="mrm:ui:start">ui</a></bdi> <span class="bcsep">•</span> <bdi><a href="../mrm/install.html"  class="breadcrumbs" title="mrm:install">install</a></bdi> <span class="bcsep">•</span> <bdi><a href="../mrm/rmcase.html"  class="breadcrumbs" title="mrm:rmcase">rmcase</a></bdi> <span class="bcsep">•</span> <bdi><a href="../mrm/start.html"  class="breadcrumbs" title="mrm:start">mrm</a></bdi> <span class="bcsep">•</span> <bdi><a href="../mrm/tipy.html"  class="breadcrumbs" title="mrm:tipy">tipy</a></bdi> <span class="bcsep">•</span> <bdi><a href="../playground/playground.html"  class="breadcrumbs" title="playground:playground">playground</a></bdi> <span class="bcsep">•</span> <bdi><a href="dokuwiki.html"  class="breadcrumbs" title="wiki:dokuwiki">dokuwiki</a></bdi> <span class="bcsep">•</span> <bdi><a href="napoveda.html"  class="breadcrumbs" title="wiki:napoveda">napoveda</a></bdi> <span class="bcsep">•</span> <span class="curid"><bdi><a href="syntax.html"  class="breadcrumbs" title="wiki:syntax">syntax</a></bdi></span></div>
+                    </div>
+    
+
+
+    <hr class="a11y" />
+</div></div><!-- /header -->
+
+        <div class="wrapper group">
+
+                            <!-- ********** ASIDE ********** -->
+                <div id="dokuwiki__aside"><div class="pad aside include group">
+                    <h3 class="toggle">Postranní lišta</h3>
+                    <div class="content"><div class="group">
+                                                                        
+
+
+<p>
+<strong> Začínáme </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../start.html" class="wikilink1" title="start" data-wiki-id="start">Úvodní stránka</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../lmbase/instalace.html" class="wikilink1" title="lmbase:instalace" data-wiki-id="lmbase:instalace">Instalace systému</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmbase/start.html" class="wikilink1" title="lmbase:start" data-wiki-id="lmbase:start">Základy ovládání</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmbase/lmworkspace.html" class="wikilink1" title="lmbase:lmworkspace" data-wiki-id="lmbase:lmworkspace">LM Workspace</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmdata/start.html" class="wikilink1" title="lmdata:start" data-wiki-id="lmdata:start">Demonstrační data</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmdemo/start.html" class="wikilink1" title="lmdemo:start" data-wiki-id="lmdemo:start">Ukázkové postupy</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmdemo/hotel2015/start.html" class="wikilink1" title="lmdemo:hotel2015:start" data-wiki-id="lmdemo:hotel2015:start">Demo Hotel</a></div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong> Systém LISp-Miner a proces DZD </strong>
+</p>
+<ul>
+<li class="level1 node"><div class="li"> <a href="../lmexplore/start.html" class="wikilink1" title="lmexplore:start" data-wiki-id="lmexplore:start">Seznámení s daty</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmexplore/import.html" class="wikilink1" title="lmexplore:import" data-wiki-id="lmexplore:import">Načtení dat</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmexplore/importtxt.html" class="wikilink1" title="lmexplore:importtxt" data-wiki-id="lmexplore:importtxt">Načtení dat z TXT</a></div>
+</li>
+</ul>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmprepro/start.html" class="wikilink1" title="lmprepro:start" data-wiki-id="lmprepro:start">Předzpracování dat</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmexplore/columnderived.html" class="wikilink1" title="lmexplore:columnderived" data-wiki-id="lmexplore:columnderived">Výpočet odvozených hodnot</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmprepro/attribute.html" class="wikilink1" title="lmprepro:attribute" data-wiki-id="lmprepro:attribute">Atribut a jeho kategorie</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmprepro/attributes.html" class="wikilink1" title="lmprepro:attributes" data-wiki-id="lmprepro:attributes">Strom skupin atributů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmianalysis/start.html" class="wikilink1" title="lmianalysis:start" data-wiki-id="lmianalysis:start">Interaktivní analýza</a></div>
+</li>
+<li class="level1 node"><div class="li"> <a href="../lmtask/start.html" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Modelování</a></div>
+<ul>
+<li class="level2"><div class="li"> <a href="../lmtask/task.html" class="wikilink1" title="lmtask:task" data-wiki-id="lmtask:task">Analytická úloha</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/cedent.html" class="wikilink1" title="lmtask:settings:cedent" data-wiki-id="lmtask:settings:cedent">Výběr atributů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/ftcedenthierarchy.html" class="wikilink1" title="lmtask:settings:ftcedenthierarchy" data-wiki-id="lmtask:settings:ftcedenthierarchy">Zadávání cedentů</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="../lmtask/settings/ftcoefficient.html" class="wikilink1" title="lmtask:settings:ftcoefficient" data-wiki-id="lmtask:settings:ftcoefficient">Zadávání koeficientů</a></div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <a href="../lmtask/start.html#prohlizeni_vysledku" class="wikilink1" title="lmtask:start" data-wiki-id="lmtask:start">Prohlížení výsledků</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Analytické procedury </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../mcf/start.html" class="wikilink1" title="mcf:start" data-wiki-id="mcf:start">CF-Miner</a> <img src="../mcf/tasksubtypecf.tok.59dee6_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mkl/start.html" class="wikilink1" title="mkl:start" data-wiki-id="mkl:start">KL-Miner</a> <img src="../mkl/tasksubtypekl.tok.b39fa5_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mft/start.html" class="wikilink1" title="mft:start" data-wiki-id="mft:start">4ft-Miner</a> <img src="../mft/tasksubtypeft.tok.02d723_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mmc/start.html" class="wikilink1" title="mmc:start" data-wiki-id="mmc:start">MCluster-Miner</a> <img src="../mmc/tasksubtypemc.tok.677b81_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../met/start.html" class="wikilink1" title="met:start" data-wiki-id="met:start">ETree-Miner</a> <img src="../met/tasksubtypeet.tok.aaa210_w.20.png" class="media" alt="" width="20" /></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdc/start.html" class="wikilink1" title="mdc:start" data-wiki-id="mdc:start">SDCF-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdk/start.html" class="wikilink1" title="mdk:start" data-wiki-id="mdk:start">SDKL-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mdf/start.html" class="wikilink1" title="mdf:start" data-wiki-id="mdf:start">SD4ft-Miner</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../maf/start.html" class="wikilink1" title="maf:start" data-wiki-id="maf:start">Ac4ft-Miner</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Pokročilé funkce </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../lmcl/start.html" class="wikilink1" title="lmcl:start" data-wiki-id="lmcl:start">Skriptovací jazyk</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../imex/start" class="wikilink2" title="imex:start" rel="nofollow" data-wiki-id="imex:start">Import a export</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="../mrm/start.html" class="wikilink1" title="mrm:start" data-wiki-id="mrm:start">Generování umělých dat</a></div>
+</li>
+</ul>
+
+<p>
+<strong> Výzkum a vývoj </strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="../rad/start" class="wikilink2" title="rad:start" rel="nofollow" data-wiki-id="rad:start">Směry výzkumu</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="napoveda.html" class="wikilink1" title="wiki:napoveda" data-wiki-id="wiki:napoveda">Tvorba stránek</a></div>
+</li>
+</ul>
+<hr />
+                                            </div></div>
+                </div></div><!-- /aside -->
+            
+            <!-- ********** CONTENT ********** -->
+            <div id="dokuwiki__content"><div class="pad group">
+                
+                <div class="pageId"><span>wiki:syntax</span></div>
+
+                <div class="page group">
+                                                            <!-- wikipage start -->
+                    <!-- TOC START -->
+<div id="dw__toc" class="dw__toc">
+<h3 class="toggle">Obsah</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="#formatting_syntax">Formatting Syntax</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="#basic_text_formatting">Basic Text Formatting</a></div></li>
+<li class="level2"><div class="li"><a href="#links">Links</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#external">External</a></div></li>
+<li class="level3"><div class="li"><a href="#internal">Internal</a></div></li>
+<li class="level3"><div class="li"><a href="#interwiki">Interwiki</a></div></li>
+<li class="level3"><div class="li"><a href="#windows_shares">Windows Shares</a></div></li>
+<li class="level3"><div class="li"><a href="#image_links">Image Links</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#footnotes">Footnotes</a></div></li>
+<li class="level2"><div class="li"><a href="#sectioning">Sectioning</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#headline_level_3">Headline Level 3</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#media_files">Media Files</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#supported_media_formats">Supported Media Formats</a></div></li>
+<li class="level3"><div class="li"><a href="#fallback_formats">Fallback Formats</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#lists">Lists</a></div></li>
+<li class="level2"><div class="li"><a href="#text_conversions">Text Conversions</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#text_to_image_conversions">Text to Image Conversions</a></div></li>
+<li class="level3"><div class="li"><a href="#text_to_html_conversions">Text to HTML Conversions</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#quoting">Quoting</a></div></li>
+<li class="level2"><div class="li"><a href="#tables">Tables</a></div></li>
+<li class="level2"><div class="li"><a href="#no_formatting">No Formatting</a></div></li>
+<li class="level2"><div class="li"><a href="#code_blocks">Code Blocks</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="#syntax_highlighting">Syntax Highlighting</a></div></li>
+<li class="level3"><div class="li"><a href="#downloadable_code_blocks">Downloadable Code Blocks</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="#embedding_html_and_php">Embedding HTML and PHP</a></div></li>
+<li class="level2"><div class="li"><a href="#rssatom_feed_aggregation">RSS/ATOM Feed Aggregation</a></div></li>
+<li class="level2"><div class="li"><a href="#control_macros">Control Macros</a></div></li>
+<li class="level2"><div class="li"><a href="#syntax_plugins">Syntax Plugins</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<h1 class="sectionedit1" id="formatting_syntax">Formatting Syntax</h1>
+<div class="level1">
+
+<p>
+<a href="https://www.dokuwiki.org/DokuWiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/DokuWiki">DokuWiki</a> supports some simple markup language, which tries to make the datafiles to be as readable as possible. This page contains all possible syntax you may use when editing the pages. Simply have a look at the source of this page by pressing „Edit this page“. If you want to try something, just use the <a href="../playground/playground.html" class="wikilink1" title="playground:playground" data-wiki-id="playground:playground">playground</a> page. The simpler markup is easily accessible via <a href="https://www.dokuwiki.org/toolbar" class="interwiki iw_doku" title="https://www.dokuwiki.org/toolbar">quickbuttons</a>, too.
+</p>
+
+</div>
+
+<h2 class="sectionedit2" id="basic_text_formatting">Basic Text Formatting</h2>
+<div class="level2">
+
+<p>
+DokuWiki supports <strong>bold</strong>, <em>italic</em>, <em class="u">underlined</em> and <code>monospaced</code> texts. Of course you can <strong><em class="u"><em><code>combine</code></em></em></strong> all these.
+</p>
+<pre class="code">DokuWiki supports **bold**, //italic//, __underlined__ and &#039;&#039;monospaced&#039;&#039; texts.
+Of course you can **__//&#039;&#039;combine&#039;&#039;//__** all these.</pre>
+
+<p>
+You can use <sub>subscript</sub> and <sup>superscript</sup>, too.
+</p>
+<pre class="code">You can use &lt;sub&gt;subscript&lt;/sub&gt; and &lt;sup&gt;superscript&lt;/sup&gt;, too.</pre>
+
+<p>
+You can mark something as <del>deleted</del> as well.
+</p>
+<pre class="code">You can mark something as &lt;del&gt;deleted&lt;/del&gt; as well.</pre>
+
+<p>
+<strong>Paragraphs</strong> are created from blank lines. If you want to <strong>force a newline</strong> without a paragraph, you can use two backslashes followed by a whitespace or the end of line.
+</p>
+
+<p>
+This is some text with some linebreaks<br/>
+Note that the
+two backslashes are only recognized at the end of a line<br/>
+
+or followed by<br/>
+a whitespace \\this happens without it.
+</p>
+<pre class="code">This is some text with some linebreaks\\ Note that the
+two backslashes are only recognized at the end of a line\\
+or followed by\\ a whitespace \\this happens without it.</pre>
+
+<p>
+You should use forced newlines only if really needed.
+</p>
+
+</div>
+
+<h2 class="sectionedit3" id="links">Links</h2>
+<div class="level2">
+
+<p>
+DokuWiki supports multiple ways of creating links.
+</p>
+
+</div>
+
+<h3 class="sectionedit4" id="external">External</h3>
+<div class="level3">
+
+<p>
+External links are recognized automagically: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="ugc nofollow">http://www.google.com</a> or simply <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="ugc nofollow">www.google.com</a> - You can set the link text as well: <a href="http://www.google.com" class="urlextern" title="http://www.google.com" rel="ugc nofollow">This Link points to google</a>. Email addresses like this one: <a href="mailto:&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;">&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;</a> are recognized, too.
+</p>
+<pre class="code">DokuWiki supports multiple ways of creating links. External links are recognized
+automagically: http://www.google.com or simply www.google.com - You can set
+link text as well: [[http://www.google.com|This Link points to google]]. Email
+addresses like this one: &lt;andi@splitbrain.org&gt; are recognized, too.</pre>
+
+</div>
+
+<h3 class="sectionedit5" id="internal">Internal</h3>
+<div class="level3">
+
+<p>
+Internal links are created by using square brackets. You can either just give a <a href="pagename" class="wikilink2" title="wiki:pagename" rel="nofollow" data-wiki-id="wiki:pagename">pagename</a> or use an additional <a href="pagename" class="wikilink2" title="wiki:pagename" rel="nofollow" data-wiki-id="wiki:pagename">link text</a>.
+</p>
+<pre class="code">Internal links are created by using square brackets. You can either just give
+a [[pagename]] or use an additional [[pagename|link text]].</pre>
+
+<p>
+<a href="https://www.dokuwiki.org/pagename" class="interwiki iw_doku" title="https://www.dokuwiki.org/pagename">Wiki pagenames</a> are converted to lowercase automatically, special characters are not allowed.
+</p>
+
+<p>
+You can use <a href="../some/namespaces" class="wikilink2" title="some:namespaces" rel="nofollow" data-wiki-id="some:namespaces">namespaces</a> by using a colon in the pagename.
+</p>
+<pre class="code">You can use [[some:namespaces]] by using a colon in the pagename.</pre>
+
+<p>
+For details about namespaces see <a href="https://www.dokuwiki.org/namespaces" class="interwiki iw_doku" title="https://www.dokuwiki.org/namespaces">namespaces</a>.
+</p>
+
+<p>
+Linking to a specific section is possible, too. Just add the section name behind a hash character as known from <abbr title="HyperText Markup Language">HTML</abbr>. This links to <a href="syntax.html#internal" class="wikilink1" title="wiki:syntax" data-wiki-id="wiki:syntax">this Section</a>.
+</p>
+<pre class="code">This links to [[syntax#internal|this Section]].</pre>
+
+<p>
+Notes:
+</p>
+<ul>
+<li class="level1"><div class="li"> Links to <a href="syntax.html" class="wikilink1" title="wiki:syntax" data-wiki-id="wiki:syntax">existing pages</a> are shown in a different style from <a href="nonexisting" class="wikilink2" title="wiki:nonexisting" rel="nofollow" data-wiki-id="wiki:nonexisting">nonexisting</a> ones.</div>
+</li>
+<li class="level1"><div class="li"> DokuWiki does not use <a href="https://en.wikipedia.org/wiki/CamelCase" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> to automatically create links by default, but this behavior can be enabled in the <a href="https://www.dokuwiki.org/config" class="interwiki iw_doku" title="https://www.dokuwiki.org/config">config</a> file. Hint: If DokuWiki is a link, then it&#039;s enabled.</div>
+</li>
+<li class="level1"><div class="li"> When a section&#039;s heading is changed, its bookmark changes, too. So don&#039;t rely on section linking too much.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit6" id="interwiki">Interwiki</h3>
+<div class="level3">
+
+<p>
+DokuWiki supports <a href="https://www.dokuwiki.org/Interwiki" class="interwiki iw_doku" title="https://www.dokuwiki.org/Interwiki">Interwiki</a> links. These are quick links to other Wikis. For example this is a link to Wikipedia&#039;s page about Wikis: <a href="https://en.wikipedia.org/wiki/Wiki" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Wiki">Wiki</a>.
+</p>
+<pre class="code">DokuWiki supports [[doku&gt;Interwiki]] links. These are quick links to other Wikis.
+For example this is a link to Wikipedia&#039;s page about Wikis: [[wp&gt;Wiki]].</pre>
+
+</div>
+
+<h3 class="sectionedit7" id="windows_shares">Windows Shares</h3>
+<div class="level3">
+
+<p>
+Windows shares like <a href="../server/share" class="windows" title="\\server\share">this</a> are recognized, too. Please note that these only make sense in a homogeneous user group like a corporate <a href="https://en.wikipedia.org/wiki/Intranet" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/Intranet">Intranet</a>.
+</p>
+<pre class="code">Windows Shares like [[\\server\share|this]] are recognized, too.</pre>
+
+<p>
+Notes:
+</p>
+<ul>
+<li class="level1"><div class="li"> For security reasons direct browsing of windows shares only works in Microsoft Internet Explorer per default (and only in the „local zone“).</div>
+</li>
+<li class="level1"><div class="li"> For Mozilla and Firefox it can be enabled through different workaround mentioned in the <a href="http://kb.mozillazine.org/Links_to_local_pages_do_not_work" class="urlextern" title="http://kb.mozillazine.org/Links_to_local_pages_do_not_work" rel="ugc nofollow">Mozilla Knowledge Base</a>. However, there will still be a JavaScript warning about trying to open a Windows Share. To remove this warning (for all users), put the following line in <code>conf/lang/en/lang.php</code> (more details at <a href="https://www.dokuwiki.org/localization#changing_some_localized_texts_and_strings_in_your_installation" class="interwiki iw_doku" title="https://www.dokuwiki.org/localization#changing_some_localized_texts_and_strings_in_your_installation">localization</a>): <dl class="code">
+<dt><a href="syntax.html" title="Stáhnout snippet" class="mediafile mf_php">conf/lang/en/lang.php</a></dt>
+<dd><pre class="code">&lt;?php
+/**
+ * Customization of the english language file
+ * Copy only the strings that needs to be modified
+ */
+$lang[&#039;js&#039;][&#039;nosmblinks&#039;] = &#039;&#039;;</pre>
+</dd></dl>
+</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit8" id="image_links">Image Links</h3>
+<div class="level3">
+
+<p>
+You can also use an image to link to another internal or external page by combining the syntax for links and <a href="#images_and_other_files" title="wiki:syntax ↵" class="wikilink1">images</a> (see below) like this:
+</p>
+<pre class="code">[[http://php.net|{{wiki:dokuwiki-128.png}}]]</pre>
+
+<p>
+<a href="http://php.net" class="media" title="http://php.net" rel="ugc nofollow"><img src="dokuwiki-128.png" class="media" alt="" /></a>
+</p>
+
+<p>
+Please note: The image formatting is the only formatting syntax accepted in link names.
+</p>
+
+<p>
+The whole <a href="#images_and_other_files" title="wiki:syntax ↵" class="wikilink1">image</a> and <a href="#links" title="wiki:syntax ↵" class="wikilink1">link</a> syntax is supported (including image resizing, internal and external images and URLs and interwiki links).
+</p>
+
+</div>
+
+<h2 class="sectionedit9" id="footnotes">Footnotes</h2>
+<div class="level2">
+
+<p>
+You can add footnotes <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup> by using double parentheses.
+</p>
+<pre class="code">You can add footnotes ((This is a footnote)) by using double parentheses.</pre>
+
+</div>
+
+<h2 class="sectionedit10" id="sectioning">Sectioning</h2>
+<div class="level2">
+
+<p>
+You can use up to five different levels of headlines to structure your content. If you have more than three headlines, a table of contents is generated automatically – this can be disabled by including the string <code>~~NOTOC~~</code> in the document.
+</p>
+
+</div>
+
+<h3 class="sectionedit11" id="headline_level_3">Headline Level 3</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="headline_level_4">Headline Level 4</h4>
+<div class="level4">
+
+</div>
+
+<h5 id="headline_level_5">Headline Level 5</h5>
+<div class="level5">
+<pre class="code">==== Headline Level 3 ====
+=== Headline Level 4 ===
+== Headline Level 5 ==</pre>
+
+<p>
+By using four or more dashes, you can make a horizontal line:
+</p>
+<hr />
+
+</div>
+
+<h2 class="sectionedit12" id="media_files">Media Files</h2>
+<div class="level2">
+
+<p>
+You can include external and internal <a href="https://www.dokuwiki.org/images" class="interwiki iw_doku" title="https://www.dokuwiki.org/images">images, videos and audio files</a> with curly brackets. Optionally you can specify the size of them.
+</p>
+
+<p>
+Real size:                        <a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.png" class="media" alt="" /></a>
+</p>
+
+<p>
+Resize to given width:            <a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.tok.49db81_w.50.png" class="media" alt="" width="50" /></a>
+</p>
+
+<p>
+Resize to given width and height<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>: <a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.h.50_tok.c62e39_w.200.png" class="media" alt="" width="200" height="50" /></a>
+</p>
+
+<p>
+Resized external image:           <a href="../http_3a_2f_2fphp.net_2fimages_2fphp.tok.6b7cc7.gif" class="media" title="http://php.net/images/php.gif"><img src="../http_3a_2f_2fphp.net_2fimages_2fphp.h.50_tok.511b38_w.200.gif" class="media" alt="" width="200" height="50" /></a>
+</p>
+<pre class="code">Real size:                        {{wiki:dokuwiki-128.png}}
+Resize to given width:            {{wiki:dokuwiki-128.png?50}}
+Resize to given width and height: {{wiki:dokuwiki-128.png?200x50}}
+Resized external image:           {{http://php.net/images/php.gif?200x50}}</pre>
+
+<p>
+By using left or right whitespaces you can choose the alignment.
+</p>
+
+<p>
+<a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.png" class="mediaright" alt="" /></a>
+</p>
+
+<p>
+<a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.png" class="medialeft" alt="" /></a>
+</p>
+
+<p>
+<a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.png" class="mediacenter" alt="" /></a>
+</p>
+<pre class="code">{{ wiki:dokuwiki-128.png}}
+{{wiki:dokuwiki-128.png }}
+{{ wiki:dokuwiki-128.png }}</pre>
+
+<p>
+Of course, you can add a title (displayed as a tooltip by most browsers), too.
+</p>
+
+<p>
+<a href="dokuwiki-128.id.wiki_3Asyntax.png.detail.html?id=wiki%3Asyntax&media=wiki:dokuwiki-128.png" class="media" title="wiki:dokuwiki-128.png"><img src="dokuwiki-128.png" class="mediacenter" title="This is the caption" alt="This is the caption" /></a>
+</p>
+<pre class="code">{{ wiki:dokuwiki-128.png |This is the caption}}</pre>
+
+<p>
+For linking an image to another page see <a href="#image_links" title="wiki:syntax ↵" class="wikilink1">Image Links</a> above.
+</p>
+
+</div>
+
+<h3 class="sectionedit13" id="supported_media_formats">Supported Media Formats</h3>
+<div class="level3">
+
+<p>
+DokuWiki can embed the following media formats directly.
+</p>
+<div class="table sectionedit14"><table class="inline">
+	<tr class="row0">
+		<td class="col0"> Image </td><td class="col1 leftalign"> <code>gif</code>, <code>jpg</code>, <code>png</code>  </td>
+	</tr>
+	<tr class="row1">
+		<td class="col0"> Video </td><td class="col1"> <code>webm</code>, <code>ogv</code>, <code>mp4</code> </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> Audio </td><td class="col1 leftalign"> <code>ogg</code>, <code>mp3</code>, <code>wav</code>  </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> Flash </td><td class="col1 leftalign"> <code>swf</code>                    </td>
+	</tr>
+</table></div>
+
+<p>
+If you specify a filename that is not a supported media format, then it will be displayed as a link instead.
+</p>
+
+<p>
+By adding <code>?linkonly</code> you provide a link to the media without displaying it inline
+</p>
+<pre class="code">{{wiki:dokuwiki-128.png?linkonly}}</pre>
+
+<p>
+<a href="dokuwiki-128.png" class="media mediafile mf_png" title="wiki:dokuwiki-128.png (27.2 KB)">dokuwiki-128.png</a> This is just a link to the image.
+</p>
+
+</div>
+
+<h3 class="sectionedit15" id="fallback_formats">Fallback Formats</h3>
+<div class="level3">
+
+<p>
+Unfortunately not all browsers understand all video and audio formats. To mitigate the problem, you can upload your file in different formats for maximum browser compatibility.
+</p>
+
+<p>
+For example consider this embedded mp4 video:
+</p>
+<pre class="code">{{video.mp4|A funny video}}</pre>
+
+<p>
+When you upload a <code>video.webm</code> and <code>video.ogv</code> next to the referenced <code>video.mp4</code>, DokuWiki will automatically add them as alternatives so that one of the three files is understood by your browser.
+</p>
+
+<p>
+Additionally DokuWiki supports a „poster“ image which will be shown before the video has started. That image needs to have the same filename as the video and be either a jpg or png file. In the example above a <code>video.jpg</code> file would work.
+</p>
+
+</div>
+
+<h2 class="sectionedit16" id="lists">Lists</h2>
+<div class="level2">
+
+<p>
+Dokuwiki supports ordered and unordered lists. To create a list item, indent your text by two spaces and use a <code>*</code> for unordered lists or a <code>-</code> for ordered ones.
+</p>
+<ul>
+<li class="level1"><div class="li"> This is a list</div>
+</li>
+<li class="level1 node"><div class="li"> The second item</div>
+<ul>
+<li class="level2"><div class="li"> You may have different levels</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Another item</div>
+</li>
+</ul>
+<ol>
+<li class="level1"><div class="li"> The same list but ordered</div>
+</li>
+<li class="level1 node"><div class="li"> Another item</div>
+<ol>
+<li class="level2"><div class="li"> Just use indention for deeper levels</div>
+</li>
+</ol>
+</li>
+<li class="level1"><div class="li"> That&#039;s it</div>
+</li>
+</ol>
+<pre class="code">  * This is a list
+  * The second item
+    * You may have different levels
+  * Another item
+
+  - The same list but ordered
+  - Another item
+    - Just use indention for deeper levels
+  - That&#039;s it</pre>
+
+<p>
+Also take a look at the <a href="https://www.dokuwiki.org/faq%3Alists" class="interwiki iw_doku" title="https://www.dokuwiki.org/faq%3Alists">FAQ on list items</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit17" id="text_conversions">Text Conversions</h2>
+<div class="level2">
+
+<p>
+DokuWiki can convert certain pre-defined characters or strings into images or other text or <abbr title="HyperText Markup Language">HTML</abbr>.
+</p>
+
+<p>
+The text to image conversion is mainly done for smileys. And the text to <abbr title="HyperText Markup Language">HTML</abbr> conversion is used for typography replacements, but can be configured to use other <abbr title="HyperText Markup Language">HTML</abbr> as well.
+</p>
+
+</div>
+
+<h3 class="sectionedit18" id="text_to_image_conversions">Text to Image Conversions</h3>
+<div class="level3">
+
+<p>
+DokuWiki converts commonly used <a href="https://en.wikipedia.org/wiki/emoticon" class="interwiki iw_wp" title="https://en.wikipedia.org/wiki/emoticon">emoticon</a>s to their graphical equivalents. Those <a href="https://www.dokuwiki.org/Smileys" class="interwiki iw_doku" title="https://www.dokuwiki.org/Smileys">Smileys</a> and other images can be configured and extended. Here is an overview of Smileys included in DokuWiki:
+</p>
+<ul>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_cool.gif" class="icon" alt="8-)" />   8-)  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_eek.gif" class="icon" alt="8-O" />   8-O  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_sad.gif" class="icon" alt=":-(" />   :-(  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_smile.gif" class="icon" alt=":-)" />   :-)  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_smile2.gif" class="icon" alt="=)" />    =)   </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_doubt.gif" class="icon" alt=":-/" />   :-/  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_doubt2.gif" class="icon" alt=":-\" />   :-\  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_confused.gif" class="icon" alt=":-?" />   :-?  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_biggrin.gif" class="icon" alt=":-D" />   :-D  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_razz.gif" class="icon" alt=":-P" />   :-P  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_surprised.gif" class="icon" alt=":-O" />   :-O  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_silenced.gif" class="icon" alt=":-X" />   :-X  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_neutral.gif" class="icon" alt=":-|" />   :-|  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_wink.gif" class="icon" alt=";-)" />   ;-)  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_fun.gif" class="icon" alt="^_^" />   ^_^  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_question.gif" class="icon" alt=":?:" />   :?:  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_exclaim.gif" class="icon" alt=":!:" />   :!:  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/icon_lol.gif" class="icon" alt="LOL" />   LOL  </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/fixme.gif" class="icon" alt="FIXME" />   FIXME </div>
+</li>
+<li class="level1"><div class="li"> <img src="../lib/images/smileys/delete.gif" class="icon" alt="DELETEME" />  DELETEME </div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit19" id="text_to_html_conversions">Text to HTML Conversions</h3>
+<div class="level3">
+
+<p>
+Typography: <a href="dokuwiki.html" class="wikilink1" title="wiki:dokuwiki" data-wiki-id="wiki:dokuwiki">DokuWiki</a> can convert simple text characters to their typographically correct entities. Here is an example of recognized characters.
+</p>
+
+<p>
+→ ← ↔ ⇒ ⇐ ⇔ » « – — 640&times;480 © ™ ®
+„He thought &#039;It&#039;s a man&#039;s world&#039;…“
+</p>
+<pre class="code">-&gt; &lt;- &lt;-&gt; =&gt; &lt;= &lt;=&gt; &gt;&gt; &lt;&lt; -- --- 640x480 (c) (tm) (r)
+&quot;He thought &#039;It&#039;s a man&#039;s world&#039;...&quot;</pre>
+
+<p>
+The same can be done to produce any kind of <abbr title="HyperText Markup Language">HTML</abbr>, it just needs to be added to the <a href="https://www.dokuwiki.org/entities" class="interwiki iw_doku" title="https://www.dokuwiki.org/entities">pattern file</a>.
+</p>
+
+<p>
+There are three exceptions which do not come from that pattern file: multiplication entity (640&times;480), &#039;single&#039; and „double quotes“. They can be turned off through a <a href="https://www.dokuwiki.org/config%3Atypography" class="interwiki iw_doku" title="https://www.dokuwiki.org/config%3Atypography">config option</a>.
+</p>
+
+</div>
+
+<h2 class="sectionedit20" id="quoting">Quoting</h2>
+<div class="level2">
+
+<p>
+Some times you want to mark some text to show it&#039;s a reply or comment. You can use the following syntax:
+</p>
+<pre class="code">I think we should do it
+
+&gt; No we shouldn&#039;t
+
+&gt;&gt; Well, I say we should
+
+&gt; Really?
+
+&gt;&gt; Yes!
+
+&gt;&gt;&gt; Then lets do it!</pre>
+
+<p>
+I think we should do it
+</p>
+<blockquote><div class="no">
+ No we shouldn&#039;t</div></blockquote>
+<blockquote><div class="no">
+<blockquote><div class="no">
+ Well, I say we should</div></blockquote>
+</div></blockquote>
+<blockquote><div class="no">
+ Really?</div></blockquote>
+<blockquote><div class="no">
+<blockquote><div class="no">
+ Yes!</div></blockquote>
+</div></blockquote>
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+ Then lets do it!</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+
+</div>
+
+<h2 class="sectionedit21" id="tables">Tables</h2>
+<div class="level2">
+
+<p>
+DokuWiki supports a simple syntax to create tables.
+</p>
+<div class="table sectionedit22"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Heading 1      </th><th class="col1 leftalign"> Heading 2       </th><th class="col2 leftalign"> Heading 3          </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Row 1 Col 1    </td><td class="col1 leftalign"> Row 1 Col 2     </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Row 2 Col 1    </td><td class="col1" colspan="2"> some colspan (note the double pipe) </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Row 3 Col 1    </td><td class="col1 leftalign"> Row 3 Col 2     </td><td class="col2 leftalign"> Row 3 Col 3        </td>
+	</tr>
+</table></div>
+
+<p>
+Table rows have to start and end with a <code>|</code> for normal rows or a <code>^</code> for headers.
+</p>
+<pre class="code">^ Heading 1      ^ Heading 2       ^ Heading 3          ^
+| Row 1 Col 1    | Row 1 Col 2     | Row 1 Col 3        |
+| Row 2 Col 1    | some colspan (note the double pipe) ||
+| Row 3 Col 1    | Row 3 Col 2     | Row 3 Col 3        |</pre>
+
+<p>
+To connect cells horizontally, just make the next cell completely empty as shown above. Be sure to have always the same amount of cell separators!
+</p>
+
+<p>
+Vertical tableheaders are possible, too.
+</p>
+<div class="table sectionedit23"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<td class="col0 leftalign">              </td><th class="col1 leftalign"> Heading 1            </th><th class="col2 leftalign"> Heading 2          </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<th class="col0 leftalign"> Heading 3    </th><td class="col1 leftalign"> Row 1 Col 2          </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+	</tr>
+	<tr class="row2">
+		<th class="col0 leftalign"> Heading 4    </th><td class="col1"> no colspan this time </td><td class="col2 leftalign">                    </td>
+	</tr>
+	<tr class="row3">
+		<th class="col0 leftalign"> Heading 5    </th><td class="col1 leftalign"> Row 2 Col 2          </td><td class="col2 leftalign"> Row 2 Col 3        </td>
+	</tr>
+</table></div>
+
+<p>
+As you can see, it&#039;s the cell separator before a cell which decides about the formatting:
+</p>
+<pre class="code">|              ^ Heading 1            ^ Heading 2          ^
+^ Heading 3    | Row 1 Col 2          | Row 1 Col 3        |
+^ Heading 4    | no colspan this time |                    |
+^ Heading 5    | Row 2 Col 2          | Row 2 Col 3        |</pre>
+
+<p>
+You can have rowspans (vertically connected cells) by adding <code>:::</code> into the cells below the one to which they should connect.
+</p>
+<div class="table sectionedit24"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Heading 1      </th><th class="col1 leftalign"> Heading 2                  </th><th class="col2 leftalign"> Heading 3          </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> Row 1 Col 1    </td><td class="col1" rowspan="3"> this cell spans vertically </td><td class="col2 leftalign"> Row 1 Col 3        </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> Row 2 Col 1    </td><td class="col1 leftalign"> Row 2 Col 3        </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> Row 3 Col 1    </td><td class="col1 leftalign"> Row 2 Col 3        </td>
+	</tr>
+</table></div>
+
+<p>
+Apart from the rowspan syntax those cells should not contain anything else.
+</p>
+<pre class="code">^ Heading 1      ^ Heading 2                  ^ Heading 3          ^
+| Row 1 Col 1    | this cell spans vertically | Row 1 Col 3        |
+| Row 2 Col 1    | :::                        | Row 2 Col 3        |
+| Row 3 Col 1    | :::                        | Row 2 Col 3        |</pre>
+
+<p>
+You can align the table contents, too. Just add at least two whitespaces at the opposite end of your text: Add two spaces on the left to align right, two spaces on the right to align left and two spaces at least at both ends for centered text.
+</p>
+<div class="table sectionedit25"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign" colspan="3">           Table with alignment           </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 rightalign">         right</td><td class="col1 centeralign">    center    </td><td class="col2 leftalign">left          </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign">left          </td><td class="col1 rightalign">         right</td><td class="col2 centeralign">    center    </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> xxxxxxxxxxxx </td><td class="col1"> xxxxxxxxxxxx </td><td class="col2"> xxxxxxxxxxxx </td>
+	</tr>
+</table></div>
+
+<p>
+This is how it looks in the source:
+</p>
+<pre class="code">^           Table with alignment           ^^^
+|         right|    center    |left          |
+|left          |         right|    center    |
+| xxxxxxxxxxxx | xxxxxxxxxxxx | xxxxxxxxxxxx |</pre>
+
+<p>
+Note: Vertical alignment is not supported.
+</p>
+
+</div>
+
+<h2 class="sectionedit26" id="no_formatting">No Formatting</h2>
+<div class="level2">
+
+<p>
+If you need to display text exactly like it is typed (without any formatting), enclose the area either with <code>&lt;nowiki&gt;</code> tags or even simpler, with double percent signs <code>%%</code>.
+</p>
+
+<p>
+
+This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
+
+The same is true for //__this__ text// with a smiley ;-).
+</p>
+<pre class="code">&lt;nowiki&gt;
+This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
+&lt;/nowiki&gt;
+The same is true for %%//__this__ text// with a smiley ;-)%%.</pre>
+
+</div>
+
+<h2 class="sectionedit27" id="code_blocks">Code Blocks</h2>
+<div class="level2">
+
+<p>
+You can include code blocks into your documents by either indenting them by at least two spaces (like used for the previous examples) or by using the tags <code>&lt;code&gt;</code> or <code>&lt;file&gt;</code>.
+</p>
+<pre class="code">This is text is indented by two spaces.</pre>
+<pre class="code">This is preformatted code all spaces are preserved: like              &lt;-this</pre>
+<pre class="file">This is pretty much the same, but you could use it to show that you quoted a file.</pre>
+
+<p>
+Those blocks were created by this source:
+</p>
+<pre class="code">  This is text is indented by two spaces.</pre>
+<pre class="code">&lt;code&gt;
+This is preformatted code all spaces are preserved: like              &lt;-this
+&lt;/code&gt;</pre>
+<pre class="code">&lt;file&gt;
+This is pretty much the same, but you could use it to show that you quoted a file.
+&lt;/file&gt;</pre>
+
+</div>
+
+<h3 class="sectionedit28" id="syntax_highlighting">Syntax Highlighting</h3>
+<div class="level3">
+
+<p>
+<a href="dokuwiki.html" class="wikilink1" title="wiki:dokuwiki" data-wiki-id="wiki:dokuwiki">DokuWiki</a> can highlight sourcecode, which makes it easier to read. It uses the <a href="http://qbnz.com/highlighter/" class="urlextern" title="http://qbnz.com/highlighter/" rel="ugc nofollow">GeSHi</a> Generic Syntax Highlighter – so any language supported by GeSHi is supported. The syntax uses the same code and file blocks described in the previous section, but this time the name of the language syntax to be highlighted is included inside the tag, e.g. <code>&lt;code java&gt;</code> or <code>&lt;file java&gt;</code>.
+</p>
+<pre class="code java"><span class="co3">/**
+ * The HelloWorldApp class implements an application that
+ * simply displays &quot;Hello World!&quot; to the standard output.
+ */</span>
+<span class="kw1">class</span> HelloWorldApp <span class="br0">&#123;</span>
+    <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+string"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3Adocs.oracle.com+javase+docs+api+system"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;Hello World!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co1">//Display the string.</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+The following language strings are currently recognized: <em>4cs, 6502acme, 6502kickass, 6502tasm, 68000devpac, abap, actionscript-french, actionscript, actionscript3, ada, algol68, apache, applescript, asm, asp, autoconf, autohotkey, autoit, avisynth, awk, bascomavr, bash, basic4gl, bf, bibtex, blitzbasic, bnf, boo, c, c_loadrunner, c_mac, caddcl, cadlisp, cfdg, cfm, chaiscript, cil, clojure, cmake, cobol, coffeescript, cpp, cpp-qt, csharp, css, cuesheet, d, dcs, delphi, diff, div, dos, dot, e, epc, ecmascript, eiffel, email, erlang, euphoria, f1, falcon, fo, fortran, freebasic, fsharp, gambas, genero, genie, gdb, glsl, gml, gnuplot, go, groovy, gettext, gwbasic, haskell, hicest, hq9plus, html, html5, icon, idl, ini, inno, intercal, io, j, java5, java, javascript, jquery, kixtart, klonec, klonecpp, latex, lb, lisp, llvm, locobasic, logtalk, lolcode, lotusformulas, lotusscript, lscript, lsl2, lua, m68k, magiksf, make, mapbasic, matlab, mirc, modula2, modula3, mmix, mpasm, mxml, mysql, newlisp, nsis, oberon2, objc, objeck, ocaml-brief, ocaml, oobas, oracle8, oracle11, oxygene, oz, pascal, pcre, perl, perl6, per, pf, php-brief, php, pike, pic16, pixelbender, pli, plsql, postgresql, povray, powerbuilder, powershell, proftpd, progress, prolog, properties, providex, purebasic, pycon, python, q, qbasic, rails, rebol, reg, robots, rpmspec, rsplus, ruby, sas, scala, scheme, scilab, sdlbasic, smalltalk, smarty, sql, systemverilog, tcl, teraterm, text, thinbasic, tsql, typoscript, unicon, uscript, vala, vbnet, vb, verilog, vhdl, vim, visualfoxpro, visualprolog, whitespace, winbatch, whois, xbasic, xml, xorg_conf, xpp, yaml, z80, zxbasic</em>
+</p>
+
+</div>
+
+<h3 class="sectionedit29" id="downloadable_code_blocks">Downloadable Code Blocks</h3>
+<div class="level3">
+
+<p>
+When you use the <code>&lt;code&gt;</code> or <code>&lt;file&gt;</code> syntax as above, you might want to make the shown code available for download as well. You can do this by specifying a file name after language code like this:
+</p>
+<pre class="code">&lt;file php myexample.php&gt;
+&lt;?php echo &quot;hello world!&quot;; ?&gt;
+&lt;/file&gt;</pre>
+<dl class="file">
+<dt><a href="syntax.codeblock.8.html" title="Stáhnout snippet" class="mediafile mf_php">myexample.php</a></dt>
+<dd><pre class="code file php"><span class="kw2">&lt;?php</span> <span class="kw1">echo</span> <span class="st0">&quot;hello world!&quot;</span><span class="sy0">;</span> <span class="sy1">?&gt;</span></pre>
+</dd></dl>
+
+<p>
+If you don&#039;t want any highlighting but want a downloadable file, specify a dash (<code>-</code>) as the language code: <code>&lt;code - myfile.foo&gt;</code>.
+</p>
+
+</div>
+
+<h2 class="sectionedit30" id="embedding_html_and_php">Embedding HTML and PHP</h2>
+<div class="level2">
+
+<p>
+You can embed raw <abbr title="HyperText Markup Language">HTML</abbr> or PHP code into your documents by using the <code>&lt;html&gt;</code> or <code>&lt;php&gt;</code> tags. (Use uppercase tags if you need to enclose block level elements.)
+</p>
+
+<p>
+<abbr title="HyperText Markup Language">HTML</abbr> example:
+</p>
+<pre class="code">&lt;html&gt;
+This is some &lt;span style=&quot;color:red;font-size:150%;&quot;&gt;inline HTML&lt;/span&gt;
+&lt;/html&gt;
+&lt;HTML&gt;
+&lt;p style=&quot;border:2px dashed red;&quot;&gt;And this is some block HTML&lt;/p&gt;
+&lt;/HTML&gt;</pre>
+
+<p>
+<code class="code html4strict">This is some <span class="sc2">&lt;<a href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;color:red;font-size:150%;&quot;</span>&gt;</span>inline HTML<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span></code>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;border:2px dashed red;&quot;</span>&gt;</span>And this is some block HTML<span class="sc2">&lt;<span class="sy0">/</span><a href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span></pre>
+<p>
+PHP example:
+</p>
+<pre class="code">&lt;php&gt;
+echo &#039;The PHP version: &#039;;
+echo phpversion();
+echo &#039; (generated inline HTML)&#039;;
+&lt;/php&gt;
+&lt;PHP&gt;
+echo &#039;&lt;table class=&quot;inline&quot;&gt;&lt;tr&gt;&lt;td&gt;The same, but inside a block level element:&lt;/td&gt;&#039;;
+echo &#039;&lt;td&gt;&#039;.phpversion().&#039;&lt;/td&gt;&#039;;
+echo &#039;&lt;/tr&gt;&lt;/table&gt;&#039;;
+&lt;/PHP&gt;</pre>
+
+<p>
+<code class="code php"><span class="kw1">echo</span> <span class="st_h">'The PHP version: '</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <a href="http://www.php.net/phpversion"><span class="kw3">phpversion</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st_h">' (inline HTML)'</span><span class="sy0">;</span></code>
+</p>
+<pre class="code php"><span class="kw1">echo</span> <span class="st_h">'&lt;table class=&quot;inline&quot;&gt;&lt;tr&gt;&lt;td&gt;The same, but inside a block level element:&lt;/td&gt;'</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st_h">'&lt;td&gt;'</span><span class="sy0">.</span><a href="http://www.php.net/phpversion"><span class="kw3">phpversion</span></a><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">.</span><span class="st_h">'&lt;/td&gt;'</span><span class="sy0">;</span>
+<span class="kw1">echo</span> <span class="st_h">'&lt;/tr&gt;&lt;/table&gt;'</span><span class="sy0">;</span></pre>
+<p>
+<strong>Please Note</strong>: <abbr title="HyperText Markup Language">HTML</abbr> and PHP embedding is disabled by default in the configuration. If disabled, the code is displayed instead of executed.
+</p>
+
+</div>
+
+<h2 class="sectionedit31" id="rssatom_feed_aggregation">RSS/ATOM Feed Aggregation</h2>
+<div class="level2">
+
+<p>
+<a href="dokuwiki.html" class="wikilink1" title="wiki:dokuwiki" data-wiki-id="wiki:dokuwiki">DokuWiki</a> can integrate data from external XML feeds. For parsing the XML feeds, <a href="http://simplepie.org/" class="urlextern" title="http://simplepie.org/" rel="ugc nofollow">SimplePie</a> is used. All formats understood by SimplePie can be used in DokuWiki as well. You can influence the rendering by multiple additional space separated parameters:
+</p>
+<div class="table sectionedit32"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Parameter  </th><th class="col1"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0"> any number </td><td class="col1"> will be used as maximum number items to show, defaults to 8 </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0 leftalign"> reverse    </td><td class="col1"> display the last items in the feed first </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0 leftalign"> author     </td><td class="col1"> show item authors names </td>
+	</tr>
+	<tr class="row4">
+		<td class="col0 leftalign"> date       </td><td class="col1"> show item dates </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> description</td><td class="col1"> show the item description. If <a href="https://www.dokuwiki.org/config%3Ahtmlok" class="interwiki iw_doku" title="https://www.dokuwiki.org/config%3Ahtmlok">HTML</a> is disabled all tags will be stripped </td>
+	</tr>
+	<tr class="row6">
+		<td class="col0 leftalign"> nosort     </td><td class="col1"> do not sort the items in the feed </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> <em>n</em>[dhm] </td><td class="col1"> refresh period, where d=days, h=hours, m=minutes. (e.g. 12h = 12 hours). </td>
+	</tr>
+</table></div>
+
+<p>
+The refresh period defaults to 4 hours. Any value below 10 minutes will be treated as 10 minutes. <a href="dokuwiki.html" class="wikilink1" title="wiki:dokuwiki" data-wiki-id="wiki:dokuwiki">DokuWiki</a> will generally try to supply a cached version of a page, obviously this is inappropriate when the page contains dynamic external content. The parameter tells <a href="dokuwiki.html" class="wikilink1" title="wiki:dokuwiki" data-wiki-id="wiki:dokuwiki">DokuWiki</a> to re-render the page if it is more than <em>refresh period</em> since the page was last rendered.
+</p>
+
+<p>
+By default the feed will be sorted by date, newest items first. You can sort it by oldest first using the <code>reverse</code> parameter, or display the feed as is with <code>nosort</code>.
+</p>
+
+<p>
+<strong>Example:</strong>
+</p>
+<pre class="code">{{rss&gt;http://slashdot.org/index.rss 5 author date 1h }}</pre>
+<ul class="rss"><li><div class="li"><em>Nastala chyba při vytváření tohoto RSS: </em><a href="http://slashdot.org/index.rss" class="urlextern" title="http://slashdot.org/index.rss" rel="ugc nofollow">http://slashdot.org/index.rss</a></div></li></ul>
+</div>
+
+<h2 class="sectionedit33" id="control_macros">Control Macros</h2>
+<div class="level2">
+
+<p>
+Some syntax influences how DokuWiki renders a page without creating any output it self. The following control macros are availble:
+</p>
+<div class="table sectionedit34"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 leftalign"> Macro           </th><th class="col1"> Description </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<td class="col0 leftalign"> ~~NOTOC~~   </td><td class="col1"> If this macro is found on the page, no table of contents will be created </td>
+	</tr>
+	<tr class="row2">
+		<td class="col0"> ~~NOCACHE~~ </td><td class="col1"> DokuWiki caches all output by default. Sometimes this might not be wanted (eg. when the &lt;php&gt; syntax above is used), adding this macro will force DokuWiki to rerender a page on every call </td>
+	</tr>
+</table></div>
+
+</div>
+
+<h2 class="sectionedit35" id="syntax_plugins">Syntax Plugins</h2>
+<div class="level2">
+
+<p>
+DokuWiki&#039;s syntax can be extended by <a href="https://www.dokuwiki.org/plugins" class="interwiki iw_doku" title="https://www.dokuwiki.org/plugins">Plugins</a>. How the installed plugins are used is described on their appropriate description pages. The following syntax plugins are available in this particular DokuWiki installation:
+</p>
+<ul><li><div class="li"><a href="http://www.dokuwiki.org/plugin:gallery" class="urlextern" title="http://www.dokuwiki.org/plugin:gallery" rel="ugc nofollow">Gallery Plugin</a> <em>2019-01-05</em> autor: <a href="mailto:&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;">Andreas Gohr</a><br />Creates a gallery of images from a namespace or RSS/ATOM feed</div></li><li><div class="li"><a href="http://dokuwiki.org/plugin:info" class="urlextern" title="http://dokuwiki.org/plugin:info" rel="ugc nofollow">Info Plugin</a> <em>2020-06-04</em> autor: <a href="mailto:&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;">Andreas Gohr</a><br />Displays information about various DokuWiki internals</div></li><li><div class="li"><a href="https://www.dokuwiki.org/plugin:siteexport" class="urlextern" title="https://www.dokuwiki.org/plugin:siteexport" rel="ugc nofollow">Site Export</a> <em>2022-05-03</em> autor: <a href="mailto:&#116;&#111;&#111;&#108;&#115;&#64;&#105;&#110;&#101;&#116;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#100;&#101;" class="mail" title="&#116;&#111;&#111;&#108;&#115;&#64;&#105;&#110;&#101;&#116;&#115;&#111;&#102;&#116;&#119;&#97;&#114;&#101;&#46;&#100;&#101;">i-net software</a><br />exports the dokuwiki site in the given format</div></li><li><div class="li"><a href="http://www.dokuwiki.org/plugin:translation" class="urlextern" title="http://www.dokuwiki.org/plugin:translation" rel="ugc nofollow">Translation Plugin</a> <em>2020-03-24</em> autor: <a href="mailto:&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;">Andreas Gohr</a><br />Supports the easy setup of a multi-language wiki.</div></li><li><div class="li"><a href="https://www.dokuwiki.org/plugin:vshare" class="urlextern" title="https://www.dokuwiki.org/plugin:vshare" rel="ugc nofollow">Video Sharing Site Plugin</a> <em>2020-03-18</em> autor: <a href="mailto:&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#100;&#105;&#64;&#115;&#112;&#108;&#105;&#116;&#98;&#114;&#97;&#105;&#110;&#46;&#111;&#114;&#103;">Andreas Gohr</a><br />Easily embed videos from various Video Sharing sites. Example: {{youtube&gt;XXXXXX}}</div></li><li><div class="li"><a href="https://www.dokuwiki.org/plugin:wrap" class="urlextern" title="https://www.dokuwiki.org/plugin:wrap" rel="ugc nofollow">Wrap Plugin</a> <em>2018-04-22</em> autor: <a href="mailto:&#97;&#110;&#105;&#107;&#97;&#64;&#115;&#101;&#108;&#102;&#116;&#104;&#105;&#110;&#107;&#101;&#114;&#46;&#111;&#114;&#103;" class="mail" title="&#97;&#110;&#105;&#107;&#97;&#64;&#115;&#101;&#108;&#102;&#116;&#104;&#105;&#110;&#107;&#101;&#114;&#46;&#111;&#114;&#103;">Anika Henke</a><br />Universal plugin which combines functionalities of many other plugins. Wrap wiki text inside containers (divs or spans) and give them a class (choose from a variety of preset classes), a width and/or a language with its associated text direction.</div></li></ul>
+</div>
+<div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content">This is a footnote</div></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<div class="content">when the aspect ratio of the given width and height doesn&#039;t match that of the image, it will be cropped to the new ratio before resizing</div></div>
+</div>
+
+                    <!-- wikipage stop -->
+                                    </div>
+
+                <div class="docInfo"><bdi>wiki/syntax.txt</bdi> · Poslední úprava: 2017/08/11 16:32 (upraveno mimo DokuWiki)</div>
+
+                            </div></div><!-- /content -->
+
+            <hr class="a11y" />
+
+            <!-- PAGE ACTIONS -->
+            <div id="dokuwiki__pagetools">
+                <h3 class="a11y">Nástroje pro stránku</h3>
+                <div class="tools">
+                    <ul>
+                        <li class="source"><a href="syntax.html" title="Zdrojový kód stránky [v]" rel="nofollow" accesskey="v"><span>Zdrojový kód stránky</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5l3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0l-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74z"/></svg></a></li><li class="revs"><a href="syntax.html" title="Starší verze [o]" rel="nofollow" accesskey="o"><span>Starší verze</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11 7v5.11l4.71 2.79.79-1.28-4-2.37V7m0-5C8.97 2 5.91 3.92 4.27 6.77L2 4.5V11h6.5L5.75 8.25C6.96 5.73 9.5 4 12.5 4a7.5 7.5 0 0 1 7.5 7.5 7.5 7.5 0 0 1-7.5 7.5c-3.27 0-6.03-2.09-7.06-5h-2.1c1.1 4.03 4.77 7 9.16 7 5.24 0 9.5-4.25 9.5-9.5A9.5 9.5 0 0 0 12.5 2z"/></svg></a></li><li class="backlink"><a href="syntax.html" title="Zpětné odkazy" rel="nofollow"><span>Zpětné odkazy</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"/></svg></a></li><li class="siteexport_addpage"><a href="syntax.html" title="Export Page to HTML/PDF" rel="nofollow"><span>Export Page to HTML/PDF</span><svg width="61px" height="51px" viewBox="0 0 61 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><path d="M26.1891503,39.0065635 L26.0876578,38.9773206 L60.6523866,1.23972885 L60.4321374,2.11844376 L60.476442,2.07071678 L60.4265202,2.14085429 L49.5024876,45.7237994 L32.8255882,40.9187101 L26,50.508302 L26,39.2103249 L26.1891503,39.0065635 Z M60.9727675,0.862917243 L22.2676619,38.2155059 L-0.00245042233,30.2214566 L60.9727675,0.862917243 Z" id="Paper-Plane"></path></svg></a></li><li class="top"><a href="#dokuwiki__top" title="Nahoru [t]" rel="nofollow" accesskey="t"><span>Nahoru</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg></a></li>                    </ul>
+                </div>
+            </div>
+        </div><!-- /wrapper -->
+
+        
+<!-- ********** FOOTER ********** -->
+<div id="dokuwiki__footer"><div class="pad">
+    <div class="license">Kromě míst, kde je explicitně uvedeno jinak, je obsah této wiki licencován pod následující licencí: <bdi><a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license" class="urlextern">CC Attribution-Share Alike 4.0 International</a></bdi></div>
+    <div class="buttons">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license"><img src="../lib/images/license/button/cc-by-sa.png" alt="CC Attribution-Share Alike 4.0 International" /></a>        <a href="https://www.dokuwiki.org/donate" title="Donate" ><img
+            src="../lib/tpl/dokuwiki/images/button-donate.gif" width="80" height="15" alt="Donate" /></a>
+        <a href="https://php.net" title="Powered by PHP" ><img
+            src="../lib/tpl/dokuwiki/images/button-php.gif" width="80" height="15" alt="Powered by PHP" /></a>
+        <a href="../check/referer" title="Valid HTML5" ><img
+            src="../lib/tpl/dokuwiki/images/button-html5.png" width="80" height="15" alt="Valid HTML5" /></a>
+        <a href="../css-validator/check/referer.profile.css3?profile=css3" title="Valid CSS" ><img
+            src="../lib/tpl/dokuwiki/images/button-css.png" width="80" height="15" alt="Valid CSS" /></a>
+        <a href="https://dokuwiki.org/" title="Driven by DokuWiki" ><img
+            src="../lib/tpl/dokuwiki/images/button-dw.png" width="80" height="15"
+            alt="Driven by DokuWiki" /></a>
+    </div>
+</div></div><!-- /footer -->
+
+    </div></div><!-- /site -->
+
+    <div class="no"><img src="../lib/exe/taskrunner.1667081960.gif?1667081960" width="2" height="1" alt="" /></div>
+    <div id="screen__mode" class="no"></div></body>
+</html>
