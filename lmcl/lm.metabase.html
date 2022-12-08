@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+lm.metabase
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><strong>lm.metabase</strong></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Namespace <code>
+lm.metabase
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+LM Metabase related functions<br/>
+
+<h2>Classes List</h2>
+<table class="property_list">
+No class defined.
+</table>
+
+<h2>Properties List</h2>
+<table class="property_list">
+No preperties defined.
+</table>
+
+<h2>Functions List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#associateWithDataMDB">associateWithDataMDB</a>&nbsp;()</td>
+<td class="summary">Associaties an existing metabase (in a MDB file) with analyzed data (also in a MDB file). Not supported in 64-bit version.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#associateWithDataODBC">associateWithDataODBC</a>&nbsp;()</td>
+<td class="summary">Associaties an existing metabase (available through an ODBC DSN) with analyzed data (also available through an ODBC DSN)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#backupMDB">backupMDB</a>&nbsp;()</td>
+<td class="summary">Makes a backup copy of the metabase MDB file. Not supported in 64-bit version.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#clearLocalDataCache">clearLocalDataCache</a>&nbsp;()</td>
+<td class="summary">Completely clears local data cache for this metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#close">close</a>&nbsp;()</td>
+<td class="summary">Closes metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#createAndAssociateWithDataMDB">createAndAssociateWithDataMDB</a>&nbsp;()</td>
+<td class="summary">Creates a new metabase (as a MDB file) and associates it with analyzed data (also in a MDB file). Not supported in 64-bit version.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#exportXML">exportXML</a>&nbsp;()</td>
+<td class="summary">Exports preprocessing, task definitions and/or results to a XML/PMML file using a given template</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDSN">getDSN</a>&nbsp;()</td>
+<td class="summary">Returns ODBC Data Source Name of the currently opened metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#importXML">importXML</a>&nbsp;()</td>
+<td class="summary">Imports preprocessing and/or task definitions from a XML/PMML files</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#isOpen">isOpen</a>&nbsp;()</td>
+<td class="summary">Returns true if a metabase was already opened using the lm.metabase.open</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#markChanged">markChanged</a>&nbsp;()</td>
+<td class="summary">Sets metabase 'changed' flag informing other modules they should reload metabase upon activation.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#open">open</a>&nbsp;()</td>
+<td class="summary">Opens a metabase using the given ODBC Data Source Name</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#reload">reload</a>&nbsp;()</td>
+<td class="summary">Reloads the whole metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#reloadResults">reloadResults</a>&nbsp;()</td>
+<td class="summary">Partially reloads the metabase with results to preserve other objects (tasks, prepro) already used in the Lua script</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#restoreMDB">restoreMDB</a>&nbsp;()</td>
+<td class="summary">Replaces the metabase MDB with a backup copy. Not supported in 64-bit version.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setAutoSaveFlag">setAutoSaveFlag</a>&nbsp;()</td>
+<td class="summary">Sets auto-save flag for metabase-stored object. If true (default) the onAdd and onUpdate functions are called automatically after a object has been constructed or a change has been made to it. Returns the previous value of the flag.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#updateMetadata">updateMetadata</a>&nbsp;()</td>
+<td class="summary">Updates metadata information (needs to be called after a change has been made to analyzed data)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#updateMostRecentlyUsedList">updateMostRecentlyUsedList</a>&nbsp;()</td>
+<td class="summary">Adds currently opened metabase into the most recently used list of DSN that is provided upon launch of any LM module. Reorders the list if neccessary.</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+
+</dl> <!-- property -->
+
+<h3 id="methods">Functions</h3>
+<dl class="method">
+
+<dt id="associateWithDataMDB"><code>associateWithDataMDB()</code></dt>
+<dd>
+Associaties an existing metabase (in a MDB file) with analyzed data (also in a MDB file). Not supported in 64-bit version.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameMetabase</code> : <code>string</code> - path to an existing metabase MDB file
+</li>
+<li>
+<code>pathNameData</code> : <code>string</code> - path to an existing analyzed data MDB file
+</li>
+<li>
+<code>dsnBase</code> : <code>string</code> - Base middle-part of the ODBC Data Source Name (a prefix 'LM' will be added for both data and metabase and the suffix 'MB' for metabase)
+</li>
+</ul>
+</dd>
+<dt id="associateWithDataODBC"><code>associateWithDataODBC()</code></dt>
+<dd>
+Associaties an existing metabase (available through an ODBC DSN) with analyzed data (also available through an ODBC DSN)
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>dsnMetabase</code> : <code>string</code> - ODBC Data Source Name to an existing metabase
+</li>
+<li>
+<code>dsnData</code> : <code>string</code> - ODBC Data Source Name to an existing analyzed data
+</li>
+</ul>
+</dd>
+<dt id="backupMDB"><code>backupMDB()</code></dt>
+<dd>
+Makes a backup copy of the metabase MDB file. Not supported in 64-bit version.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameSrc</code> : <code>string</code> - path to the MDB metabase file to be archived
+</li>
+<li>
+<code>pathNameDest</code> : <code>string</code> - destination path to make backup
+</li>
+</ul>
+</dd>
+<dt id="clearLocalDataCache"><code>clearLocalDataCache()</code></dt>
+<dd>
+Completely clears local data cache for this metabase
+</dd>
+<dt id="close"><code>close()</code></dt>
+<dd>
+Closes metabase
+</dd>
+<dt id="createAndAssociateWithDataMDB"><code>createAndAssociateWithDataMDB()</code></dt>
+<dd>
+Creates a new metabase (as a MDB file) and associates it with analyzed data (also in a MDB file). Not supported in 64-bit version.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameMetabase</code> : <code>string</code> - path to metabase MDB file to be created
+</li>
+<li>
+<code>pathNameData</code> : <code>string</code> - path to an existing analyzed data MDB file
+</li>
+<li>
+<code>dsn</code> : <code>string</code> - Middle-part of the ODBC Data Source Name (a prefix 'LM' will be added for both data and metabase and the suffix 'MB' for metabase)
+</li>
+</ul>
+</dd>
+<dt id="exportXML"><code>exportXML()</code></dt>
+<dd>
+Exports preprocessing, task definitions and/or results to a XML/PMML file using a given template
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameTemplate</code> : <code>string</code> - path to a template file
+</li>
+<li>
+<code>pathNameDest</code> : <code>string</code> - destination file
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>pathNameAlias</code> : <code>string</code> - path to the file with tags translation table
+</li>
+</ul>
+</dd>
+<dt id="getDSN"><code>getDSN() : string</code></dt>
+<dd>
+Returns ODBC Data Source Name of the currently opened metabase
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="importXML"><code>importXML()</code></dt>
+<dd>
+Imports preprocessing and/or task definitions from a XML/PMML files
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameSrc</code> : <code>string</code> - path to source XML file
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>pathNameAlias</code> : <code>string</code> - path to the file with tags translation table
+</li>
+<li>
+<code>bCheckPrimaryKeyUnique</code> : <code>boolean</code> - if the primary key column should be checked for duplicities
+</li>
+</ul>
+</dd>
+<dt id="isOpen"><code>isOpen() : boolean</code></dt>
+<dd>
+Returns true if a metabase was already opened using the lm.metabase.open
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="markChanged"><code>markChanged()</code></dt>
+<dd>
+Sets metabase 'changed' flag informing other modules they should reload metabase upon activation.
+</dd>
+<dt id="open"><code>open()</code></dt>
+<dd>
+Opens a metabase using the given ODBC Data Source Name
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>dataSourceName</code> : <code>string</code> - ODBC Data Source Name for metabase to open
+</li>
+</ul>
+</dd>
+<dt id="reload"><code>reload()</code></dt>
+<dd>
+Reloads the whole metabase
+</dd>
+<dt id="reloadResults"><code>reloadResults()</code></dt>
+<dd>
+Partially reloads the metabase with results to preserve other objects (tasks, prepro) already used in the Lua script
+</dd>
+<dt id="restoreMDB"><code>restoreMDB()</code></dt>
+<dd>
+Replaces the metabase MDB with a backup copy. Not supported in 64-bit version.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameSrc</code> : <code>string</code> - path to the MDB metabase backup file
+</li>
+<li>
+<code>pathNameDest</code> : <code>string</code> - destination path to make restore
+</li>
+</ul>
+</dd>
+<dt id="setAutoSaveFlag"><code>setAutoSaveFlag( boolean )</code></dt>
+<dd>
+Sets auto-save flag for metabase-stored object. If true (default) the onAdd and onUpdate functions are called automatically after a object has been constructed or a change has been made to it. Returns the previous value of the flag.
+<h3>Parameters</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="updateMetadata"><code>updateMetadata()</code></dt>
+<dd>
+Updates metadata information (needs to be called after a change has been made to analyzed data)
+</dd>
+<dt id="updateMostRecentlyUsedList"><code>updateMostRecentlyUsedList()</code></dt>
+<dd>
+Adds currently opened metabase into the most recently used list of DSN that is provided upon launch of any LM module. Reorders the list if neccessary.
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

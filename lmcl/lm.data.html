@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+lm.data
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><strong>lm.data</strong></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Namespace <code>
+lm.data
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+Analyzed data database related functions<br/>
+
+<h2>Classes List</h2>
+<table class="property_list">
+No class defined.
+</table>
+
+<h2>Properties List</h2>
+<table class="property_list">
+No preperties defined.
+</table>
+
+<h2>Functions List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#createEmptyDataMDB">createEmptyDataMDB</a>&nbsp;()</td>
+<td class="summary">Creates an empty MDB file for data to be imported later. Not supported in 64-bit version.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDSN">getDSN</a>&nbsp;()</td>
+<td class="summary">Returns ODBC DataSourceName of the currently opened analyzed data database</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#importTXT">importTXT</a>&nbsp;()</td>
+<td class="summary">Imports a text file into database</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+
+</dl> <!-- property -->
+
+<h3 id="methods">Functions</h3>
+<dl class="method">
+
+<dt id="createEmptyDataMDB"><code>createEmptyDataMDB()</code></dt>
+<dd>
+Creates an empty MDB file for data to be imported later. Not supported in 64-bit version.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameData</code> : <code>string</code> - path to database MDB file to be created
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>bOverwrite</code> : <code>boolean</code> - if to overwrite an already existing file
+</li>
+</ul>
+</dd>
+<dt id="getDSN"><code>getDSN() : string</code></dt>
+<dd>
+Returns ODBC DataSourceName of the currently opened analyzed data database
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="importTXT"><code>importTXT()</code></dt>
+<dd>
+Imports a text file into database
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pathNameSrc</code> : <code>string</code> - path to source file
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>pathNameDest</code> : <code>string</code> - destination Data file path
+</li>
+<li>
+<code>tableName</code> : <code>string</code> - name of the table to be created
+</li>
+<li>
+<code>bTitleLine</code> : <code>boolean</code> - if the first line contains names of columns
+</li>
+<li>
+<code>bAddIDColumn</code> : <code>boolean</code> - if the primary key column ID_LM should be created and filled with unique numbers
+</li>
+<li>
+<code>bDateMonthFirst</code> : <code>boolean</code> - if the DBMS requires to store date values in the US format (MM-DD-YYYY)
+</li>
+<li>
+<code>cColumnSeparator</code> : <code>char</code> - column delimiter character
+</li>
+<li>
+<code>cThousandsSeparator</code> : <code>char</code> - thousands separator character
+</li>
+<li>
+<code>nSampleLines</code> : <code>integer</code> - number of lines to read to estimate column data types
+</li>
+<li>
+<code>nRowLimitCount</code> : <code>integer</code> - limit for number of imported rows
+</li>
+<li>
+<code>bRowLimitRandom</code> : <code>boolean</code> - if the rows are selected randomly from the whole file (otherwise the first nRowLimitCount rows are imported)
+</li>
+<li>
+<code>pathNameSrcMetadata</code> : <code>string</code> - path to meta-data description file (first line= alternative columns names, second line= forced data types, third line= disabled columns (any of 'no', 'disabled', 'skip' will cause a column to be ommited from import)
+</li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+TaskGroup
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><strong>TaskGroup</strong></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Class <code>
+TaskGroup
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+Group of data-mining tasks<br/>
+inherits from <a href="LMWrapName.html">LMWrapName</a><br/>
+namespace: <a href="lm.tasks.html">lm.tasks</a><br/>
+
+<h2>Constructor</h2>
+
+<dl class="constructor">
+
+<dt id="TaskGroup"><code>TaskGroup()</code></dt>
+<dd>
+Creates a new object of this class
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>name</code> : <code>string</code> - unique name for the new group of tasks
+</li>
+</ul>
+</dd>
+
+</dl> <!-- constructor -->
+
+<h2>Properties List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="#ID">ID</a>&nbsp;</td>
+<td class="summary">Unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Name">Name</a>&nbsp;</td>
+<td class="summary">Unique name of this object. Cannot be empty.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Note">Note</a>&nbsp;</td>
+<td class="summary">Text comment to this object (up to 255 characters)</td>
+</tr>
+</table>
+
+<h2>Methods List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#canDel">canDel</a>&nbsp;()</td>
+<td class="summary">Returns true if the object could be deleted (is not used)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#findTask">findTask</a>&nbsp;()</td>
+<td class="summary">Tries to look-up a <a href="Task.html">Task</a> with a unique property given as parameter. Just one parameter has to be specified. Returns <code>nil</code> if <a href="Task.html">Task</a> with this property doesn't exists.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getID">getID</a>&nbsp;()</td>
+<td class="summary">Returns unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getName">getName</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Name">Name</a> property, name of this object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getNote">getNote</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onAdd">onAdd</a>&nbsp;()</td>
+<td class="summary">Store the newly created object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onDel">onDel</a>&nbsp;()</td>
+<td class="summary">Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onUpdate">onUpdate</a>&nbsp;()</td>
+<td class="summary">Save changes made to the object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#prepareTaskArray">prepareTaskArray</a>&nbsp;()</td>
+<td class="summary">Returns array of tasks in this group of tasks. Returns objects of descendant classes (eg. <a href="TaskFT.html">TaskFT</a>). An optional parameter could be specified to filter only tasks of a given type, see <a href="codes.html#TaskSubType">TaskSubType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#queryTaskGenerationStatusAll">queryTaskGenerationStatusAll</a>&nbsp;()</td>
+<td class="summary">Re-reads tasks states from metabase and returns number of tasks for which theirs state has changed from <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a> to <a href="Task.html#isTaskGenerationStatusFinished">isTaskGenerationStatusFinished</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#runAllAndWaitForResults">runAllAndWaitForResults</a>&nbsp;()</td>
+<td class="summary">Starts all tasks (with not <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a>) in this group of tasks and waits till all of them have finished</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#runAllAsync">runAllAsync</a>&nbsp;()</td>
+<td class="summary">Starts all tasks (with not <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a>) in this group of tasks in parallel threads and returns immediately</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setName">setName</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Name">Name</a> property, name of this object (must be unique)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setNote">setNote</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#waitForResultsAll">waitForResultsAll</a>&nbsp;()</td>
+<td class="summary">Waits till all tasks with <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a> have finished</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+<dt id="ID"><code>ID</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="Name"><code>Name</code>&nbsp;: string</dt>
+<dd>
+Unique name of this object. Cannot be empty.
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+</dd>
+<dt id="Note"><code>Note</code>&nbsp;: string</dt>
+<dd>
+Text comment to this object (up to 255 characters)
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+</dd>
+
+</dl> <!-- property -->
+
+<h3><a name="methods"></a>Methods</h3>
+<dl class="method">
+
+<dt id="canDel"><code>canDel() : boolean</code></dt>
+<dd>
+Returns true if the object could be deleted (is not used)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="findTask"><code>findTask() : <a href="Task.html">Task</a></code></dt>
+<dd>
+Tries to look-up a <a href="Task.html">Task</a> with a unique property given as parameter. Just one parameter has to be specified. Returns <code>nil</code> if <a href="Task.html">Task</a> with this property doesn't exists.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nID</code> : <code>integer</code> - an ID of the task to look-up
+</li>
+<li>
+<code>name</code> : <code>string</code> - a name of the task to look-up
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li><code><a href="Task.html">Task</a></code> - or <code>nil</code></li>
+</ul>
+</dd>
+<dt id="getID"><code>getID() : integer</code></dt>
+<dd>
+Returns unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getName"><code>getName() : string</code></dt>
+<dd>
+Returns the value of <a href="#Name">Name</a> property, name of this object
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getNote"><code>getNote() : string</code></dt>
+<dd>
+Returns the value of <a href="#Note">Note</a> property
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="onAdd"><code>onAdd()</code></dt>
+<dd>
+Store the newly created object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onDel"><code>onDel()</code></dt>
+<dd>
+Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onUpdate"><code>onUpdate()</code></dt>
+<dd>
+Save changes made to the object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="prepareTaskArray"><code>prepareTaskArray() : luaTable</code></dt>
+<dd>
+Returns array of tasks in this group of tasks. Returns objects of descendant classes (eg. <a href="TaskFT.html">TaskFT</a>). An optional parameter could be specified to filter only tasks of a given type, see <a href="codes.html#TaskSubType">TaskSubType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>pDataTable</code> : <code><a href="DataTable.html">DataTable</a></code> - database table the tasks should be based upon
+</li>
+<li>
+<code>nTaskSubTypeCode</code> : <code>integer</code> - <a href="codes.html#TaskSubType">TaskSubType</a> code to filter only tasks of a given type
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li><code>luaTable</code></li>
+</ul>
+</dd>
+<dt id="queryTaskGenerationStatusAll"><code>queryTaskGenerationStatusAll() : integer</code></dt>
+<dd>
+Re-reads tasks states from metabase and returns number of tasks for which theirs state has changed from <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a> to <a href="Task.html#isTaskGenerationStatusFinished">isTaskGenerationStatusFinished</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code> - number of tasks with state change</li>
+</ul>
+</dd>
+<dt id="runAllAndWaitForResults"><code>runAllAndWaitForResults()</code></dt>
+<dd>
+Starts all tasks (with not <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a>) in this group of tasks and waits till all of them have finished
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nTargetPlatform</code> : <code>integer</code> - <a href="codes.html#TargetPlatform">TargetPlatform</a> code
+</li>
+<li>
+<code>bForceRunFinished</code> : <code>boolean</code> - if true, forces all tasks to be run again even if they are already finished
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li>
+<code>integer</code> - number of launched tasks
+</li>
+</ul>
+</dd>
+<dt id="runAllAsync"><code>runAllAsync()</code></dt>
+<dd>
+Starts all tasks (with not <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a>) in this group of tasks in parallel threads and returns immediately
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nTargetPlatform</code> : <code>integer</code> - <a href="codes.html#TargetPlatform">TargetPlatform</a> code
+</li>
+<li>
+<code>bForceRunFinished</code> : <code>boolean</code> - if true, forces all tasks to be run again even if they are already finished
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li>
+<code>integer</code> - number of launched tasks
+</li>
+</ul>
+</dd>
+<dt id="setName"><code>setName( string )</code></dt>
+<dd>
+Sets the value of <a href="#Name">Name</a> property, name of this object (must be unique)
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - cannot be empty</li>
+</ul>
+</dd>
+<dt id="setNote"><code>setNote( string )</code></dt>
+<dd>
+Sets the value of <a href="#Note">Note</a> property
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="waitForResultsAll"><code>waitForResultsAll()</code></dt>
+<dd>
+Waits till all tasks with <a href="Task.html#isTaskGenerationStatusInProcess">isTaskGenerationStatusInProcess</a> have finished
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nSleepTime</code> : <code>integer</code> - time (in milliseconds) between two checks for change in metabase
+</li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

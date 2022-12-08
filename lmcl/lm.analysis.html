@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+lm.analysis
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><strong>lm.analysis</strong></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Namespace <code>
+lm.analysis
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+Interactive analysis related classes and functions<br/>
+
+<h2>Classes List</h2>
+<table class="property_list">
+No class defined.
+</table>
+
+<h2>Properties List</h2>
+<table class="property_list">
+No preperties defined.
+</table>
+
+<h2>Functions List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#addPCAColumns">addPCAColumns</a>&nbsp;()</td>
+<td class="summary">Runs a Principal component analysis and adds computed principal components as a <a href="DataColumn.html">DataColumn</a> into corresponding <a href="DataTable.html">DataTable</a></td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+
+</dl> <!-- property -->
+
+<h3 id="methods">Functions</h3>
+<dl class="method">
+
+<dt id="addPCAColumns"><code>addPCAColumns()</code></dt>
+<dd>
+Runs a Principal component analysis and adds computed principal components as a <a href="DataColumn.html">DataColumn</a> into corresponding <a href="DataTable.html">DataTable</a>
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pDataTable</code> : <code><a href="DataTable.html">DataTable</a></code> - database table the PCA should be based upon its column
+</li>
+<li>
+<code>dataColumnArray</code> : <code>table</code> - array of source database columns to run a PCA on them
+</li>
+<li>
+<code>nCount</code> : <code>integer</code> - number of Principal components to add (must be less than the number of source database columns)
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>baseName</code> : <code>string</code> - base name of newly created columns
+</li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+Hypothesis
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><strong>Hypothesis</strong></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Class <code>
+Hypothesis
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+A found pattern of an unspecified type<br/>
+inherits from <a href="LMWrap.html">LMWrap</a><br/>
+namespace: <a href="lm.tasks.results.html">lm.tasks.results</a><br/>
+
+<h2>Constructor</h2>
+
+<dl class="constructor">
+
+No constructor available. Objects of this class could not be instantiated from Lua scripts.
+
+</dl> <!-- constructor -->
+
+<h2>Properties List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="#ID">ID</a>&nbsp;</td>
+<td class="summary">Unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Order">Order</a>&nbsp;</td>
+<td class="summary">Order-index of this hypothesis</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Task">Task</a>&nbsp;</td>
+<td class="summary">the <a href="Task.html">Task</a>, this hypothesis belongs to</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Text">Text</a>&nbsp;</td>
+<td class="summary">Textual representation of this hypothesis</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#TextHTML">TextHTML</a>&nbsp;</td>
+<td class="summary">HTML representation of this hypothesis</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Weight">Weight</a>&nbsp;</td>
+<td class="summary">Property used for storing eg. primary interest measure value for LM ReverseMiner</td>
+</tr>
+</table>
+
+<h2>Methods List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#getID">getID</a>&nbsp;()</td>
+<td class="summary">Returns unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getOrder">getOrder</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Order">Order</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getTask">getTask</a>&nbsp;()</td>
+<td class="summary">Returns the <a href="Task.html">Task</a> this hypothesis belongs to, the value of <a href="#Task">Task</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getWeight">getWeight</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Weight">Weight</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#checkMutualInfluence">checkMutualInfluence</a>&nbsp;()</td>
+<td class="summary">Returns a type of relationship between hypothesis and given mutual influence, see <a href="codes.html#HypothesisMutualInfluenceRelationship">HypothesisMutualInfluenceRelationship codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#prepareFTPartialCedentArray">prepareFTPartialCedentArray</a>&nbsp;()</td>
+<td class="summary">Returns array of <a href="FTPartialCedent.html">FTPartialCedent</a>s, partial cedents of a given type in this hypothesis</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setOrder">setOrder</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Order">Order</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setWeight">setWeight</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Weight">Weight</a> property</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+<dt id="ID"><code>ID</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="Order"><code>Order</code>&nbsp;: integer</dt>
+<dd>
+Order-index of this hypothesis
+</dd>
+<dt id="Task"><code>Task</code>&nbsp; (read-only) : <a href="Task.html">Task</a></dt>
+<dd>
+the <a href="Task.html">Task</a>, this hypothesis belongs to
+</dd>
+<dt id="Text"><code>Text</code>&nbsp; (read-only) : string</dt>
+<dd>
+Textual representation of this hypothesis
+</dd>
+<dt id="TextHTML"><code>TextHTML</code>&nbsp; (read-only) : string</dt>
+<dd>
+HTML representation of this hypothesis
+</dd>
+<dt id="Weight"><code>Weight</code>&nbsp;: float</dt>
+<dd>
+Property used for storing eg. primary interest measure value for LM ReverseMiner
+</dd>
+
+</dl> <!-- property -->
+
+<h3><a name="methods"></a>Methods</h3>
+<dl class="method">
+
+<dt id="getID"><code>getID() : integer</code></dt>
+<dd>
+Returns unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getOrder"><code>getOrder() : integer</code></dt>
+<dd>
+Returns the value of <a href="#Order">Order</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getTask"><code>getTask() : <a href="Task.html">Task</a></code></dt>
+<dd>
+Returns the <a href="Task.html">Task</a> this hypothesis belongs to, the value of <a href="#Task">Task</a> property
+<h3>Returns</h3>
+<ul>
+<li><code><a href="Task.html">Task</a></code></li>
+</ul>
+</dd>
+<dt id="getWeight"><code>getWeight() : float</code></dt>
+<dd>
+Returns the value of <a href="#Weight">Weight</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+<dt id="checkMutualInfluence"><code>checkMutualInfluence() : integer</code></dt>
+<dd>
+Returns a type of relationship between hypothesis and given mutual influence, see <a href="codes.html#HypothesisMutualInfluenceRelationship">HypothesisMutualInfluenceRelationship codes</a>
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pMutualInfluence</code> : <code><a href="MutualInfluence.html">MutualInfluence</a></code> - the Mutual influence to which compare this hypothesis
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code> - relationship code, see <a href="codes.html#HypothesisMutualInfluenceRelationship">HypothesisMutualInfluenceRelationship codes</a></li>
+</ul>
+</dd>
+<dt id="prepareFTPartialCedentArray"><code>prepareFTPartialCedentArray() : luaTable</code></dt>
+<dd>
+Returns array of <a href="FTPartialCedent.html">FTPartialCedent</a>s, partial cedents of a given type in this hypothesis
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>nCedentTypeCode</code> : <code>integer</code> - <a href="codes.html#CedentType">CedentType</a> code to identify the whole cedent partial cedent array to prepare
+</li>
+<li>
+<code>nActionStateCode</code> : <code>integer</code> - <a href="codes.html#ActionState">ActionState</a> code to differentiate between stable and variable parst of antecedent and succedent in Ac4ft-Miner tasks
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li><code>luaTable</code></li>
+</ul>
+</dd>
+<dt id="setOrder"><code>setOrder( integer )</code></dt>
+<dd>
+Sets the value of <a href="#Order">Order</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setWeight"><code>setWeight( float )</code></dt>
+<dd>
+Sets the value of <a href="#Weight">Weight</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

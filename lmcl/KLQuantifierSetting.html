@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+KLQuantifierSetting
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><strong>KLQuantifierSetting</strong></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Class <code>
+KLQuantifierSetting
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+Set of parameters describing one KL-quantifier, a criterion on interest measure comparing it to a threshold value<br/>
+inherits from <a href="LMWrap.html">LMWrap</a><br/>
+namespace: <a href="lm.tasks.settings.html">lm.tasks.settings</a><br/>
+
+<h2>Constructor</h2>
+
+<dl class="constructor">
+
+<dt id="KLQuantifierSetting"><code>KLQuantifierSetting()</code></dt>
+<dd>
+Creates a new object of this class
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>pTaskKL</code> : <code><a href="TaskKL.html">TaskKL</a></code> - to which this quantifier setting belongs
+</li>
+<li>
+<code>nKLQuantifierTypeCode</code> : <code>integer</code> - <a href="codes.html#KLQuantifierType">KLQuantifierType</a> code to define this quantifier type
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nCompareTypeCode</code> : <code>integer</code> - <a href="codes.html#CompareType">CompareType</a> code to define relation between interest measure and threshold value
+</li>
+<li>
+<code>nKLQuantifierValueTypeCode</code> : <code>integer</code> - <a href="codes.html#KLQuantifierValueType">KLQuantifierValueType</a> code describing threshold value units
+</li>
+<li>
+<code>dThresholdValue</code> : <code>float</code> - universal threshold value (will be assigned to the proper parameter for the given quantifier type)
+</li>
+<li>
+<code>nOrder</code> : <code>integer</code> - position of the quantifier in the list of quantifiers of its task
+</li>
+</ul>
+</dd>
+
+</dl> <!-- constructor -->
+
+<h2>Properties List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="#FromCol">FromCol</a>&nbsp;</td>
+<td class="summary">Absolute or relative index of the leKL boundary of range for columns. Relative position is given by a negative number</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#FromRow">FromRow</a>&nbsp;</td>
+<td class="summary">Absolute or relative index of the leKL boundary of range for rows. Relative position is given by a negative number</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GenerationHintFlag">GenerationHintFlag</a>&nbsp;</td>
+<td class="summary">If there are available hints from the last task run</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GenerationHintValueMax">GenerationHintValueMax</a>&nbsp;</td>
+<td class="summary">Hint from the last task run - the highest found interest measure for this quantifier</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GenerationHintValueMin">GenerationHintValueMin</a>&nbsp;</td>
+<td class="summary">Hint from the last task run - the lowest found interest measure for this quantifier</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ID">ID</a>&nbsp;</td>
+<td class="summary">Unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#KendallTauBAbsValueFlag">KendallTauBAbsValueFlag</a>&nbsp;</td>
+<td class="summary">Whether the Kendall's coefficient TauB values should be in positive interval only, e.g. <0;1></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Note">Note</a>&nbsp;</td>
+<td class="summary">Additional note to this partial cedent</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Order">Order</a>&nbsp;</td>
+<td class="summary">Order-index of this partial cedent in array of partial cedent of its <a href="TaskKL.html">TaskKL</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RangeRelFlag">RangeRelFlag</a>&nbsp;</td>
+<td class="summary">If the range for rows and cols is specified in percentage form</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ThresholdValue">ThresholdValue</a>&nbsp;</td>
+<td class="summary">KL-Quantifiers threshold value</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ToCol">ToCol</a>&nbsp;</td>
+<td class="summary">Absolute or relative index of the right boundary of range for columns. Relative position is given by a negative number</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ToRow">ToRow</a>&nbsp;</td>
+<td class="summary">Absolute or relative index of the right boundary of range for rows. Relative position is given by a negative number</td>
+</tr>
+</table>
+
+<h2>Methods List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#canDel">canDel</a>&nbsp;()</td>
+<td class="summary">Returns true if the object could be deleted (is not used)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getCompareTypeCode">getCompareTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of comparation type for threshold value of aggregational quantifiers, see <a href="codes.html#CompareType">CompareType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getCompareTypeKey">getCompareTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of comparation type for threshold value of aggregational quantifiers</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getCompareTypeName">getCompareTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of comparation type for threshold value of aggregational quantifiers</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getFromCol">getFromCol</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#FromCol">FromCol</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getFromRow">getFromRow</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#FromRow">FromRow</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getGenerationHintValueMax">getGenerationHintValueMax</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#GenerationHintValueMax">GenerationHintValueMax</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getGenerationHintValueMin">getGenerationHintValueMin</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#GenerationHintValueMin">GenerationHintValueMin</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getID">getID</a>&nbsp;()</td>
+<td class="summary">Returns unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierTypeCode">getKLQuantifierTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of quantifier type for this quantifier, see <a href="codes.html#KLQuantifierType">KLQuantifierType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierTypeKey">getKLQuantifierTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of quantifier type for this quantifier</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierTypeName">getKLQuantifierTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of quantifier type for this quantifier</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierValueTypeCode">getKLQuantifierValueTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of absolute/relative type threshold value of aggregational quantifiers, see <a href="codes.html#KLQuantifierValueType">KLQuantifierValueType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierValueTypeKey">getKLQuantifierValueTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of absolute/relative type threshold value of aggregational quantifiers</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getKLQuantifierValueTypeName">getKLQuantifierValueTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of absolute/relative type threshold value of aggregational quantifiers</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getNote">getNote</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getOrder">getOrder</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Order">Order</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getTaskKL">getTaskKL</a>&nbsp;()</td>
+<td class="summary">Returns the <a href="TaskKL.html">TaskKL</a>, the task this quantifier setting belongs to</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getThresholdValue">getThresholdValue</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ThresholdValue">ThresholdValue</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getToCol">getToCol</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ToCol">ToCol</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getToRow">getToRow</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ToRow">ToRow</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#isGenerationHintFlag">isGenerationHintFlag</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#GenerationHintFlag">GenerationHintFlag</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#isKendallTauBAbsValueFlag">isKendallTauBAbsValueFlag</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#KendallTauBAbsValueFlag">KendallTauBAbsValueFlag</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onAdd">onAdd</a>&nbsp;()</td>
+<td class="summary">Store the newly created object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onDel">onDel</a>&nbsp;()</td>
+<td class="summary">Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onUpdate">onUpdate</a>&nbsp;()</td>
+<td class="summary">Save changes made to the object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setCompareTypeCode">setCompareTypeCode</a>&nbsp;()</td>
+<td class="summary">Sets code of comparation type for threshold value of aggregational quantifiers, see <a href="codes.html#CompareType">CompareType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setFromCol">setFromCol</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#FromCol">FromCol</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setFromRow">setFromRow</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#FromRow">FromRow</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setKendallTauBAbsValueFlag">setKendallTauBAbsValueFlag</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#KendallTauBAbsValueFlag">KendallTauBAbsValueFlag</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setKLQuantifierTypeCode">setKLQuantifierTypeCode</a>&nbsp;()</td>
+<td class="summary">Sets code of quantifier type for this quantifier, see <a href="codes.html#KLQuantifierType">KLQuantifierType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setKLQuantifierValueTypeCode">setKLQuantifierValueTypeCode</a>&nbsp;()</td>
+<td class="summary">Sets code of absolute/relative type threshold value of aggregational quantifiers, see <a href="codes.html#KLQuantifierValueType">KLQuantifierValueType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setNote">setNote</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setOrder">setOrder</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Order">Order</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setThresholdValue">setThresholdValue</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ThresholdValue">ThresholdValue</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setToCol">setToCol</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ToCol">ToCol</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setToRow">setToRow</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ToRow">ToRow</a> property</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+<dt id="FromCol"><code>FromCol</code>&nbsp;: integer</dt>
+<dd>
+Absolute or relative index of the leKL boundary of range for columns. Relative position is given by a negative number
+</dd>
+<dt id="FromRow"><code>FromRow</code>&nbsp;: integer</dt>
+<dd>
+Absolute or relative index of the leKL boundary of range for rows. Relative position is given by a negative number
+</dd>
+<dt id="GenerationHintFlag"><code>GenerationHintFlag</code>&nbsp; (read-only) : boolean</dt>
+<dd>
+If there are available hints from the last task run
+</dd>
+<dt id="GenerationHintValueMax"><code>GenerationHintValueMax</code>&nbsp; (read-only) : float</dt>
+<dd>
+Hint from the last task run - the highest found interest measure for this quantifier
+</dd>
+<dt id="GenerationHintValueMin"><code>GenerationHintValueMin</code>&nbsp; (read-only) : float</dt>
+<dd>
+Hint from the last task run - the lowest found interest measure for this quantifier
+</dd>
+<dt id="ID"><code>ID</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="KendallTauBAbsValueFlag"><code>KendallTauBAbsValueFlag</code>&nbsp;: boolean</dt>
+<dd>
+Whether the Kendall's coefficient TauB values should be in positive interval only, e.g. <0;1>
+</dd>
+<dt id="Note"><code>Note</code>&nbsp;: string</dt>
+<dd>
+Additional note to this partial cedent
+</dd>
+<dt id="Order"><code>Order</code>&nbsp;: integer</dt>
+<dd>
+Order-index of this partial cedent in array of partial cedent of its <a href="TaskKL.html">TaskKL</a>
+</dd>
+<dt id="RangeRelFlag"><code>RangeRelFlag</code>&nbsp; (read-only) : boolean</dt>
+<dd>
+If the range for rows and cols is specified in percentage form
+</dd>
+<dt id="ThresholdValue"><code>ThresholdValue</code>&nbsp;: float</dt>
+<dd>
+KL-Quantifiers threshold value
+</dd>
+<dt id="ToCol"><code>ToCol</code>&nbsp;: integer</dt>
+<dd>
+Absolute or relative index of the right boundary of range for columns. Relative position is given by a negative number
+</dd>
+<dt id="ToRow"><code>ToRow</code>&nbsp;: integer</dt>
+<dd>
+Absolute or relative index of the right boundary of range for rows. Relative position is given by a negative number
+</dd>
+
+</dl> <!-- property -->
+
+<h3><a name="methods"></a>Methods</h3>
+<dl class="method">
+
+<dt id="canDel"><code>canDel() : boolean</code></dt>
+<dd>
+Returns true if the object could be deleted (is not used)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="getCompareTypeCode"><code>getCompareTypeCode() : integer</code></dt>
+<dd>
+Returns code of comparation type for threshold value of aggregational quantifiers, see <a href="codes.html#CompareType">CompareType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getCompareTypeKey"><code>getCompareTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of comparation type for threshold value of aggregational quantifiers
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getCompareTypeName"><code>getCompareTypeName() : string</code></dt>
+<dd>
+Returns string representation of comparation type for threshold value of aggregational quantifiers
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getFromCol"><code>getFromCol() : integer</code></dt>
+<dd>
+Returns the value of <a href="#FromCol">FromCol</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getFromRow"><code>getFromRow() : integer</code></dt>
+<dd>
+Returns the value of <a href="#FromRow">FromRow</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getGenerationHintValueMax"><code>getGenerationHintValueMax() : float</code></dt>
+<dd>
+Returns the value of <a href="#GenerationHintValueMax">GenerationHintValueMax</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+<dt id="getGenerationHintValueMin"><code>getGenerationHintValueMin() : float</code></dt>
+<dd>
+Returns the value of <a href="#GenerationHintValueMin">GenerationHintValueMin</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+<dt id="getID"><code>getID() : integer</code></dt>
+<dd>
+Returns unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierTypeCode"><code>getKLQuantifierTypeCode() : integer</code></dt>
+<dd>
+Returns code of quantifier type for this quantifier, see <a href="codes.html#KLQuantifierType">KLQuantifierType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierTypeKey"><code>getKLQuantifierTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of quantifier type for this quantifier
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierTypeName"><code>getKLQuantifierTypeName() : string</code></dt>
+<dd>
+Returns string representation of quantifier type for this quantifier
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierValueTypeCode"><code>getKLQuantifierValueTypeCode() : integer</code></dt>
+<dd>
+Returns code of absolute/relative type threshold value of aggregational quantifiers, see <a href="codes.html#KLQuantifierValueType">KLQuantifierValueType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierValueTypeKey"><code>getKLQuantifierValueTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of absolute/relative type threshold value of aggregational quantifiers
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getKLQuantifierValueTypeName"><code>getKLQuantifierValueTypeName() : string</code></dt>
+<dd>
+Returns string representation of absolute/relative type threshold value of aggregational quantifiers
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getNote"><code>getNote() : string</code></dt>
+<dd>
+Returns the value of <a href="#Note">Note</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getOrder"><code>getOrder() : integer</code></dt>
+<dd>
+Returns the value of <a href="#Order">Order</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getTaskKL"><code>getTaskKL() : <a href="TaskKL.html">TaskKL</a></code></dt>
+<dd>
+Returns the <a href="TaskKL.html">TaskKL</a>, the task this quantifier setting belongs to
+<h3>Returns</h3>
+<ul>
+<li><code><a href="TaskKL.html">TaskKL</a></code></li>
+</ul>
+</dd>
+<dt id="getThresholdValue"><code>getThresholdValue() : float</code></dt>
+<dd>
+Returns the value of <a href="#ThresholdValue">ThresholdValue</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+<dt id="getToCol"><code>getToCol() : integer</code></dt>
+<dd>
+Returns the value of <a href="#ToCol">ToCol</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getToRow"><code>getToRow() : integer</code></dt>
+<dd>
+Returns the value of <a href="#ToRow">ToRow</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="isGenerationHintFlag"><code>isGenerationHintFlag() : boolean</code></dt>
+<dd>
+Returns the value of <a href="#GenerationHintFlag">GenerationHintFlag</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="isKendallTauBAbsValueFlag"><code>isKendallTauBAbsValueFlag() : boolean</code></dt>
+<dd>
+Returns the value of <a href="#KendallTauBAbsValueFlag">KendallTauBAbsValueFlag</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="onAdd"><code>onAdd()</code></dt>
+<dd>
+Store the newly created object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onDel"><code>onDel()</code></dt>
+<dd>
+Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onUpdate"><code>onUpdate()</code></dt>
+<dd>
+Save changes made to the object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="setCompareTypeCode"><code>setCompareTypeCode( integer )</code></dt>
+<dd>
+Sets code of comparation type for threshold value of aggregational quantifiers, see <a href="codes.html#CompareType">CompareType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setFromCol"><code>setFromCol( integer )</code></dt>
+<dd>
+Sets the value of <a href="#FromCol">FromCol</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setFromRow"><code>setFromRow( integer )</code></dt>
+<dd>
+Sets the value of <a href="#FromRow">FromRow</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setKendallTauBAbsValueFlag"><code>setKendallTauBAbsValueFlag( boolean )</code></dt>
+<dd>
+Sets the value of <a href="#KendallTauBAbsValueFlag">KendallTauBAbsValueFlag</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="setKLQuantifierTypeCode"><code>setKLQuantifierTypeCode( integer )</code></dt>
+<dd>
+Sets code of quantifier type for this quantifier, see <a href="codes.html#KLQuantifierType">KLQuantifierType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setKLQuantifierValueTypeCode"><code>setKLQuantifierValueTypeCode( integer )</code></dt>
+<dd>
+Sets code of absolute/relative type threshold value of aggregational quantifiers, see <a href="codes.html#KLQuantifierValueType">KLQuantifierValueType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setNote"><code>setNote( string )</code></dt>
+<dd>
+Sets the value of <a href="#Note">Note</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="setOrder"><code>setOrder( integer )</code></dt>
+<dd>
+Sets the value of <a href="#Order">Order</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setThresholdValue"><code>setThresholdValue( float )</code></dt>
+<dd>
+Sets the value of <a href="#ThresholdValue">ThresholdValue</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>float</code></li>
+</ul>
+</dd>
+<dt id="setToCol"><code>setToCol( integer )</code></dt>
+<dd>
+Sets the value of <a href="#ToCol">ToCol</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setToRow"><code>setToRow( integer )</code></dt>
+<dd>
+Sets the value of <a href="#ToRow">ToRow</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+Attribute
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><strong>Attribute</strong></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Class <code>
+Attribute
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+LISp-Miner data-mining Attribute of an unspecified type<br/>
+inherits from <a href="LMWrapName.html">LMWrapName</a><br/>
+namespace: <a href="lm.prepro.html">lm.prepro</a><br/>
+
+<h2>Constructor</h2>
+
+<dl class="constructor">
+
+<dt id="Attribute"><code>Attribute()</code></dt>
+<dd>
+Creates a new object of this class
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>name</code> : <code>string</code> - unique name for the new  of Attributes
+</li>
+<li>
+<code>pAttributeGroup</code> : <code><a href="AttributeGroup.html">AttributeGroup</a></code> - parent group of attributes
+</li>
+<li>
+<code>pDataColumn</code> : <code><a href="DataColumn.html">DataColumn</a></code> - database table column this attribute is based upon
+</li>
+</ul>
+</dd>
+
+</dl> <!-- constructor -->
+
+<h2>Properties List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="#CategoryCount">CategoryCount</a>&nbsp;</td>
+<td class="summary">Number of defined categories</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CategoryCountAll">CategoryCountAll</a>&nbsp;</td>
+<td class="summary">Number of defined categories, including X-Category</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DataColumn">DataColumn</a>&nbsp;</td>
+<td class="summary">the <a href="DataColumn.html">DataColumn</a>, database column this attribute is build upon</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DataTable">DataTable</a>&nbsp;</td>
+<td class="summary">the <a href="DataTable.html">DataTable</a>, database table this attribute is based on</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ID">ID</a>&nbsp;</td>
+<td class="summary">Unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ItemShift">ItemShift</a>&nbsp;</td>
+<td class="summary">Positive or negative shift relative to data row from which it reads values to construct bit-strings for this attribute</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Name">Name</a>&nbsp;</td>
+<td class="summary">Unique name of this object. Cannot be empty.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#Note">Note</a>&nbsp;</td>
+<td class="summary">Text comment to this object (up to 255 characters)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ParentAttributeGroup">ParentAttributeGroup</a>&nbsp;</td>
+<td class="summary"><a href="AttributeGroup.html">AttributeGroup</a>, group of attributes this attribute belongs to</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ShortName">ShortName</a>&nbsp;</td>
+<td class="summary">A shorter variant of attribute name</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ShowNameFlag">ShowNameFlag</a>&nbsp;</td>
+<td class="summary">If the name of attribute should be included into literal string in interpretation</td>
+</tr>
+</table>
+
+<h2>Methods List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#autoCreateBinary">autoCreateBinary</a>&nbsp;()</td>
+<td class="summary">Automatic creation of categories as two intervals on the left and right of a threshold value</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#autoCreateEnumeration">autoCreateEnumeration</a>&nbsp;()</td>
+<td class="summary">Automatic creation of categories as an enumeration of all values in the underlying database column. Values already present in the X-category are ignored.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#autoCreateIntervalEquidistant">autoCreateIntervalEquidistant</a>&nbsp;()</td>
+<td class="summary">Automatic creation of categories as intervals of the same length</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#autoCreateIntervalEquifrequency">autoCreateIntervalEquifrequency</a>&nbsp;()</td>
+<td class="summary">Automatic creation of categories as intervals with hopefully the same frequency</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#calcCategoryFrequencies">calcCategoryFrequencies</a>&nbsp;()</td>
+<td class="summary">Pre-calculates frequencies for all categories. Frequencies are otherwise calculated ad-hod in a function requesting frequency of a category as its input.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#canDel">canDel</a>&nbsp;()</td>
+<td class="summary">Returns true if the object could be deleted (is not used)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#canDelCategoryAll">canDelCategoryAll</a>&nbsp;()</td>
+<td class="summary">Returns true if all <a href="Category.html">Category</a>'ies of this attribute could be deleted (no one is used)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#clone">clone</a>&nbsp;()</td>
+<td class="summary">Creates a clone (an exact copy) of this attribute</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#findCategory">findCategory</a>&nbsp;()</td>
+<td class="summary">Tries to look-up a <a href="Category.html">Category</a> with a unique property given as parameter. Just one parameter has to be specified. Returns <code>nil</code> if <a href="Category.html">Category</a> with this property doesn't exists.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getActionTypeCode">getActionTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of if values in underlying database column could change (ie. not eg. the birth date), see <a href="codes.html#ActionType">ActionType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getActionTypeKey">getActionTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of if values in underlying database column could change (ie. not eg. the birth date)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getActionTypeName">getActionTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of if values in underlying database column could change (ie. not eg. the birth date)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getCategoryCount">getCategoryCount</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#CategoryCount">CategoryCount</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getCategoryCountAll">getCategoryCountAll</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#CategoryCountAll">CategoryCountAll</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDataColumn">getDataColumn</a>&nbsp;()</td>
+<td class="summary">Returns the <a href="DataColumn.html">DataColumn</a> this attribute is build upon, the value of <a href="#DataColumn">DataColumn</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDataCharacterTypeCode">getDataCharacterTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of if values in underlying database column are of type nominal, ordinal or cardinal, see <a href="codes.html#DataCharacterType">DataCharacterType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDataCharacterTypeKey">getDataCharacterTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of if values in underlying database column are of type nominal, ordinal or cardinal</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDataCharacterTypeName">getDataCharacterTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of if values in underlying database column are of type nominal, ordinal or cardinal</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getDataTable">getDataTable</a>&nbsp;()</td>
+<td class="summary">Returns the <a href="DataTable.html">DataTable</a> this attribute is based on, the value of <a href="#DataTable">DataTable</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getID">getID</a>&nbsp;()</td>
+<td class="summary">Returns unique identifier (primary key) of the object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getItemShift">getItemShift</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ItemShift">ItemShift</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getLiteralName">getLiteralName</a>&nbsp;()</td>
+<td class="summary">Returns name abbreviation used in intepretation of results</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getName">getName</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Name">Name</a> property, name of this object</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getNote">getNote</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getParentAttributeGroup">getParentAttributeGroup</a>&nbsp;()</td>
+<td class="summary">Returns the parent <a href="AttributeGroup.html">AttributeGroup</a> this attribute belongs to, the value of <a href="#ParentAttributeGroup">ParentAttributeGroup</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getShortName">getShortName</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ShortName">ShortName</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getValueSubTypeCode">getValueSubTypeCode</a>&nbsp;()</td>
+<td class="summary">Returns code of data-type of values in database column, see <a href="codes.html#ValueSubType">ValueSubType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getValueSubTypeKey">getValueSubTypeKey</a>&nbsp;()</td>
+<td class="summary">Returns unique string key of data-type of values in database column</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getValueSubTypeName">getValueSubTypeName</a>&nbsp;()</td>
+<td class="summary">Returns string representation of data-type of values in database column</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getXCategory">getXCategory</a>&nbsp;()</td>
+<td class="summary">Returns optional <a href="Category.html">Category</a> representing missing or invalid values</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#hasBitStringsReady">hasBitStringsReady</a>&nbsp;()</td>
+<td class="summary">Returns true when the bit-strings for all categories are prepared</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#hasXCategory">hasXCategory</a>&nbsp;()</td>
+<td class="summary">Returns true when this attribute has X-Category defined</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#isShowNameFlag">isShowNameFlag</a>&nbsp;()</td>
+<td class="summary">Returns the value of <a href="#ShowNameFlag">ShowNameFlag</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onAdd">onAdd</a>&nbsp;()</td>
+<td class="summary">Store the newly created object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onDel">onDel</a>&nbsp;()</td>
+<td class="summary">Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#onUpdate">onUpdate</a>&nbsp;()</td>
+<td class="summary">Save changes made to the object into metabase</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#prepareCategoryArray">prepareCategoryArray</a>&nbsp;()</td>
+<td class="summary">Returns array of <a href="Category.html">Category</a>'ies (categories in this attribute)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#resetHasBitStringsReady">resetHasBitStringsReady</a>&nbsp;()</td>
+<td class="summary">resets the <a href="hasBitStringsReady.html">hasBitStringsReady</a> flag</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setActionTypeCode">setActionTypeCode</a>&nbsp;()</td>
+<td class="summary">Sets code of if values in underlying database column could change (ie. not eg. the birth date), see <a href="codes.html#ActionType">ActionType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setDataCharacterTypeCode">setDataCharacterTypeCode</a>&nbsp;()</td>
+<td class="summary">Sets code of if values in underlying database column are of type nominal, ordinal or cardinal, see <a href="codes.html#DataCharacterType">DataCharacterType codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setItemShift">setItemShift</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ItemShift">ItemShift</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setName">setName</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Name">Name</a> property, name of this object (must be unique)</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setNote">setNote</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#Note">Note</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setParentAttributeGroup">setParentAttributeGroup</a>&nbsp;()</td>
+<td class="summary">Sets the parent <a href="AttributeGroup.html">AttributeGroup</a> this attribute belongs to, the value of <a href="#ParentAttributeGroup">ParentAttributeGroup</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setShortName">setShortName</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ShortName">ShortName</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setShowNameFlag">setShowNameFlag</a>&nbsp;()</td>
+<td class="summary">Sets the value of <a href="#ShowNameFlag">ShowNameFlag</a> property</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setXCategory">setXCategory</a>&nbsp;()</td>
+<td class="summary">Sets optional <a href="Category.html">Category</a> representing missing or invalid values</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+<dt id="CategoryCount"><code>CategoryCount</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Number of defined categories
+</dd>
+<dt id="CategoryCountAll"><code>CategoryCountAll</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Number of defined categories, including X-Category
+</dd>
+<dt id="DataColumn"><code>DataColumn</code>&nbsp; (read-only) : <a href="DataColumn.html">DataColumn</a></dt>
+<dd>
+the <a href="DataColumn.html">DataColumn</a>, database column this attribute is build upon
+</dd>
+<dt id="DataTable"><code>DataTable</code>&nbsp; (read-only) : <a href="DataTable.html">DataTable</a></dt>
+<dd>
+the <a href="DataTable.html">DataTable</a>, database table this attribute is based on
+</dd>
+<dt id="ID"><code>ID</code>&nbsp; (read-only) : integer</dt>
+<dd>
+Unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="ItemShift"><code>ItemShift</code>&nbsp;: integer</dt>
+<dd>
+Positive or negative shift relative to data row from which it reads values to construct bit-strings for this attribute
+</dd>
+<dt id="Name"><code>Name</code>&nbsp;: string</dt>
+<dd>
+Unique name of this object. Cannot be empty.
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+</dd>
+<dt id="Note"><code>Note</code>&nbsp;: string</dt>
+<dd>
+Text comment to this object (up to 255 characters)
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+</dd>
+<dt id="ParentAttributeGroup"><code>ParentAttributeGroup</code>&nbsp; (read-only) : -</dt>
+<dd>
+<a href="AttributeGroup.html">AttributeGroup</a>, group of attributes this attribute belongs to
+</dd>
+<dt id="ShortName"><code>ShortName</code>&nbsp;: string</dt>
+<dd>
+A shorter variant of attribute name
+</dd>
+<dt id="ShowNameFlag"><code>ShowNameFlag</code>&nbsp;: boolean</dt>
+<dd>
+If the name of attribute should be included into literal string in interpretation
+</dd>
+
+</dl> <!-- property -->
+
+<h3><a name="methods"></a>Methods</h3>
+<dl class="method">
+
+<dt id="autoCreateBinary"><code>autoCreateBinary()</code></dt>
+<dd>
+Automatic creation of categories as two intervals on the left and right of a threshold value
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Obligatory named parameters</h3>
+<ul>
+<li>
+<code>valueThrehold</code> : <code>same type as its attribute</code> - threshold value to create intervals around it
+</li>
+<li>
+<code>nFirstIntervalRightBracketTypeCode</code> : <code>integer</code> - <a href="codes.html#CedentType">BracketType</a> code to identify the right closing bracket of the first interval (the left closing bracket of the second interval will be set to opposite)
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>bMnemonicNames</code> : <code>boolean</code> - if true, mnemonic names as 'low', 'higher' are used as intervals descriptions
+</li>
+<li>
+<code>categoryNames</code> : <code>string</code> - list of user-specified category names, separated by semicolon '&#x3B'
+</li>
+</ul>
+</dd>
+<dt id="autoCreateEnumeration"><code>autoCreateEnumeration()</code></dt>
+<dd>
+Automatic creation of categories as an enumeration of all values in the underlying database column. Values already present in the X-category are ignored.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nCount</code> : <code>integer</code> - an upper limit for number of categories to be created, only categories for up to the nCount most frequent values are created
+</li>
+<li>
+<code>nFrequencyMin</code> : <code>integer</code> - values with frequency below this value are ignored and no category is created for them
+</li>
+<li>
+<code>nFrequencyMax</code> : <code>integer</code> - values with frequency above this value are ignored and no category is created for them
+</li>
+<li>
+<code>bCreateCategoryOthers</code> : <code>boolean</code> - if true a category named 'Others' will be create to include the rest values for which no special category was created
+</li>
+<li>
+<code>categoryNames</code> : <code>string</code> - list of user-specified category names, separated by semicolon '&#x3B'
+</li>
+</ul>
+</dd>
+<dt id="autoCreateIntervalEquidistant"><code>autoCreateIntervalEquidistant()</code></dt>
+<dd>
+Automatic creation of categories as intervals of the same length
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>dFrom</code> : <code>float</code> - starting value for intervals
+</li>
+<li>
+<code>dTo</code> : <code>float</code> - ending value for intervals
+</li>
+<li>
+<code>dLength</code> : <code>float</code> - length of intervals
+</li>
+<li>
+<code>nCount</code> : <code>integer</code> - number of intervals (to compute length automatically if no parameter dLength is specified)
+</li>
+<li>
+<code>bCloseLeft</code> : <code>boolean</code> - sharp closing of intervals on the left
+</li>
+<li>
+<code>bMnemonicNames</code> : <code>boolean</code> - if true, mnemonic names as 'ed_1', 'ed_2' are used as intervals descriptions
+</li>
+<li>
+<code>categoryNames</code> : <code>string</code> - list of user-specified category names, separated by semicolon '&#x3B'
+</li>
+</ul>
+</dd>
+<dt id="autoCreateIntervalEquifrequency"><code>autoCreateIntervalEquifrequency()</code></dt>
+<dd>
+Automatic creation of categories as intervals with hopefully the same frequency
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>dFrom</code> : <code>float</code> - starting value for intervals
+</li>
+<li>
+<code>dTo</code> : <code>float</code> - ending value for intervals
+</li>
+<li>
+<code>nCount</code> : <code>integer</code> - number of intervals to create
+</li>
+<li>
+<code>bMnemonicNames</code> : <code>boolean</code> - if true, mnemonic names as 'low', 'higher' are used as intervals descriptions
+</li>
+<li>
+<code>categoryNames</code> : <code>string</code> - list of user-specified category names, separated by semicolon '&#x3B'
+</li>
+</ul>
+</dd>
+<dt id="calcCategoryFrequencies"><code>calcCategoryFrequencies()</code></dt>
+<dd>
+Pre-calculates frequencies for all categories. Frequencies are otherwise calculated ad-hod in a function requesting frequency of a category as its input.
+<h3>Returns</h3>
+<ul>
+<li>
+<code>boolean</code> - true, if successfull
+</li>
+</ul>
+</dd>
+<dt id="canDel"><code>canDel() : boolean</code></dt>
+<dd>
+Returns true if the object could be deleted (is not used)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="canDelCategoryAll"><code>canDelCategoryAll() : boolean</code></dt>
+<dd>
+Returns true if all <a href="Category.html">Category</a>'ies of this attribute could be deleted (no one is used)
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="clone"><code>clone() : <a href="Attribute.html">Attribute</a></code></dt>
+<dd>
+Creates a clone (an exact copy) of this attribute
+<h3>Returns</h3>
+<ul>
+<li><code><a href="Attribute.html">Attribute</a></code> - cloned attribute</li>
+</ul>
+</dd>
+<dt id="findCategory"><code>findCategory() : <a href="Category.html">Category</a></code></dt>
+<dd>
+Tries to look-up a <a href="Category.html">Category</a> with a unique property given as parameter. Just one parameter has to be specified. Returns <code>nil</code> if <a href="Category.html">Category</a> with this property doesn't exists.
+<h3>Parameters</h3>
+<ul>
+<li>
+<code>luaTable</code> - to store named parameters
+</li>
+</ul>
+<h3>Optional named parameters</h3>
+<ul>
+<li>
+<code>nID</code> : <code>integer</code> - an ID of the category to look-up
+</li>
+<li>
+<code>name</code> : <code>string</code> - a name of the category to look-up
+</li>
+</ul>
+<h3>Returns</h3>
+<ul>
+<li><code><a href="Category.html">Category</a></code> - or <code>nil</code></li>
+</ul>
+</dd>
+<dt id="getActionTypeCode"><code>getActionTypeCode() : integer</code></dt>
+<dd>
+Returns code of if values in underlying database column could change (ie. not eg. the birth date), see <a href="codes.html#ActionType">ActionType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getActionTypeKey"><code>getActionTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of if values in underlying database column could change (ie. not eg. the birth date)
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getActionTypeName"><code>getActionTypeName() : string</code></dt>
+<dd>
+Returns string representation of if values in underlying database column could change (ie. not eg. the birth date)
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getCategoryCount"><code>getCategoryCount() : integer</code></dt>
+<dd>
+Returns the value of <a href="#CategoryCount">CategoryCount</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getCategoryCountAll"><code>getCategoryCountAll() : integer</code></dt>
+<dd>
+Returns the value of <a href="#CategoryCountAll">CategoryCountAll</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getDataColumn"><code>getDataColumn() : <a href="DataColumn.html">DataColumn</a></code></dt>
+<dd>
+Returns the <a href="DataColumn.html">DataColumn</a> this attribute is build upon, the value of <a href="#DataColumn">DataColumn</a> property
+<h3>Returns</h3>
+<ul>
+<li><code><a href="DataColumn.html">DataColumn</a></code></li>
+</ul>
+</dd>
+<dt id="getDataCharacterTypeCode"><code>getDataCharacterTypeCode() : integer</code></dt>
+<dd>
+Returns code of if values in underlying database column are of type nominal, ordinal or cardinal, see <a href="codes.html#DataCharacterType">DataCharacterType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getDataCharacterTypeKey"><code>getDataCharacterTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of if values in underlying database column are of type nominal, ordinal or cardinal
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getDataCharacterTypeName"><code>getDataCharacterTypeName() : string</code></dt>
+<dd>
+Returns string representation of if values in underlying database column are of type nominal, ordinal or cardinal
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getDataTable"><code>getDataTable() : <a href="DataTable.html">DataTable</a></code></dt>
+<dd>
+Returns the <a href="DataTable.html">DataTable</a> this attribute is based on, the value of <a href="#DataTable">DataTable</a> property
+<h3>Returns</h3>
+<ul>
+<li><code><a href="DataTable.html">DataTable</a></code></li>
+</ul>
+</dd>
+<dt id="getID"><code>getID() : integer</code></dt>
+<dd>
+Returns unique identifier (primary key) of the object
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getItemShift"><code>getItemShift() : integer</code></dt>
+<dd>
+Returns the value of <a href="#ItemShift">ItemShift</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getLiteralName"><code>getLiteralName() : string</code></dt>
+<dd>
+Returns name abbreviation used in intepretation of results
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getName"><code>getName() : string</code></dt>
+<dd>
+Returns the value of <a href="#Name">Name</a> property, name of this object
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getNote"><code>getNote() : string</code></dt>
+<dd>
+Returns the value of <a href="#Note">Note</a> property
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getParentAttributeGroup"><code>getParentAttributeGroup() : <a href="AttributeGroup.html">AttributeGroup</a></code></dt>
+<dd>
+Returns the parent <a href="AttributeGroup.html">AttributeGroup</a> this attribute belongs to, the value of <a href="#ParentAttributeGroup">ParentAttributeGroup</a> property
+<h3>Returns</h3>
+<ul>
+<li><code><a href="AttributeGroup.html">AttributeGroup</a></code></li>
+</ul>
+</dd>
+<dt id="getShortName"><code>getShortName() : string</code></dt>
+<dd>
+Returns the value of <a href="#ShortName">ShortName</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getValueSubTypeCode"><code>getValueSubTypeCode() : integer</code></dt>
+<dd>
+Returns code of data-type of values in database column, see <a href="codes.html#ValueSubType">ValueSubType codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getValueSubTypeKey"><code>getValueSubTypeKey() : string</code></dt>
+<dd>
+Returns unique string key of data-type of values in database column
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getValueSubTypeName"><code>getValueSubTypeName() : string</code></dt>
+<dd>
+Returns string representation of data-type of values in database column
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getXCategory"><code>getXCategory() : <a href="Category.html">Category</a></code></dt>
+<dd>
+Returns optional <a href="Category.html">Category</a> representing missing or invalid values
+<h3>Returns</h3>
+<ul>
+<li><code><a href="Category.html">Category</a></code></li>
+</ul>
+</dd>
+<dt id="hasBitStringsReady"><code>hasBitStringsReady() : boolean</code></dt>
+<dd>
+Returns true when the bit-strings for all categories are prepared
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="hasXCategory"><code>hasXCategory() : boolean</code></dt>
+<dd>
+Returns true when this attribute has X-Category defined
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="isShowNameFlag"><code>isShowNameFlag() : boolean</code></dt>
+<dd>
+Returns the value of <a href="#ShowNameFlag">ShowNameFlag</a> property
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="onAdd"><code>onAdd()</code></dt>
+<dd>
+Store the newly created object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onDel"><code>onDel()</code></dt>
+<dd>
+Delete the object from metabase (fails if <a href="#canDel">canDel</a> returns false)
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="onUpdate"><code>onUpdate()</code></dt>
+<dd>
+Save changes made to the object into metabase
+<br>Intherited from: <a href="LMWrap.html">LMWrap</a>
+</dd>
+<dt id="prepareCategoryArray"><code>prepareCategoryArray() : luaTable</code></dt>
+<dd>
+Returns array of <a href="Category.html">Category</a>'ies (categories in this attribute)
+<h3>Returns</h3>
+<ul>
+<li><code>luaTable</code></li>
+</ul>
+</dd>
+<dt id="resetHasBitStringsReady"><code>resetHasBitStringsReady()</code></dt>
+<dd>
+resets the <a href="hasBitStringsReady.html">hasBitStringsReady</a> flag
+</dd>
+<dt id="setActionTypeCode"><code>setActionTypeCode( integer )</code></dt>
+<dd>
+Sets code of if values in underlying database column could change (ie. not eg. the birth date), see <a href="codes.html#ActionType">ActionType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setDataCharacterTypeCode"><code>setDataCharacterTypeCode( integer )</code></dt>
+<dd>
+Sets code of if values in underlying database column are of type nominal, ordinal or cardinal, see <a href="codes.html#DataCharacterType">DataCharacterType codes</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setItemShift"><code>setItemShift( integer )</code></dt>
+<dd>
+Sets the value of <a href="#ItemShift">ItemShift</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="setName"><code>setName( string )</code></dt>
+<dd>
+Sets the value of <a href="#Name">Name</a> property, name of this object (must be unique)
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - cannot be empty</li>
+</ul>
+</dd>
+<dt id="setNote"><code>setNote( string )</code></dt>
+<dd>
+Sets the value of <a href="#Note">Note</a> property
+<br>Intherited from: <a href="LMWrapName.html">LMWrapName</a>
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="setParentAttributeGroup"><code>setParentAttributeGroup( <a href="AttributeGroup.html">AttributeGroup</a> )</code></dt>
+<dd>
+Sets the parent <a href="AttributeGroup.html">AttributeGroup</a> this attribute belongs to, the value of <a href="#ParentAttributeGroup">ParentAttributeGroup</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code><a href="AttributeGroup.html">AttributeGroup</a></code></li>
+</ul>
+</dd>
+<dt id="setShortName"><code>setShortName( string )</code></dt>
+<dd>
+Sets the value of <a href="#ShortName">ShortName</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - cannot be empty</li>
+</ul>
+</dd>
+<dt id="setShowNameFlag"><code>setShowNameFlag( boolean )</code></dt>
+<dd>
+Sets the value of <a href="#ShowNameFlag">ShowNameFlag</a> property
+<h3>Parameters</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="setXCategory"><code>setXCategory( <a href="Category.html">Category</a> )</code></dt>
+<dd>
+Sets optional <a href="Category.html">Category</a> representing missing or invalid values
+<h3>Parameters</h3>
+<ul>
+<li><code><a href="Category.html">Category</a></code></li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

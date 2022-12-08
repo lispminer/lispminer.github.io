@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>EverMinerSimple Demo Example -- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_single">
+
+<h1>EverMinerSimple Demo Example</h1>
+
+A more complex example of (simplified) data mining automation is provided.
+
+<p>
+
+The EverMiner is a research goal of full-scale knowledge-data-discovery
+automation. It is based on general phases of KDD and on research in
+observational logic operations (namely of deduction and inferring new
+knowledge). It is supposed to formulate reasonable analytical tasks to look-up
+interesting and not yet known patterns in analyzed data.
+
+<p>
+
+One import prerequisite for automation is a high-level language to control
+data preprocessing, analytical tasks settings and to provide means for
+digesting mined results and for inferring new domain knowledge. Thus, the
+LISp-Miner Control Language main goal is to provide such a tool.
+
+<p>
+
+The EverMinerSimple demo is a really simplified version of the EverMiner, which
+only purpose is to proof that the LMCL is really able to automate the KDD
+process.
+
+<p>
+
+The EverMinerSimple implements only one iteration of the main phases with no
+new domain knowledge from results inferred yet. But it already incorporates
+the inner cycle of fine-tuning tasks parameters to obtain an acceptable number
+of patterns in results (this number is an input parameter -- see below).
+
+<p>
+
+There is a conceptual diagram of EverMinerSimple steps in the picture 1.
+
+<div id="imagebox">
+<img src="img/ems.concept.png" width="800px"><br>
+Pic. 1 -- EverMinerSimple conceptual diagram<br>
+</div>
+
+The main EverMinerSimple file is:<br>
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\_EverMinerSimple.lua</code>
+
+<p>
+
+It consists of <a href="#input_parameters">input
+parameters</a> and a sequence of calls to high level functions corresponding to
+steps in the conceptual diagram above.
+
+<h2 id="input_parameters">Input parameters</h2>
+
+Few user-defined parameters provide all the necessary input to the whole
+process.
+
+<p>
+
+The first group of parameters defines the text file with analyzed
+data to import, destinations to store the created database with analyzed data
+and the database with meta-data. Finally, it defines the <i>ODBC DataSourceName</i>
+to identify this <i>data + meta-data</i> pair within the operating system.
+
+<p>
+
+The second group of parameters provides a bit of domain knowledge – groups of
+attributes the analyzed data columns should be grouped into. This information
+is important for analytical tasks construction, where all the possible
+combinations of groups of attributes in antecedents and succedents of patterns
+to be mined are created.
+
+<p>
+
+The most interesting input parameters are the minimal and maximal number of
+patterns to mine, regardless of combination of groups this particular task is
+concerning. There are several ways how to reduce (or enlarge) task search
+space to influence the number of found patterns -- see parallel processing
+below. (A check for maximal number of iteration is implemented to avoid a
+never-ending cycle.) Another parameter controls platform on which tasks are
+solved -- either locally on multiple processor cores or remotely on a computer
+grid.
+
+An important feature is that no task settings are changed after it was
+processed. Every time a change is necessary to task settings, its exact clone
+is created first and the desired change is made to this cloned task settings
+instead. Therefore, a complete history of task settings evolution, together
+with a number and an exact form of found patterns is preserved in the
+meta-data database. It could be used later for investigations of steps and
+decisions taken during automated data mining process – either for debug
+purposes or to help with a proper interpretation of found patterns.
+
+<p>
+
+The last input parameter specifies the path and name of file for the
+analytical report to be written into.
+
+<h2>Data import</h2>
+
+This phase is executed by calling the <code>
+ems.metabase.createDataAndMetabase()</code> from the main file and is
+implemented in the<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSMetabase.lua</code> file.
+
+<p>
+
+It imports data using the <a href="lm.data.html#importTXT"><code>lm.data.importTXT(...)</code></a>
+function. Then it creates a fresh metabase
+and associates it with previously created database with analyzed data. Finally
+it updates meta-information about tables and theirs columns by calling the <a
+href="lm.metabase.html#updateMetadata"><code>lm.metabase.updateMetadata()
+</code></a> function.
+
+<h2>Data Exploration</h2>
+
+This phase is executed by calling the <code> ems.explore.initTables()</code>
+from the main file and is implemented in the
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSExplore.lua</code>
+file.
+
+<p>
+
+It iterates through all the tables in analyzed data database, adds derived
+columns (eg. DayOfWeek) for Date/Time columns and computes basic statistical
+informations for each column (min, max, avg...). It also marks the primary key
+column. Finally, it enables <a href="DBTable.html#LocalDataCache"> caching</a>
+to speed up multiple analytical tasks computations on this table.
+
+<h2>Data Preprocessing</h2>
+
+This phase is executed by calling the <code>ems.prepro.createPreprocessing()
+</code> from the main file and is implemented in the
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSPrepro.lua</code>
+file.
+
+<p>
+
+First, it creates groups of attributes following the domain knowledge provided
+as an input parameter. Second, it creates a categorized attribute for each
+data column found in analyzed data table and inserts each attribute into a
+group of attributes based again on domain knowledge.
+
+<p>
+
+There is a simple analytical knowledge incorporporated into type of
+discretization of attributes:
+
+<ul>
+
+<li>Columns with continuous (float) values are discretized into 10
+equidistant intervals</li>
+
+<li>Columns with not more than 20 integer values
+(including date-part derived columns except for 'Year') are enumerated on
+principle one value is one category</li>
+
+<li>Columns with more than 20 integer values are discretized into 10
+equifrequency intervals</li>
+
+<li>Columns with string values are enumerated up to 100 most frequent values</li>
+
+</ul>
+
+<h2>Analytical Tasks</h2>
+
+This phase is executed by calling the <code>ems.tasks.createTasks()</code>
+from the main file and is implemented in the
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSTasks.lua</code> file.
+
+<p>
+
+For now, only 4ft-Miner tasks are constructed for previously created groups of
+attributes and principle "each-to-each". So there is a task setting created
+for each group of attributes where it serves as succedent (on the right-hand
+side of association rule) and all other groups are on the left, as antecedents.
+
+<h2>Parallel Processing</h2>
+
+This phase is executed by calling the <code>ems.iterations.runAll()</code>
+from the main file and is implemented in the
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSIterations.lua</code>
+file.
+
+<p>
+
+Task processing algorithm description is in the Picture 2.
+
+<div id="imagebox">
+<img src="img/ems.iterations.png" width="800px"><br>
+Pic. 2 -- Parallel Processing of tasks algorithm description<br>
+</div>
+
+There is a task queue initially filled with analytical tasks constructed in
+the previous phase.
+
+<p>
+
+A loop is process till the queue is empty. It takes the first task in the
+queue and checks its state. If the task is not computed yet, it starts an
+asynchronous generation and verification of patterns by calling the <code>ProcPooler</code>
+or <code>GridPooler</code> module, with regard to value of <code>TargetPlatform</code> input parameter.
+
+<p>
+
+If the task has already has been started, a query is made to metabase for the
+task state update. If its state has not changed yet, the task is moved to the
+end of the queue and the loop is repeated for another task.
+
+<p>
+
+If the task state has finished with some error, its state is changed to 'failed'
+and the task is removed for further processing.
+
+<p>
+
+If the task state has been solved successfully, found patterns are loaded and
+the execution forks based on the number of found patterns. If it is within the
+defined acceptable range, the "most interesting patterns" (in this simplified version
+just the "first two") are marked as "final results" to be included in the analytical report.
+
+<p>
+
+If the number of found patters is too low (respectively too high), the
+concerned task settings are changed to enlarge (respectively to reduce) the
+solution space searched. Changes to task settings are limited for now to a
+change of threshold values of 4ft-quantifiers of <i>BASE</i> and <i>Founded
+Implication</i>.
+
+<p>
+
+The important feature of task cloning is used. So no change is made to the
+actual task setting, but its clone (an exact copy) is created first using the
+<a href="Task.html#clone"><code>Task.clone</code></a> function. All the changes are
+made to newly created copy and the previous task settings is preserved,
+including the list of found patterns. So the whole history of task settings
+changes is stored and available for a detail study of the path the automation
+has taken.
+
+<p>
+
+If a new version of task settings is successfully created, it is inserted into
+task queue while the old task settings is removed. If it is not possible to
+further tweak task settings to get the acceptable number of hypothesis, the
+task is not further processed and this failure is mentioned in the final report.
+
+<h2>Results Summary</h2>
+
+The final report is created by calling the <code>ems.results.exportReport()</code>
+from the main file and is implemented in the
+<i>&lt;LM root&gt;</i><code>\Exec\Demo\EverMinerSimple\EMSResults.lua</code>
+file.
+
+<p>
+
+There is an <a href="../Export/EverMinerSimple.Demo.html">example of such a report</a> included.
+
+</div> <!-- id="content_single" -->
+
+</div> <!-- id="content_base" -->
+
+</body>
+</html>

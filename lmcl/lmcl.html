@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>LMCL Basics -- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_single">
+
+<h1>LISp-Miner Control Language Basics</h1>
+
+For a graphical overview see <a href="lmom.html">LMCL Diagrams</a>. For script
+examples see <a href="examples.html">LMCL Demo Examples</a>.
+
+<h2>Syntax and naming conventions</h2>
+
+For a general overview of the scripting language syntax see <a
+href="http://www.lua.org"> Lua</a> pages and the <a href="http://www.lua.org/manual">
+reference manual</a> especially.
+
+<p>
+
+LMCL follows <a href="http://www.lua.org"> Lua</a> naming conventions as far as they
+were identified in <a href="http://www.lua.org"> Lua</a> examples. Names of variables,
+namespaces, functions, methods and named-function-parameters start with lower letters.
+Only the names of classes, theirs properties and predefined global constants start
+with capital letters. Names compounded from two or more words follow the
+"camel" convention of starting capital letters for the second and next words.
+
+<h3>Set and Get Functions</h3>
+
+There are unified name prefixes of <code>set-</code> and <code>get-</code>
+for functions reading and setting properties of objects. The <i>setter</i>
+function has the only one unnamed parameter of the same type as the property
+it is modifying, so is the return type of the corresponding <i>getter</i> function.
+
+<div id="codebox">
+dataColumn.getName()  <comment>-- returns column name as string</comment><br/>
+attribute.setName( "age") <comment>-- changes name of the attribute</comment><br/>
+</div>
+
+<h3>Functions and methods parameteres</h3>
+
+Unnamed parameters for function calls are used only for <i>setter</i>
+functions and few other simple functions (mainly the logging functions from
+the <a href="lm.html">lm</a> namespace). In all other cases the named
+parameters are used for enhancing readability and clarity of the script codes.
+
+<p>
+
+A simplified <i>Hungarian notation</i> is used to identify four basic types of named parameters.
+
+<div id="codebox">
+nTaskSubTypeCode   <comment>-- an integer number expected</comment><br/>
+dParamP <comment>-- a floating-point number (double precision) is expected</comment><br/>
+bForceRunFinished <comment>-- a boolean value is expected</comment><br/>
+pParentGroup <comment>-- a reference to an LMObject is expected</comment><br/>
+</div>
+
+<h3>Prepare-</h3>
+
+A special function name prefix <code>prepare-</code> is used to identify
+functions or methods returning an array of objects as a <a href="http://www.lua.org">
+Lua</a> <code>table</code> data-type. Some <code>prepare-</code> functions allow to pass
+an optional parameter to filter only some objects from the internal array (eg.
+only tasks of a given type).
+
+<div id="codebox">
+dataColumnArray= dbtable.prepareDataColumnArray()<br/>
+taskArray= lm.tasks.prepareTaskArray( nTaskSubTypeCode= lm.codes.TaskSubType.CFMiner)<br/>
+</div>
+
+<h3>Find-</h3>
+
+Another prefix of <code>find-</code> is used to identify functions looking-up
+an object in an internal array by one of its unique properties (usually by the <code>
+ID</code> or <code>Name</code> object properties). The identifier is passed as
+a named parameter -- see reference to available <code>find-</code> functions.
+
+<div id="codebox">
+dataColumn= dataTable.findDataColumn( name= "District")<br/>
+task= lm.tasks.findTask( nID= 7)<br/>
+</div>
+
+<h3>Properties</h3>
+
+In some cases a direct manipulation of property value is possible using the
+property name -- see class references. Properties of type <code>
+boolean</code> are distinguished by suffix <code>-Flag</code> appended to
+theirs names.
+
+<div id="codebox">
+nCount= dbtable.RecordCount <comment>-- Reads value of the RecordCount property (using the getRecordCount method internally)</comment><br/>
+attribute.Note= "A text description" <comment>-- Sets value of the Note property (using the setNote method internally)</comment><br/>
+</div>
+
+<h3>LISp-Miner subsystems identification</h3>
+
+To better understand the names of classes, you should become familiar with the
+LISp-Miner subsystems two-letter identifiers.
+
+<p>
+
+<table class="property_list">
+<tr>
+<td class="name" nowrap><strong>Two-letter identifier</strong></td>
+<td class="summary"><strong>Meaning</strong></td>
+</tr>
+<tr>
+<td class="name" nowrap>FT</td>
+<td class="summary">4ft-Miner related classes, or classes for 4ft-cedents and literals used in all other modules too</td>
+</tr>
+<tr>
+<td class="name" nowrap>CF</td>
+<td class="summary">CF-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>KL</td>
+<td class="summary">KL-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>DF</td>
+<td class="summary">SD4ft-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>DC</td>
+<td class="summary">SDCF-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>DK</td>
+<td class="summary">SDKL-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>ET</td>
+<td class="summary">ETree-Miner related classes</td>
+</tr>
+<tr>
+<td class="name" nowrap>MC</td>
+<td class="summary">MCluster-Miner related classes</td>
+</tr>
+</table>
+
+<h3>Member-access through dot</h3>
+
+The important syntax feature to remember is that members of namespaces or properties and methods of objects are accessed
+by the the dot '.'.
+
+<div id="codebox">
+lm.log( ... )<br/>
+lm.sleep()<br/>
+lm.metabase.open( ... )<br/>
+lm.explore.DataColumn<br/>
+lm.explore.prepareDataTableArray()<br/>
+dataTable.getID()<br/>
+task.Name<br/>
+task.getName()<br/>
+dataTable.RecordCount<br/>
+</div>
+
+<h2>Namespaces</h2>
+
+The basic namespace for all the LISp-Miner related functions and classes is
+the <a href="lm.html"><code>lm</code></a> namespace. It is moreover subdivided
+into additional namespaces, a complete list of them could be seen in the
+navigation bar in the left part of this page.
+
+<h2>Classes</h2>
+
+LISp-Miner objects are available as instances of <code>lua_userdata</code>
+objects with <i>meta-tables</i> to keep necessary information about properties
+and methods of each class. A complete list of all classes is also on the left
+of this page.
+
+<h2>Codes</h2>
+
+Pre-defined constans were created for LISp-Miner internal types. They are
+grouped in the <code>lm.codes</code> namespace and there is also a <a
+href="codes.html">complete list with descriptions</a> available.
+
+</div> <!-- id="content_single" -->
+
+</div> <!-- id="content_base" -->
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>LMExec -- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_single">
+
+<h1>LMExec Module</h1>
+
+The LMExec module executes LMCL scripts. You have to download it separately from
+the <a href="http://lispminer.vse.cz/files/exe/LM.Exec.zip">LISp-Miner download
+page</a> and extract it to the LISp-Miner root directory.
+
+<p>
+
+Afterwards, you can found the <code>LMExec.exe</code> file and launch it. It has a simple
+interface (see picture) to open a script, execute it and see its progress log.
+
+<div id="imagebox">
+<img src="img/lmexec.png" width="800px"><br>
+LM Exec Main Window<br>
+</div>
+
+You could open a script using the <code>Open</code> button in the top-right
+corner. You can press then the <code>Start</code> button in the bottom-left
+corner to execute it. After the execution of the script has finished, you can
+start it again using the same button.
+
+<p>
+
+If an error occurs during execution, you can switch to a text editor, change
+script at given position and save changes. You can press once again the <code>
+Start</code> button to run the updated version of the script, without a need
+to open the script again or even to restart the LM Exec module.
+
+<p>
+
+You can cancel a running script by the <code>Cancel</code> button. Be
+aware that this button functionality depends on the actual script code. It
+will not work if the script is stalled (eg. in an infite cycle).
+
+<p>
+
+You can also pause the execution, instead of outright cancelling the script.
+In this case you can export the log history (see later) and then re-start the
+script using again the <code>Pause/Unpause</code> button.
+
+<h3>Execution log</h3>
+
+The center space of the LM Exec windows occupies a text log describing
+execution of the script.
+
+<p>
+
+All the errors and warnings are logged and displayed during the script
+execution. So are the main Lua-script function calls and selected
+time-consuming LISp-Miner operations (depending on the <a
+href="lm.html#setLogVerbosityLevel"> log verbosity level</a>).
+
+<p>
+
+If an error is encountered during the execution, the script is aborted and a
+description of error appears in the log together with the line-number on which
+this error had occurred. User-defined debug-messages could be logged using the
+<a href="lm.html#log"> <code>log</code></a> function (or its variants) from
+the <a href="lm.html"> <code>lm</code></a> namespace.
+
+<p>
+
+You can copy the whole log into clipboard by pressing the <code>Copy&nbsp;log</code>
+button. The log is also automatically saved into the
+<i>&lt;LM root&gt;</i><code>\Exec\_LMExec.log</code> file.
+
+<h3>Command line parameters</h3>
+
+You can pass user-defined command line parameters to the LMCL script.
+
+<p>
+
+Each parameter has a syntax of <code>/ScriptParam:&lt;Name&gt;=&lt;Value&gt;</code>. Parameters are accessible from within the script using the <a href="lm.html#ScriptParam">lm.ScriptParam</a> table followed by the parameter name.
+
+<p>
+
+Example:
+
+<p>
+
+<code>LMExec.exe /Input:LMExec.Demo.Z.b.ScriptParam.lua /ScriptParam:FirstParam=Alfa /ScriptParam:SecondParam=2</code>
+
+<p>
+
+<code>lm.logInfo( "First parameter value is "..lm.ScriptParam.FirstParam);</code><br>
+<code>lm.logInfo( "The second parameter value is "..lm.ScriptParam.SecondParam);</code>
+
+<p>
+
+</div> <!-- id="content_single" -->
+
+</div> <!-- id="content_base" -->
+
+</body>
+</html>

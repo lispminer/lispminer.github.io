@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>
+lm
+-- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><strong>lm</strong></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- id="navigation" -->
+
+<div id="content_base">
+
+<div id="content_title">
+
+<h1>Namespace <code>
+lm
+</code></h1>
+
+</div>	<!-- content_title -->
+
+<div id="content_body">
+
+Base namespace for LISp-Miner related classes and functions<br/>
+
+<h2>Classes List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="LMWrap.html">LMWrap</a>&nbsp;</td>
+<td class="summary">An abstract Lua wrapper for LISp-Miner metabase objects</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="LMWrapName.html">LMWrapName</a>&nbsp;</td>
+<td class="summary">An abstract class for wrapped LM objects with Name and Note</td>
+</tr>
+</table>
+
+<h2>Properties List</h2>
+<table class="property_list">
+<tr>
+<td class="name" nowrap><a href="#ScriptParam">ScriptParam</a>&nbsp;</td>
+<td class="summary">Parameters passed to LMExec with <code>/ScriptParam</code> and identified by its name</td>
+</tr>
+</table>
+
+<h2>Functions List</h2>
+<table class="method_list">
+<tr>
+<td class="name" nowrap><a href="#getLMRootDirectory">getLMRootDirectory</a>&nbsp;()</td>
+<td class="summary">Returns LISp-Miner root folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getLMRootFolder">getLMRootFolder</a>&nbsp;()</td>
+<td class="summary">Returns LISp-Miner root folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getLogVerbosityLevel">getLogVerbosityLevel</a>&nbsp;()</td>
+<td class="summary">Returns how much of the execution logged into history, see <a href="codes.html#LogVerbosityLevel">LogVerbosityLevel codes</a></td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getOSCurrentDirectory">getOSCurrentDirectory</a>&nbsp;()</td>
+<td class="summary">Returns operating system current working folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getOSCurrentFolder">getOSCurrentFolder</a>&nbsp;()</td>
+<td class="summary">Returns operating system current working folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getScriptDirectory">getScriptDirectory</a>&nbsp;()</td>
+<td class="summary">Returns The folder containing currently opened script</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#getScriptFolder">getScriptFolder</a>&nbsp;()</td>
+<td class="summary">Returns The folder containing currently opened script</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#isLogFunctionParameterValuesFlag">isLogFunctionParameterValuesFlag</a>&nbsp;()</td>
+<td class="summary">Returns TRUE if parameter values passed to functions are logged</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#log">log</a>&nbsp;()</td>
+<td class="summary">Writes given string to log history. An optional integer parameter could be provided to set the log verbosity level of this message.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logEmptyLine">logEmptyLine</a>&nbsp;()</td>
+<td class="summary">Writes an empty line to log history. An optional integer parameter could be provided to set the log verbosity level of this message.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logError">logError</a>&nbsp;()</td>
+<td class="summary">Writes given string to log history, pop-ups an error box and terminates the script execution</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logIndentDown">logIndentDown</a>&nbsp;()</td>
+<td class="summary">Returns the log line indent one notch left</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logIndentUp">logIndentUp</a>&nbsp;()</td>
+<td class="summary">Indents all the next log lines one notch right. If a string is passed it is logged during indent up and once again during indent down to visually identify the end of this indent group</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logInfo">logInfo</a>&nbsp;()</td>
+<td class="summary">Writes given string to log history and pop-ups an dialog box</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logVersion">logVersion</a>&nbsp;()</td>
+<td class="summary">Writes information about the current version of LM and Lua to log history</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#logWarning">logWarning</a>&nbsp;()</td>
+<td class="summary">Writes given string to log history and pop-ups an dialog box with option to break execution</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setIsLogFunctionParameterValues">setIsLogFunctionParameterValues</a>&nbsp;()</td>
+<td class="summary">Sets the value of the LogFunctionParameterValues flag, ie. whether to log parameter values passed to functions</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setLogFunctionParameterValuesFlag">setLogFunctionParameterValuesFlag</a>&nbsp;()</td>
+<td class="summary">Sets the value of the LogFunctionParameterValues flag, ie. whether to log parameter values passed to functions. Returns the previous value so it could restore later.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setLogVerbosityLevel">setLogVerbosityLevel</a>&nbsp;()</td>
+<td class="summary">How much of the execution logged into history. Returns the previous value so it could restore later.</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setOSCurrentDirectory">setOSCurrentDirectory</a>&nbsp;()</td>
+<td class="summary">Sets operating system current working folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#setOSCurrentFolder">setOSCurrentFolder</a>&nbsp;()</td>
+<td class="summary">Sets operating system current working folder</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#sleep">sleep</a>&nbsp;()</td>
+<td class="summary">Suspends the thread for given number of milliseconds by calling the OS sleep function</td>
+</tr>
+</table>
+
+<h3><a name="properties"></a>Properties</h3>
+<dl class="property">
+
+<dt id="ScriptParam"><code>ScriptParam</code>&nbsp; (read-only) : table</dt>
+<dd>
+Parameters passed to LMExec with <code>/ScriptParam</code> and identified by its name
+</dd>
+
+</dl> <!-- property -->
+
+<h3 id="methods">Functions</h3>
+<dl class="method">
+
+<dt id="getLMRootDirectory"><code>getLMRootDirectory() : string</code></dt>
+<dd>
+Returns LISp-Miner root folder
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getLMRootFolder"><code>getLMRootFolder() : string</code></dt>
+<dd>
+Returns LISp-Miner root folder
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getLogVerbosityLevel"><code>getLogVerbosityLevel() : integer</code></dt>
+<dd>
+Returns how much of the execution logged into history, see <a href="codes.html#LogVerbosityLevel">LogVerbosityLevel codes</a>
+<h3>Returns</h3>
+<ul>
+<li><code>integer</code></li>
+</ul>
+</dd>
+<dt id="getOSCurrentDirectory"><code>getOSCurrentDirectory() : string</code></dt>
+<dd>
+Returns operating system current working folder
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getOSCurrentFolder"><code>getOSCurrentFolder() : string</code></dt>
+<dd>
+Returns operating system current working folder
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getScriptDirectory"><code>getScriptDirectory() : string</code></dt>
+<dd>
+Returns The folder containing currently opened script
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="getScriptFolder"><code>getScriptFolder() : string</code></dt>
+<dd>
+Returns The folder containing currently opened script
+<h3>Returns</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="isLogFunctionParameterValuesFlag"><code>isLogFunctionParameterValuesFlag() : boolean</code></dt>
+<dd>
+Returns TRUE if parameter values passed to functions are logged
+<h3>Returns</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="log"><code>log( string )</code></dt>
+<dd>
+Writes given string to log history. An optional integer parameter could be provided to set the log verbosity level of this message.
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - string to be logged</li>
+</ul>
+</dd>
+<dt id="logEmptyLine"><code>logEmptyLine()</code></dt>
+<dd>
+Writes an empty line to log history. An optional integer parameter could be provided to set the log verbosity level of this message.
+</dd>
+<dt id="logError"><code>logError( string )</code></dt>
+<dd>
+Writes given string to log history, pop-ups an error box and terminates the script execution
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - string to be logged</li>
+</ul>
+</dd>
+<dt id="logIndentDown"><code>logIndentDown()</code></dt>
+<dd>
+Returns the log line indent one notch left
+</dd>
+<dt id="logIndentUp"><code>logIndentUp( string )</code></dt>
+<dd>
+Indents all the next log lines one notch right. If a string is passed it is logged during indent up and once again during indent down to visually identify the end of this indent group
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - string to be logged (optional)</li>
+</ul>
+</dd>
+<dt id="logInfo"><code>logInfo( string )</code></dt>
+<dd>
+Writes given string to log history and pop-ups an dialog box
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - string to be logged</li>
+</ul>
+</dd>
+<dt id="logVersion"><code>logVersion()</code></dt>
+<dd>
+Writes information about the current version of LM and Lua to log history
+</dd>
+<dt id="logWarning"><code>logWarning( string )</code></dt>
+<dd>
+Writes given string to log history and pop-ups an dialog box with option to break execution
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code> - string to be logged</li>
+</ul>
+</dd>
+<dt id="setIsLogFunctionParameterValues"><code>setIsLogFunctionParameterValues( boolean )</code></dt>
+<dd>
+Sets the value of the LogFunctionParameterValues flag, ie. whether to log parameter values passed to functions
+<h3>Parameters</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="setLogFunctionParameterValuesFlag"><code>setLogFunctionParameterValuesFlag( boolean )</code></dt>
+<dd>
+Sets the value of the LogFunctionParameterValues flag, ie. whether to log parameter values passed to functions. Returns the previous value so it could restore later.
+<h3>Parameters</h3>
+<ul>
+<li><code>boolean</code></li>
+</ul>
+</dd>
+<dt id="setLogVerbosityLevel"><code>setLogVerbosityLevel( integer )</code></dt>
+<dd>
+How much of the execution logged into history. Returns the previous value so it could restore later.
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code> - verbosity level, see <a href="codes.html#LogVerbosityLevel">LogVerbosityLevel codes</a></li>
+</ul>
+</dd>
+<dt id="setOSCurrentDirectory"><code>setOSCurrentDirectory( string )</code></dt>
+<dd>
+Sets operating system current working folder
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="setOSCurrentFolder"><code>setOSCurrentFolder( string )</code></dt>
+<dd>
+Sets operating system current working folder
+<h3>Parameters</h3>
+<ul>
+<li><code>string</code></li>
+</ul>
+</dd>
+<dt id="sleep"><code>sleep( integer )</code></dt>
+<dd>
+Suspends the thread for given number of milliseconds by calling the OS sleep function
+<h3>Parameters</h3>
+<ul>
+<li><code>integer</code> - number of milliseconds</li>
+</ul>
+</dd>
+
+</dl> <!-- method -->
+
+</div> <!-- id="content_body" -->
+
+</div> <!-- id="content_split" -->
+
+</body>
+</html>

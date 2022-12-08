@@ -1,0 +1,3034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=UTF-8"/>
+<title>Codes -- LISp-Miner Control Language Reference</title>
+<link rel="stylesheet" href="css/lmcl.css" type="text/css" />
+</head>
+
+<body>
+
+<div id="main_title">
+
+LISp-Miner Control Language Reference,
+<span class="version">
+version: 27.19.00 of 6 Dec 2022
+</span>
+
+</div>	<!-- main_title -->
+
+<div id="navigation">
+
+<h2><a href="index.html">Main Page</a></h2>
+<ul>
+<li><a href="lmexec.html">LM Exec</a></li>
+<li><a href="lmcl.html">LMCL Language Basics</a></li>
+<li><a href="lmom.html">LMCL Diagrams</a></li>
+<li><a href="examples.html">Demo Examples</a></li>
+<li><a href="everminersimple.html">EverMinerSimple Demo</a></li>
+<li><a href="codes.html">Predefined Constants</a></li>
+</ul>
+
+<!-- Namespaces -->
+
+<h1>Namespaces</h1>
+<ul>
+<li><a href="lm.html">lm</a></li>
+<li><a href="lm.analysis.html">lm.analysis</a></li>
+<li><a href="lm.data.html">lm.data</a></li>
+<li><a href="lm.domain.html">lm.domain</a></li>
+<li><a href="lm.explore.html">lm.explore</a></li>
+<li><a href="lm.metabase.html">lm.metabase</a></li>
+<li><a href="lm.prepro.html">lm.prepro</a></li>
+<li><a href="lm.tasks.html">lm.tasks</a></li>
+<li><a href="lm.tasks.results.html">lm.tasks.results</a></li>
+<li><a href="lm.tasks.settings.html">lm.tasks.settings</a></li>
+</ul>
+
+<!-- Classes -->
+
+<h1>Classes</h1>
+<ul>
+<li><a href="AFQuantifierSetting.html">AFQuantifierSetting</a></li>
+<li><a href="Attribute.html">Attribute</a></li>
+<li><a href="AttributeGroup.html">AttributeGroup</a></li>
+<li><a href="Category.html">Category</a></li>
+<li><a href="CategoryEnumeration.html">CategoryEnumeration</a></li>
+<li><a href="CategoryInterval.html">CategoryInterval</a></li>
+<li><a href="CFAttributeSetting.html">CFAttributeSetting</a></li>
+<li><a href="CFPartialGroupSetting.html">CFPartialGroupSetting</a></li>
+<li><a href="CFQuantifierSetting.html">CFQuantifierSetting</a></li>
+<li><a href="DataColumn.html">DataColumn</a></li>
+<li><a href="DataTable.html">DataTable</a></li>
+<li><a href="DFQuantifierSetting.html">DFQuantifierSetting</a></li>
+<li><a href="ETAttributeSetting.html">ETAttributeSetting</a></li>
+<li><a href="ETPartialGroupSetting.html">ETPartialGroupSetting</a></li>
+<li><a href="FTLiteral.html">FTLiteral</a></li>
+<li><a href="FTLiteralSetting.html">FTLiteralSetting</a></li>
+<li><a href="FTPartialCedent.html">FTPartialCedent</a></li>
+<li><a href="FTPartialCedentSetting.html">FTPartialCedentSetting</a></li>
+<li><a href="FTQuantifierSetting.html">FTQuantifierSetting</a></li>
+<li><a href="FTWholeCedentSetting.html">FTWholeCedentSetting</a></li>
+<li><a href="Hypothesis.html">Hypothesis</a></li>
+<li><a href="HypothesisAF.html">HypothesisAF</a></li>
+<li><a href="HypothesisCF.html">HypothesisCF</a></li>
+<li><a href="HypothesisDF.html">HypothesisDF</a></li>
+<li><a href="HypothesisET.html">HypothesisET</a></li>
+<li><a href="HypothesisFT.html">HypothesisFT</a></li>
+<li><a href="HypothesisGroup.html">HypothesisGroup</a></li>
+<li><a href="HypothesisKL.html">HypothesisKL</a></li>
+<li><a href="HypothesisMC.html">HypothesisMC</a></li>
+<li><a href="Interval.html">Interval</a></li>
+<li><a href="KLAttributeSetting.html">KLAttributeSetting</a></li>
+<li><a href="KLPartialGroupSetting.html">KLPartialGroupSetting</a></li>
+<li><a href="KLQuantifierSetting.html">KLQuantifierSetting</a></li>
+<li><a href="LMWrap.html">LMWrap</a></li>
+<li><a href="LMWrapName.html">LMWrapName</a></li>
+<li><a href="MCAttributeSetting.html">MCAttributeSetting</a></li>
+<li><a href="MCCluster.html">MCCluster</a></li>
+<li><a href="MCPartialGroupSetting.html">MCPartialGroupSetting</a></li>
+<li><a href="MutualInfluence.html">MutualInfluence</a></li>
+<li><a href="Task.html">Task</a></li>
+<li><a href="TaskAF.html">TaskAF</a></li>
+<li><a href="TaskCF.html">TaskCF</a></li>
+<li><a href="TaskDF.html">TaskDF</a></li>
+<li><a href="TaskET.html">TaskET</a></li>
+<li><a href="TaskFT.html">TaskFT</a></li>
+<li><a href="TaskGroup.html">TaskGroup</a></li>
+<li><a href="TaskKL.html">TaskKL</a></li>
+<li><a href="TaskMC.html">TaskMC</a></li>
+</ul>
+
+</div> <!-- navigation -->
+
+<div id="content_base">
+
+<div id="content_single">
+
+<h1>Codes</h1>
+
+<table class="codetable_list">
+<tr>
+<td class="name" nowrap><a href="#ACQuantifierSourceType">ACQuantifierSourceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ActionStateType">ActionStateType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ActionType">ActionType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#AFQuantifierType">AFQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#AFQuantifierValueType">AFQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#AggregateType">AggregateType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#BoolOpType">BoolOpType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#BoolType">BoolType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#BracketType">BracketType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CategorySubType">CategorySubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CedentType">CedentType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CFQuantifierHistogramValueType">CFQuantifierHistogramValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CFQuantifierStepCountType">CFQuantifierStepCountType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CFQuantifierStepSizeType">CFQuantifierStepSizeType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CFQuantifierType">CFQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CFQuantifierValueType">CFQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CoefficientType">CoefficientType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#CompareType">CompareType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DataColumnSubType">DataColumnSubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DataCharacterType">DataCharacterType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DataTableSubType">DataTableSubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DatePartSubType">DatePartSubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DCQuantifierStepCountType">DCQuantifierStepCountType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DCQuantifierStepSizeType">DCQuantifierStepSizeType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DCQuantifierType">DCQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DCQuantifierValueType">DCQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DFQuantifierType">DFQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DFQuantifierValueType">DFQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DKQuantifierType">DKQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#DKQuantifierValueType">DKQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#FTQuantifierType">FTQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#FTQuantifierValueType">FTQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GaceType">GaceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GeoColumnSubType">GeoColumnSubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#GeoDistanceType">GeoDistanceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#InfinityType">InfinityType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#IntervalValueType">IntervalValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#KLQuantifierKLTableValueType">KLQuantifierKLTableValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#KLQuantifierType">KLQuantifierType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#KLQuantifierValueType">KLQuantifierValueType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#LaqMapType">LaqMapType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#LaqPatternGridFlagType">LaqPatternGridFlagType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#LaqTaskType">LaqTaskType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#LiteralType">LiteralType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MCAlgorithmType">MCAlgorithmType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MCCenterType">MCCenterType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MCDistanceType">MCDistanceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MCLinkageType">MCLinkageType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MissingsType">MissingsType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MutualInfluenceScopeType">MutualInfluenceScopeType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MutualInfluenceType">MutualInfluenceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#MutualInfluenceValidityType">MutualInfluenceValidityType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#QuantityBinarizeType">QuantityBinarizeType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RMAssignType">RMAssignType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RMCaseType">RMCaseType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RMDistributionType">RMDistributionType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RMDiversityType">RMDiversityType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#RMCharibType">RMCharibType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#SDConstructionType">SDConstructionType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#SDQuantifierSourceType">SDQuantifierSourceType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#TaskSubType">TaskSubType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#TestingType">TestingType</a>&nbsp;</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#ValueSubType">ValueSubType</a>&nbsp;</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<h1>Additional codes</h1>
+
+<table class="codetable_list">
+<tr>
+<td class="name" nowrap><a href="#LogVerbosityLevel">LogVerbosityLevel</a>&nbsp;</td>
+<td class="summary">How much of the execution logged into history</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#TargetPlatform">TargetPlatform</a>&nbsp;</td>
+<td class="summary">How to run a task</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#TaskGenerationStatus">TaskGenerationStatus</a>&nbsp;</td>
+<td class="summary">Task status codes</td>
+</tr>
+<tr>
+<td class="name" nowrap><a href="#HypothesisMutualInfluenceRelationship">HypothesisMutualInfluenceRelationship</a>&nbsp;</td>
+<td class="summary">Types of relationship between hypothesis and mutual influence domain knowledge</td>
+</tr>
+</table>
+
+<br/>
+
+<h2>Details</h2>
+
+<h3 id="ACQuantifierSourceType">ACQuantifierSourceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Before&nbsp;</td>
+<td class="name">'State before' frequencies</td>
+<td class="note">Quantifier test applied to the state-before set data only</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>After&nbsp;</td>
+<td class="name">'State after' frequencies</td>
+<td class="note">Quantifier test applied to the state-after set data only</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiffAbs&nbsp;</td>
+<td class="name">Delta of absolute frequencies values</td>
+<td class="note">Quantifier test applied to the 4ft-table computed by substracting of corresponding frequencies</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiffRel&nbsp;</td>
+<td class="name">Delta of relative frequencies values</td>
+<td class="note">Quantifier test applied to the 4ft-table computed by substracting of corresponding relative frequencies</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValDiff&nbsp;</td>
+<td class="name">Difference of interest-measures</td>
+<td class="note">Test applied to the difference of interest-measures computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValDiffAbs&nbsp;</td>
+<td class="name">Absolute difference of interest-measures</td>
+<td class="note">Test applied to the absolute difference of interest-measures computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValRatio&nbsp;</td>
+<td class="name">Ratio of interest-measures</td>
+<td class="note">Test applied to the ratio of interest-measures computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValRatioMax&nbsp;</td>
+<td class="name">Higher of two ratios of interest-measures</td>
+<td class="note">Test applied to the higher of two ratios of interest-measures (after/before or before/after)</td>
+</tr>
+</table>
+<h3 id="ActionStateType">ActionStateType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Before&nbsp;</td>
+<td class="name">Before</td>
+<td class="note">State before action</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>After&nbsp;</td>
+<td class="name">After</td>
+<td class="note">State after action</td>
+</tr>
+</table>
+<h3 id="ActionType">ActionType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Stable&nbsp;</td>
+<td class="name">Stable</td>
+<td class="note">Stable with no action</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Variable&nbsp;</td>
+<td class="name">Variable</td>
+<td class="note">Variable with action possible</td>
+</tr>
+</table>
+<h3 id="AFQuantifierType">AFQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PImplication&nbsp;</td>
+<td class="name">p-Implication</td>
+<td class="note">a/(a+b) >= p ... at least 100*p [%] of objects satisfying A satisfy also S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AverageDifference&nbsp;</td>
+<td class="name">Average Difference Dependence</td>
+<td class="note">Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in <-1;inf), similar to the Lift(X->Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AboveAverage&nbsp;</td>
+<td class="name">Above Average Dependence</td>
+<td class="note">Among objects satisfying A, there are at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;inf).</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>BelowAverage&nbsp;</td>
+<td class="name">Below Average Dependence</td>
+<td class="note">Among objects satisfying A, there are at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>OAD&nbsp;</td>
+<td class="name">Outside Average Dependence</td>
+<td class="note">Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalImplication&nbsp;</td>
+<td class="name">Lower Critical Implication</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalImplication&nbsp;</td>
+<td class="name">Upper Critical Implication</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoublePImplication&nbsp;</td>
+<td class="name">Double p-Implication</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleLowerCriticalImplication&nbsp;</td>
+<td class="name">Double Lower Critical Implication</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleUpperCriticalImplication&nbsp;</td>
+<td class="name">Double Upper Critical Implication</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FoundedEquivalence&nbsp;</td>
+<td class="name">p-Equivalence</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalEquivalence&nbsp;</td>
+<td class="name">Lower Critical Equivalence</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalEquivalence&nbsp;</td>
+<td class="name">Upper Critical Equivalence</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SimpleDeviation&nbsp;</td>
+<td class="name">Simple Deviation</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Fisher&nbsp;</td>
+<td class="name">Fisher quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ChiSq&nbsp;</td>
+<td class="name">Chi-Squared quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AQ&nbsp;</td>
+<td class="name">A-quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>EQ&nbsp;</td>
+<td class="name">E-quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>afrequency&nbsp;</td>
+<td class="name">a-frequency</td>
+<td class="note">a-frequency (BASE) from source contingency table</td>
+</tr>
+</table>
+<h3 id="AFQuantifierValueType">AFQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</td>
+</tr>
+</table>
+<h3 id="AggregateType">AggregateType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>COUNT&nbsp;</td>
+<td class="name">Count(*)</td>
+<td class="note">Number of rows in group.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SUM&nbsp;</td>
+<td class="name">Sum</td>
+<td class="note">Sum of values in group. Each category is represented by its index.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MIN&nbsp;</td>
+<td class="name">Minimum</td>
+<td class="note">Minimum value in group. Each category is represented by its index.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MAX&nbsp;</td>
+<td class="name">Maximum</td>
+<td class="note">Maximum value in group. Each category is represented by its index.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AVG&nbsp;</td>
+<td class="name">Average</td>
+<td class="note">Average value in group. Each category is represented by its index.</td>
+</tr>
+</table>
+<h3 id="BoolOpType">BoolOpType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Conjunction&nbsp;</td>
+<td class="name">Conjunction</td>
+<td class="note">Logical operation of conjunction</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Disjunction&nbsp;</td>
+<td class="name">Disjunction</td>
+<td class="note">Logical operation of disjunction</td>
+</tr>
+</table>
+<h3 id="BoolType">BoolType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">No boolean</td>
+<td class="note">Not boolean category</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>True&nbsp;</td>
+<td class="name">True</td>
+<td class="note">Category representing 'TRUE' values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>False&nbsp;</td>
+<td class="name">False</td>
+<td class="note">Category representing 'FALSE' values</td>
+</tr>
+</table>
+<h3 id="BracketType">BracketType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sharp&nbsp;</td>
+<td class="name">Sharp</td>
+<td class="note">Include border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Round&nbsp;</td>
+<td class="name">No sharp</td>
+<td class="note">Don't include border value</td>
+</tr>
+</table>
+<h3 id="CategorySubType">CategorySubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Enumeration&nbsp;</td>
+<td class="name">Enumeration</td>
+<td class="note">Enumeration of values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Interval&nbsp;</td>
+<td class="name">Interval</td>
+<td class="note">Interval of values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FuzzyInterval&nbsp;</td>
+<td class="name">Fuzzy interval</td>
+<td class="note">Fuzzy intervals</td>
+</tr>
+</table>
+<h3 id="CedentType">CedentType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Antecedent&nbsp;</td>
+<td class="name">Antecedent</td>
+<td class="note">Left 4ft-cedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Succedent&nbsp;</td>
+<td class="name">Succedent</td>
+<td class="note">Right 4ft-cedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Condition&nbsp;</td>
+<td class="name">Condition</td>
+<td class="note">Condition</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FirstSet&nbsp;</td>
+<td class="name">First set</td>
+<td class="note">First set for difference</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SecondSet&nbsp;</td>
+<td class="name">Second set</td>
+<td class="note">Second set for difference</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AntecedentVar&nbsp;</td>
+<td class="name">Variable antecedent</td>
+<td class="note">Action in antecedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SuccedentVar&nbsp;</td>
+<td class="name">Variable succedent</td>
+<td class="note">Action in succedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CFAttribute&nbsp;</td>
+<td class="name">Histogram attribute</td>
+<td class="note">Attribute used for calculation of CF-histogram</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KLAttributeRow&nbsp;</td>
+<td class="name">Row attribute</td>
+<td class="note">Row attribute for KL-table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KLAttributeCol&nbsp;</td>
+<td class="name">Col attribute</td>
+<td class="note">Column attribut for KL-table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ETAttribute&nbsp;</td>
+<td class="name">ETree Attribute</td>
+<td class="note">Attribute used in tree</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ETClass&nbsp;</td>
+<td class="name">Class Attribute</td>
+<td class="note">Target class attribute</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MCAttribute&nbsp;</td>
+<td class="name">Vector Attribute</td>
+<td class="note">Attribute used in clustering</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ConditionedBy&nbsp;</td>
+<td class="name">MI Conditioned be</td>
+<td class="note">Condition for a mutual influence truthfullness scope</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotInfluencedBy&nbsp;</td>
+<td class="name">MI Not influenced by</td>
+<td class="note">Condition not influencing a mutual influence truthfullness</td>
+</tr>
+</table>
+<h3 id="CFQuantifierHistogramValueType">CFQuantifierHistogramValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute frequencies. Frequencies in histogram are left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative frequencies to number of rows matching condition. Frequencies are divided by number of rows matching condition and multiplied by 100.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCategory&nbsp;</td>
+<td class="name">Relative [%] for each category</td>
+<td class="note">Relative frequencies for each category (number of rows matching condition to number of all). Each frequency is divided by the corresponding frequency in the whole matrix and multiplied by 100.</td>
+</tr>
+</table>
+<h3 id="CFQuantifierStepCountType">CFQuantifierStepCountType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number of steps. Count value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelRange&nbsp;</td>
+<td class="name">Relative [%] to act range</td>
+<td class="note">Relative to number of categories in the currently selected range- 1. Count value is multiplied by ('number of categories in current range minus 1')/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all categories</td>
+<td class="note">Relative to number of all categories minus 1. Count value is multiplied by ('total number of categories minus 1')/100</td>
+</tr>
+</table>
+<h3 id="CFQuantifierStepSizeType">CFQuantifierStepSizeType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Change in frequency as an absolute number. Minimal step size is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyPrev&nbsp;</td>
+<td class="name">Relative [%] to previous frequency</td>
+<td class="note">Relative to the previous frequency. Minimal step size is multiplied by (frequency of the previous category)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Minimal step size is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Minimal step size is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the currently processed histogram. Minimal step size is multiplied by (the highest frequency in the whole histogram)/100</td>
+</tr>
+</table>
+<h3 id="CFQuantifierType">CFQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Avg&nbsp;</td>
+<td class="name">Average frequency</td>
+<td class="note">Average frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Some&nbsp;</td>
+<td class="name">Some frequency</td>
+<td class="note">At least one frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>VariationRatio&nbsp;</td>
+<td class="name">Variation ratio</td>
+<td class="note">Variation ratio = 1-f(modal)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NominalVariation&nbsp;</td>
+<td class="name">Nominal variation (norm)</td>
+<td class="note">Nominal variation (norm) = suma(f_i*(1-f_i)) * K/(K-1), where f_i is frequency of the i-th category and K is number of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiscreteOrdinaryVariation&nbsp;</td>
+<td class="name">Discrete ordinary variation (norm)</td>
+<td class="note">Discrete Ordinary Variation (norm) = 2*suma(F_i*(1-F_i))* 2/(K-1), where F_i is cumulative relative frequency of the i-th category and K is number of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MedianIA&nbsp;</td>
+<td class="name">Median-category index (absolute)</td>
+<td class="note">Index (absolute <1;K>) of the median category</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MedianIR&nbsp;</td>
+<td class="name">Median-category index (relative)</td>
+<td class="note">Index (relative <0;1>) of the median category</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ArithmeticAverage&nbsp;</td>
+<td class="name">Arithmetic average</td>
+<td class="note">Arithmetic average of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>GeometricAverge&nbsp;</td>
+<td class="name">Geometric average</td>
+<td class="note">Geometric average of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Variance&nbsp;</td>
+<td class="name">Variance</td>
+<td class="note">Variance of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StDev&nbsp;</td>
+<td class="name">Standard deviation</td>
+<td class="note">Standard deviation of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Skewness&nbsp;</td>
+<td class="name">Skewness</td>
+<td class="note">Skewness of distribution of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Asymetry&nbsp;</td>
+<td class="name">Asymetry</td>
+<td class="note">Asymetry coeficient of distribution of cardinal values. Only for cardinal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StepsUp&nbsp;</td>
+<td class="name">Steps-up</td>
+<td class="note">Number of steps-up in frequency of adjectant categories from given range in histogram</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StepsDown&nbsp;</td>
+<td class="name">Steps-down</td>
+<td class="note">Number of steps-down in frequency of adjectant categories from given range in histogram</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffSum&nbsp;</td>
+<td class="name">PattDiffSum</td>
+<td class="note">Sum of absolute values of differences of frequencies in the histogram and a given pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffMin&nbsp;</td>
+<td class="name">PattDiffMin</td>
+<td class="note">The minimal of absolute values of differences of frequencies in the histogram and a given pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffMax&nbsp;</td>
+<td class="name">PattDiffMax</td>
+<td class="note">The maximal of absolute values of differences of frequencies in the histogram and a given pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Var&nbsp;</td>
+<td class="name">Variation from pattern</td>
+<td class="note">Total variation from given pattern</td>
+</tr>
+</table>
+<h3 id="CFQuantifierValueType">CFQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the whole histogram. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</td>
+</tr>
+</table>
+<h3 id="CoefficientType">CoefficientType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Subset&nbsp;</td>
+<td class="name">Subsets</td>
+<td class="note">All the subsets of categories from minimal up to maximal length</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>OneCategory&nbsp;</td>
+<td class="name">One category</td>
+<td class="note">Only one selected category appears in literal</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sequence&nbsp;</td>
+<td class="name">Sequences</td>
+<td class="note">All the consecutive sequencies of categories from minimal up to maximal length</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CyclicalSequence&nbsp;</td>
+<td class="name">Cyclical sequences</td>
+<td class="note">Same as the sequence plus overlapping combinations of first and last categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Cuts&nbsp;</td>
+<td class="name">Cuts</td>
+<td class="note">All the cuts of categories from minimal up to maximal length</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LeftCut&nbsp;</td>
+<td class="name">Left cuts</td>
+<td class="note">All the left cuts of categories from minimal up to maximal length</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RightCut&nbsp;</td>
+<td class="name">Right cuts</td>
+<td class="note">All the right cuts of categories from minimal up to maximal length</td>
+</tr>
+</table>
+<h3 id="CompareType">CompareType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Equal&nbsp;</td>
+<td class="name">Equal</td>
+<td class="note">Equal value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Less&nbsp;</td>
+<td class="name">Less than</td>
+<td class="note">Less than</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LessOrEqual&nbsp;</td>
+<td class="name">Less than or equal</td>
+<td class="note">Less than or equal</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Greater&nbsp;</td>
+<td class="name">Greater than</td>
+<td class="note">Greater than</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>GreaterOrEqual&nbsp;</td>
+<td class="name">Greater than or equal</td>
+<td class="note">Greater than or equal</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotEqual&nbsp;</td>
+<td class="name">Not equal</td>
+<td class="note">Not equal value</td>
+</tr>
+</table>
+<h3 id="DataColumnSubType">DataColumnSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Ordinary&nbsp;</td>
+<td class="name">Ordinary DB field</td>
+<td class="note">Ordinary database column</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Derived&nbsp;</td>
+<td class="name">Derived</td>
+<td class="note">Derived column by expression</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SQLQuery&nbsp;</td>
+<td class="name">SQL-query</td>
+<td class="note">Column computed as an SQL query</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Geo&nbsp;</td>
+<td class="name">Geo</td>
+<td class="note">Column computed as a geographical relation of a point to a set of points or polygons</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DatePart&nbsp;</td>
+<td class="name">Date-time partial value</td>
+<td class="note">A single partial value derived from the DateTime column</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MCField&nbsp;</td>
+<td class="name">Multi-column field</td>
+<td class="note">One field of a multi-column</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Hypothesis&nbsp;</td>
+<td class="name">Task-results derived value</td>
+<td class="note">Derived column based on results of a hypothesis</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PCA&nbsp;</td>
+<td class="name">Task-results derived value</td>
+<td class="note">One component of a Principal component analysis</td>
+</tr>
+</table>
+<h3 id="DataCharacterType">DataCharacterType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Nominal&nbsp;</td>
+<td class="name">Nominal</td>
+<td class="note">Nominal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Ordinal&nbsp;</td>
+<td class="name">Ordinal</td>
+<td class="note">Ordinal values with an order defined</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Cardinal&nbsp;</td>
+<td class="name">Cardinal</td>
+<td class="note">Cardinal values with a distance defined</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Unknown character of values</td>
+</tr>
+</table>
+<h3 id="DataTableSubType">DataTableSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Table&nbsp;</td>
+<td class="name">Stored table</td>
+<td class="note">Data statically stored in database table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>View&nbsp;</td>
+<td class="name">Dynamic view</td>
+<td class="note">Dynamically created view from (multiple) database tables</td>
+</tr>
+</table>
+<h3 id="DatePartSubType">DatePartSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Year&nbsp;</td>
+<td class="name">Year</td>
+<td class="note">Year-value of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Month&nbsp;</td>
+<td class="name">Month</td>
+<td class="note">Month-value of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Day&nbsp;</td>
+<td class="name">Day</td>
+<td class="note">Day-value from of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Hour&nbsp;</td>
+<td class="name">Hour</td>
+<td class="note">Hour-value of the time</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min</td>
+<td class="note">Minutes-value of the time</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sec&nbsp;</td>
+<td class="name">Sec</td>
+<td class="note">Seconds-value of the time</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DayOfWeek&nbsp;</td>
+<td class="name">DayOfWeek</td>
+<td class="note">Day of the week of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DayOfYear&nbsp;</td>
+<td class="name">DayOfYear</td>
+<td class="note">Day of the year of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>WeekOfYear&nbsp;</td>
+<td class="name">WeekOfYear</td>
+<td class="note">Week of the year of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Quarter&nbsp;</td>
+<td class="name">Quarter</td>
+<td class="note">Quarter of the year of the date</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DayOfRange&nbsp;</td>
+<td class="name">DayOfRange</td>
+<td class="note">Day index within the min-max range of dates in the corresponding column</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MonthOfRange&nbsp;</td>
+<td class="name">MonthOfRange</td>
+<td class="note">Month index within the min-max range of dates in the corresponding column</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Not applicable to this attribute</td>
+</tr>
+</table>
+<h3 id="DCQuantifierStepCountType">DCQuantifierStepCountType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number of steps. Count value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelRange&nbsp;</td>
+<td class="name">Relative [%] to act range</td>
+<td class="note">Relative to number of categories in the currently selected range- 1. Count value is multiplied by ('number of categories in current range minus 1')/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all categories</td>
+<td class="note">Relative to number of all categories minus 1. Count value is multiplied by ('total number of categories minus 1')/100</td>
+</tr>
+</table>
+<h3 id="DCQuantifierStepSizeType">DCQuantifierStepSizeType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Change in frequency as an absolute number. Minimal step size is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyPrev&nbsp;</td>
+<td class="name">Relative [%] to previous frequency</td>
+<td class="note">Relative to the previous frequency. Minimal step size is multiplied by (frequency of the previous category)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Minimal step size is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Minimal step size is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the currently processed histogram. Minimal step size is multiplied by (the highest frequency in the whole histogram)/100</td>
+</tr>
+</table>
+<h3 id="DCQuantifierType">DCQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Avg&nbsp;</td>
+<td class="name">Average frequency</td>
+<td class="note">Average frequency from range of categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Some&nbsp;</td>
+<td class="name">Some frequency</td>
+<td class="note">At least one frequency from range categories</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>VariationRatio&nbsp;</td>
+<td class="name">Variation ratio</td>
+<td class="note">Variation ratio = 1-f(modal)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NominalVariation&nbsp;</td>
+<td class="name">Nominal variation (norm)</td>
+<td class="note">Nominal variation (norm) = suma(f(i)*(1-f(i))) * K/(K-1)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiscreteOrdinaryVariation&nbsp;</td>
+<td class="name">Discrete ordinary variation (norm)</td>
+<td class="note">Discrete Ordinary Variation (norm) = 2*suma(F(i)*(1-F(i))* 2/(K-1)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ArithmeticAverage&nbsp;</td>
+<td class="name">Arithmetic average</td>
+<td class="note">Arithmetic average of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>GeometricAverage&nbsp;</td>
+<td class="name">Geometric average</td>
+<td class="note">Geometric average of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Variance&nbsp;</td>
+<td class="name">Variance</td>
+<td class="note">Variance of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StandardDeviation&nbsp;</td>
+<td class="name">Standard deviation</td>
+<td class="note">Standard deviation of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Skewness&nbsp;</td>
+<td class="name">Skewness</td>
+<td class="note">Skewness of distribution of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Asymetry&nbsp;</td>
+<td class="name">Asymetry</td>
+<td class="note">Asymetry coeficient of distribution of cardinal values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StepsUp&nbsp;</td>
+<td class="name">Steps-up</td>
+<td class="note">Number of steps-up in frequency of adjectant categories in histogram</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>StepsDown&nbsp;</td>
+<td class="name">Steps-down</td>
+<td class="note">Number of steps-down in frequency of adjectant categories in histogram</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Var&nbsp;</td>
+<td class="name">Variation from pattern</td>
+<td class="note">Total variation from given pattern</td>
+</tr>
+</table>
+<h3 id="DCQuantifierValueType">DCQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</td>
+</tr>
+</table>
+<h3 id="DFQuantifierType">DFQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PImplication&nbsp;</td>
+<td class="name">p-Implication</td>
+<td class="note">a/(a+b) >= p ... at least 100*p [%] of objects satisfying A satisfy also S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AverageDifference&nbsp;</td>
+<td class="name">Average Difference Dependence</td>
+<td class="note">Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in <-1;inf), similar to the Lift(X->Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AboveAverage&nbsp;</td>
+<td class="name">Above Average Dependence</td>
+<td class="note">Among objects satisfying A there are at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;inf).</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>BelowAverage&nbsp;</td>
+<td class="name">Below Average Dependence</td>
+<td class="note">Among objects satisfying A there are at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>OAD&nbsp;</td>
+<td class="name">Outside Average Dependence</td>
+<td class="note">Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalImplication&nbsp;</td>
+<td class="name">Lower Critical Implication</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(S|A)<=p in favour of alternative P(S|A)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalImplication&nbsp;</td>
+<td class="name">Upper Critical Implication</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(S|A)<=p in favour of alternative P(S|A)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoublePImplication&nbsp;</td>
+<td class="name">Double p-Implication</td>
+<td class="note">a/(a+b+c) >= p ... at least 100*p [%] of objects satisfying A or S satisfy both A and S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleLowerCriticalImplication&nbsp;</td>
+<td class="name">Double Lower Critical Implication</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(AandS|AorS)<=p in favour of alternative P(AandS|AorS)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleUpperCriticalImplication&nbsp;</td>
+<td class="name">Double Upper Critical Implication</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(AandS|AorS)<=p in favour of alternative P(AandS|AorS)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PEquivalence&nbsp;</td>
+<td class="name">p-Equivalence</td>
+<td class="note">(a+d)/n >= p ... at least 100*p [%] objects have the same truth value for A and S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalEquivalence&nbsp;</td>
+<td class="name">Lower Critical Equivalence</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(A and S have the same truth value)<=p in favour of alternative P(A and S have the same truth value)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalEquivalence&nbsp;</td>
+<td class="name">Upper Critical Equivalence</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(A and S have the same truth value)<=p in favour of alternative P(A and S have the same truth value)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SimpleDeviation&nbsp;</td>
+<td class="name">Simple Deviation</td>
+<td class="note">a*d > exp(sigma)*b*c</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Fisher&nbsp;</td>
+<td class="name">Fisher quantifier</td>
+<td class="note">The one-sided Fisher test rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ChiSq&nbsp;</td>
+<td class="name">Chi-Squared quantifier</td>
+<td class="note">The one-sided Fisher test asymptotically rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AQ&nbsp;</td>
+<td class="name">A-quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>EQ&nbsp;</td>
+<td class="name">E-quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>afrequency&nbsp;</td>
+<td class="name">a-frequency</td>
+<td class="note">a-frequency (BASE) from source contingency table</td>
+</tr>
+</table>
+<h3 id="DFQuantifierValueType">DFQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</td>
+</tr>
+</table>
+<h3 id="DKQuantifierType">DKQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from given part of source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from given part of source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from given part of source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Avg&nbsp;</td>
+<td class="name">Average frequency</td>
+<td class="note">Average frequency from given part of source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Some&nbsp;</td>
+<td class="name">Some frequency</td>
+<td class="note">At least one frequency from given part of source contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CramerV&nbsp;</td>
+<td class="name">Cramer's V coefficient</td>
+<td class="note">Cramer's V (association of two nominal variables) in <0;1> (the farther is value from 0 the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Kendall&nbsp;</td>
+<td class="name">Kendall's TauB coefficient</td>
+<td class="note">Value of TauB in <-1;1> (the farther is value from 0 the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ChiSq&nbsp;</td>
+<td class="name">Chi-square test</td>
+<td class="note">Chi-square test of similarity (the greater value the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ConditionalEntropy&nbsp;</td>
+<td class="name">Conditional entropy H(C|R)</td>
+<td class="note">Conditional entropy of columns given rows (the lower value the more dependant <0;log2(L)>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MutualInformation&nbsp;</td>
+<td class="name">Mutual information MI(R,C) normalized</td>
+<td class="note">Mutual information between rows and columns (the greater value the more dependant <0;1>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>InformationDependence&nbsp;</td>
+<td class="name">Inf. dependence ID(R,C)</td>
+<td class="note">Information dependence between rows and columns (the greater value the more dependant <0;1>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AsymetricInformation&nbsp;</td>
+<td class="name">Asymetric information coefficient AIC(R,C)</td>
+<td class="note">Value of asymetric information coefficient Theta (the greater value the more dependant <0;1>)</td>
+</tr>
+</table>
+<h3 id="DKQuantifierValueType">DKQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</td>
+</tr>
+</table>
+<h3 id="FTQuantifierType">FTQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Support&nbsp;</td>
+<td class="name">Support</td>
+<td class="note">a/(a+b+c+d) >= p ... at least 100*p [%] of objects satisfy both A and S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PImplication&nbsp;</td>
+<td class="name">p-Implication</td>
+<td class="note">a/(a+b) >= p ... at least 100*p [%] of objects satisfying A satisfy also S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AboveAverage&nbsp;</td>
+<td class="name">Above Average Dependence</td>
+<td class="note">Among objects satisfying A, there is at least 100*p [%] more objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;inf).</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>BelowAverage&nbsp;</td>
+<td class="name">Below Average Dependence</td>
+<td class="note">Among objects satisfying A, there is at least 100*p [%] less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>OAD&nbsp;</td>
+<td class="name">Outside Average Dependence</td>
+<td class="note">Among objects satisfying A, there is at least 100*p [%] more or less objects satisfying S than there are objects satisfying S in the whole data matrix. Parameter p in <0;1>.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AverageDifference&nbsp;</td>
+<td class="name">Average Difference Dependence</td>
+<td class="note">Relative difference in number of objects satisfying S among objects satisfying A to number objects saysfying S in the whole data matrix. Paramater p in <-1;inf), similar to the Lift(X->Y)= P(Y|X)/P(Y). It holds p= P(Y|X)/P(Y)-1.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalImplication&nbsp;</td>
+<td class="name">Lower Critical Implication</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(S|A)<=p in favour of alternative P(S|A)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalImplication&nbsp;</td>
+<td class="name">Upper Critical Implication</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(S|A)<=p in favour of alternative P(S|A)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoublePImplication&nbsp;</td>
+<td class="name">Double p-Implication</td>
+<td class="note">a/(a+b+c) >= p ... at least 100*p [%] of objects satisfying A or S satisfy both A and S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleLowerCriticalImplication&nbsp;</td>
+<td class="name">Double Lower Critical Implication</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(AandS|AorS)<=p in favour of alternative P(AandS|AorS)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DoubleUpperCriticalImplication&nbsp;</td>
+<td class="name">Double Upper Critical Implication</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(AandS|AorS)<=p in favour of alternative P(AandS|AorS)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PEquivalence&nbsp;</td>
+<td class="name">p-Equivalence</td>
+<td class="note">(a+d)/n >= p ... at least 100*p [%] objects have the same truth value for A and S</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>LowerCriticalEquivalence&nbsp;</td>
+<td class="name">Lower Critical Equivalence</td>
+<td class="note">The binomical test rejects on the level alpha the null hypothesis P(A and S have the same truth value)<=p in favour of alternative P(A and S have the same truth value)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpperCriticalEquivalence&nbsp;</td>
+<td class="name">Upper Critical Equivalence</td>
+<td class="note">The binomical test does not reject on the level alpha the null hypothesis P(A and S have the same truth value)<=p in favour of alternative P(A and S have the same truth value)>p</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SimpleDeviation&nbsp;</td>
+<td class="name">Simple Deviation</td>
+<td class="note">a*d > exp(delta)*b*c</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Fisher&nbsp;</td>
+<td class="name">Fisher quantifier</td>
+<td class="note">The one-sided Fisher test rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ChiSq&nbsp;</td>
+<td class="name">Chi-Square quantifier</td>
+<td class="note">The Chi-Square test asymptotically rejects on the level alpha the null hypothesis of independence of A and S in favour of the alternative of their positive logarithmic interaction</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>EQ&nbsp;</td>
+<td class="name">E-quantifier</td>
+<td class="note">-</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ParaSeparation&nbsp;</td>
+<td class="name">Paraconsistent separation</td>
+<td class="note">Paraconsistent separation quantifier looking for (almost) separate A and S with truth-criterion of (1+p)*a<=b+c. It is recommend also to set-up a simple-frequency quantifier for (b+c) to assure some minimal sample size.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>BASE&nbsp;</td>
+<td class="name">BASE</td>
+<td class="note">a >= BASE ... at least BASE-number of objects for dependency to be statistically relevant</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CEIL&nbsp;</td>
+<td class="name">Ceiling</td>
+<td class="note">a <= CEIL ... not more than CEIL-number of objects (i.e. not too 'obvious' dependency)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>afrequency&nbsp;</td>
+<td class="name">a-frequency</td>
+<td class="note">a-frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>bfrequency&nbsp;</td>
+<td class="name">b-frequency</td>
+<td class="note">b-frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>cfrequency&nbsp;</td>
+<td class="name">c-frequency</td>
+<td class="note">c-frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>dfrequency&nbsp;</td>
+<td class="name">d-frequency</td>
+<td class="note">d-frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>rfrequency&nbsp;</td>
+<td class="name">r-frequency</td>
+<td class="note">r-frequency (a+b) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>sfrequency&nbsp;</td>
+<td class="name">s-frequency</td>
+<td class="note">s-frequency (c+d) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>kfrequency&nbsp;</td>
+<td class="name">k-frequency</td>
+<td class="note">k-frequency (a+c) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>lfrequency&nbsp;</td>
+<td class="name">l-frequency</td>
+<td class="note">l-frequency (b+d) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>adfrequency&nbsp;</td>
+<td class="name">ad-frequency</td>
+<td class="note">ad-frequency (a+d) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>bcfrequency&nbsp;</td>
+<td class="name">bc-frequency</td>
+<td class="note">bc-frequency (b+c) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of values</td>
+<td class="note">Sum of frequencies (n) from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min value</td>
+<td class="note">Minimal frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max value</td>
+<td class="note">Maximal frequency from contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffVal&nbsp;</td>
+<td class="name">Frequency difference</td>
+<td class="note">Frequency of corresponding category in histogram minus number of rows matching both antecedent and succedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffRel&nbsp;</td>
+<td class="name">Relative frequencies difference</td>
+<td class="note">Difference of relative frequency of a corresponding category in histogram and confidence</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffRelAbs&nbsp;</td>
+<td class="name">Absolute value of relative frequencies difference</td>
+<td class="note">Absolute value of difference of relative frequency of a corresponding category in histogram and confidence</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffRelRatio&nbsp;</td>
+<td class="name">Ratio of relative frequencies</td>
+<td class="note">Ratio of relative frequency in histogram to relative frequency of succedent in rows matching antecedent (i.e. "inverse Lift")</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffCat&nbsp;</td>
+<td class="name">Relative frequencies of category difference</td>
+<td class="note">Difference of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffCatAbs&nbsp;</td>
+<td class="name">Absolute value of relative frequencies of category difference</td>
+<td class="note">Absolute value of difference of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FreqDiffCatRatio&nbsp;</td>
+<td class="name">Ratio of relative frequencies of category</td>
+<td class="note">Ratio of relative frequency of category in histogram to the frequency of this category in the whole data and relative frequency of rows matching both antecedent and succedent to frequency of category in the whole data</td>
+</tr>
+</table>
+<h3 id="FTQuantifierValueType">FTQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</td>
+</tr>
+</table>
+<h3 id="GaceType">GaceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Positive&nbsp;</td>
+<td class="name">Positive</td>
+<td class="note">Positive gace</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Negative&nbsp;</td>
+<td class="name">Negative</td>
+<td class="note">Negative gace (negation)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Both&nbsp;</td>
+<td class="name">Both</td>
+<td class="note">Both (positive and negative)</td>
+</tr>
+</table>
+<h3 id="GeoColumnSubType">GeoColumnSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>InPolygonName&nbsp;</td>
+<td class="name">In-Polygon name</td>
+<td class="note">Name of the polygon the coordinates are within</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PointName&nbsp;</td>
+<td class="name">Closest-Point name</td>
+<td class="note">Name of the closest point to the coordinates</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PointDistance&nbsp;</td>
+<td class="name">Closest-Point distance</td>
+<td class="note">Distance [km] from the coordinates to the the closest point</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PointCount&nbsp;</td>
+<td class="name">Point-number</td>
+<td class="note">Number of points within a distance [km] from the coordinates (distance given by a threshold value)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Not applicable to this attribute</td>
+</tr>
+</table>
+<h3 id="GeoDistanceType">GeoDistanceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Euclidean&nbsp;</td>
+<td class="name">Euclidean</td>
+<td class="note">Euclidean distance of cartesian planar coordinates.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Cylindrical&nbsp;</td>
+<td class="name">Cylindrical</td>
+<td class="note">Euclidean distance on cylindrical projection of geographical coordinates (WGS84) and transformed into kilometers. Applicable for points up to 500 km apart and within latitudes of 70N and 70S.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Haversine&nbsp;</td>
+<td class="name">Haversine</td>
+<td class="note">Haversine formula for computing distances on the sphere for geographical coordinates (WGS84) and transformed into kilometers. The better precison for large distances on the Earth, but slowest.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Not applicable to this attribute</td>
+</tr>
+</table>
+<h3 id="InfinityType">InfinityType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Finite&nbsp;</td>
+<td class="name">Finite value</td>
+<td class="note">Finite value (not infinity)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PlusInfinity&nbsp;</td>
+<td class="name">Plus infinity</td>
+<td class="note">Plus infinity value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MinusInfinity&nbsp;</td>
+<td class="name">Minus infinity</td>
+<td class="note">Minus infinity value</td>
+</tr>
+</table>
+<h3 id="IntervalValueType">IntervalValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>From&nbsp;</td>
+<td class="name">From</td>
+<td class="note">Left border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>To&nbsp;</td>
+<td class="name">To</td>
+<td class="note">Right border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FuzzyFromMin&nbsp;</td>
+<td class="name">Fuzzy from (min)</td>
+<td class="note">First left fuzzy border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FuzzyFromMax&nbsp;</td>
+<td class="name">Fuzzy from (max)</td>
+<td class="note">Second left fuzzy border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FuzzyToMin&nbsp;</td>
+<td class="name">Fuzzy to (min)</td>
+<td class="note">First right fuzzy border value</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FuzzyToMax&nbsp;</td>
+<td class="name">Fuzzy to (max)</td>
+<td class="note">Second right fuzzy border value</td>
+</tr>
+</table>
+<h3 id="KLQuantifierKLTableValueType">KLQuantifierKLTableValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute frequencies. Frequencies in histogram are left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative frequencies to number of rows matching condition. Frequencies are divided by number of rows matching condition and multiplied by 100.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelRow&nbsp;</td>
+<td class="name">Relative [%] for each row</td>
+<td class="note">Relative frequencies for each row. Each frequency is divided by the sum of frequencies in its row and multiplied by 100.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCol&nbsp;</td>
+<td class="name">Relative [%] for each column</td>
+<td class="note">Relative frequencies for each column. Each frequency is divided by the sum of frequencies in its column and multiplied by 100.</td>
+</tr>
+</table>
+<h3 id="KLQuantifierType">KLQuantifierType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Sum&nbsp;</td>
+<td class="name">Sum of frequencies</td>
+<td class="note">Sum of frequencies from given part of contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Min&nbsp;</td>
+<td class="name">Min frequency</td>
+<td class="note">Minimal frequency from given part of contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Max&nbsp;</td>
+<td class="name">Max frequency</td>
+<td class="note">Maximal frequency from given part of contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Avg&nbsp;</td>
+<td class="name">Average frequency</td>
+<td class="note">Average frequency from given part of contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Some&nbsp;</td>
+<td class="name">Some frequency</td>
+<td class="note">At least one frequency from given part of contingency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CramerV&nbsp;</td>
+<td class="name">Cramer's V coefficient</td>
+<td class="note">Cramer's V (association of two nominal variables) in <0;1> (the farther is value from 0 the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Kendall&nbsp;</td>
+<td class="name">Kendall's TauB coefficient</td>
+<td class="note">Kendall's TauB (coefficient of ordinal correlation of two variables) in <-1;1> (the farther is value from 0 the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ChiSq&nbsp;</td>
+<td class="name">Chi-square test</td>
+<td class="note">Chi-square test of similarity (the greater value the more dependant)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Variation&nbsp;</td>
+<td class="name">Variation from pattern</td>
+<td class="note">Total variation from pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ConditionalEntropy&nbsp;</td>
+<td class="name">Conditional entropy H(C|R)</td>
+<td class="note">Conditional entropy of columns given rows (the lower value the more dependant <0;log2(L)>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MutualInformation&nbsp;</td>
+<td class="name">Mutual information MI(R,C) normalized</td>
+<td class="note">Mutual information between rows and columns (the greater value the more dependant <0;1>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>InformationDependence&nbsp;</td>
+<td class="name">Inf. dependence ID(R,C)</td>
+<td class="note">Information dependence between rows and columns (the greater value the more dependant <0;1>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>AsymetricInformation&nbsp;</td>
+<td class="name">Asymetric information coefficient AIC(R,C)</td>
+<td class="note">Value of asymetric information coefficient Theta (the greater value the more dependant <0;1>)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffSum&nbsp;</td>
+<td class="name">PattDiffSum</td>
+<td class="note">Sum of absolute values of differences of frequencies in the contingency table and a given pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffMin&nbsp;</td>
+<td class="name">PattDiffMin</td>
+<td class="note">The minimal of absolute values of differences of frequencies in the contingency table and a given pattern</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PattDiffMax&nbsp;</td>
+<td class="name">PattDiffMax</td>
+<td class="note">The maximal of absolute values of differences of frequencies in the contingency table and a given pattern</td>
+</tr>
+</table>
+<h3 id="KLQuantifierValueType">KLQuantifierValueType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Abs&nbsp;</td>
+<td class="name">Absolute number</td>
+<td class="note">Absolute number. Threshold value is left as given.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to act condition</td>
+<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelAll&nbsp;</td>
+<td class="name">Relative [%] to all objects</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
+<td class="name">Relative [%] to max frequency</td>
+<td class="note">Relative to maximal frequency in the whole contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</td>
+</tr>
+</table>
+<h3 id="LaqMapType">LaqMapType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Antecedent&nbsp;</td>
+<td class="name">Antecedent</td>
+<td class="note">Mapping attributes to antecedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Succedent&nbsp;</td>
+<td class="name">Succedent</td>
+<td class="note">Mapping attributes to succedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Condition&nbsp;</td>
+<td class="name">Condition</td>
+<td class="note">Mapping attributes to condition</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FirstSet&nbsp;</td>
+<td class="name">FirstSet</td>
+<td class="note">Mapping attributes to the firstset</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SecondSet&nbsp;</td>
+<td class="name">SecondSet</td>
+<td class="note">Mapping attributes to the secondset</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Quantifier&nbsp;</td>
+<td class="name">Quantifier</td>
+<td class="note">Mapping of quantifier</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Filter&nbsp;</td>
+<td class="name">Filter</td>
+<td class="note">Mapping of filtering</td>
+</tr>
+</table>
+<h3 id="LaqPatternGridFlagType">LaqPatternGridFlagType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Influence not set yet</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DontCare&nbsp;</td>
+<td class="name">Don't care</td>
+<td class="note">Not interested in this combination</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ToBeMined&nbsp;</td>
+<td class="name">To be mined</td>
+<td class="note">Waiting for to be mined</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Processed&nbsp;</td>
+<td class="name">Being processed</td>
+<td class="note">Beeing processed</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Solved&nbsp;</td>
+<td class="name">Solved</td>
+<td class="note">Results obtained</td>
+</tr>
+</table>
+<h3 id="LaqTaskType">LaqTaskType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FTMiner&nbsp;</td>
+<td class="name">4ftMiner</td>
+<td class="note">4ftMiner Task</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CFMiner&nbsp;</td>
+<td class="name">CF-Miner</td>
+<td class="note">CF-Miner Task</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KLMiner&nbsp;</td>
+<td class="name">KL-Miner</td>
+<td class="note">KL-Miner Task</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SD4ftMiner&nbsp;</td>
+<td class="name">SD4ft-Miner</td>
+<td class="note">SD4ft-Miner Task</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SDCFMiner&nbsp;</td>
+<td class="name">SDCF-Miner</td>
+<td class="note">SDCF-Miner Task</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SDKLMiner&nbsp;</td>
+<td class="name">SDKL-Miner</td>
+<td class="note">SDKL-Miner Task</td>
+</tr>
+</table>
+<h3 id="LiteralType">LiteralType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Basic&nbsp;</td>
+<td class="name">Basic</td>
+<td class="note">Literal must be included in every cedent</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Remaining&nbsp;</td>
+<td class="name">Remaining</td>
+<td class="note">Literal is obligatory in cedent</td>
+</tr>
+</table>
+<h3 id="MCAlgorithmType">MCAlgorithmType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KMeans&nbsp;</td>
+<td class="name">k-Means / k-Mode</td>
+<td class="note">Flat level k-Means or k-Mode clustering</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RBKMeans&nbsp;</td>
+<td class="name">Repeated bisection k-Means / k-Mode</td>
+<td class="note">Top-down recursive bi-section clustering producing a tree of clusters</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>HAC&nbsp;</td>
+<td class="name">Hierarchical Agglomerative Clustering</td>
+<td class="note">Bottom-up hierarchical agglomerative clustering using distance matrix</td>
+</tr>
+</table>
+<h3 id="MCCenterType">MCCenterType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CatMean&nbsp;</td>
+<td class="name">Mean</td>
+<td class="note">Mean of category-index values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CatModus&nbsp;</td>
+<td class="name">Modus</td>
+<td class="note">The most frequent category</td>
+</tr>
+</table>
+<h3 id="MCDistanceType">MCDistanceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Euclidean&nbsp;</td>
+<td class="name">Euclidean distance</td>
+<td class="note">Euclidean measure of distance between two objects</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Cosinus&nbsp;</td>
+<td class="name">Cosinus similarity</td>
+<td class="note">Cosinus measure of similarity between two objects</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SimpleMatch&nbsp;</td>
+<td class="name">Simple match</td>
+<td class="note">Simple match of categories (Sokal and Michener)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Eskin&nbsp;</td>
+<td class="name">Eskin measure</td>
+<td class="note">Esking similarity for nominal variables (Eskin et al.)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>VariableEntropy&nbsp;</td>
+<td class="name">Variable Entropy</td>
+<td class="note">Variable Entropy similarity measure of nominal variables (Sulc)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>VariableMutability&nbsp;</td>
+<td class="name">Variable Mutability</td>
+<td class="note">Variable Mutability similarity measure of nominal variables (Sulc)</td>
+</tr>
+</table>
+<h3 id="MCLinkageType">MCLinkageType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Simple&nbsp;</td>
+<td class="name">Simple</td>
+<td class="note">Simple linkage of clusters (the minimal distance)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Complete&nbsp;</td>
+<td class="name">Complete</td>
+<td class="note">Complete linkage of clusters (the maximal distance)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Average&nbsp;</td>
+<td class="name">Average</td>
+<td class="note">Average linkage of clusters (the average distance)</td>
+</tr>
+</table>
+<h3 id="MissingsType">MissingsType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Deleting&nbsp;</td>
+<td class="name">Delete</td>
+<td class="note">Not including missing values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Pesimistic&nbsp;</td>
+<td class="name">Pesimistic fill up</td>
+<td class="note">Pesimistic fill up of missing values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Optimistic&nbsp;</td>
+<td class="name">Optimistic fill up</td>
+<td class="note">Pesimistic fill up of missing values</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Ignore&nbsp;</td>
+<td class="name">Ignore X-categories</td>
+<td class="note">Ignoring X-categories</td>
+</tr>
+</table>
+<h3 id="MutualInfluenceScopeType">MutualInfluenceScopeType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Scope not set yet</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>BackgroundKnowledge&nbsp;</td>
+<td class="name">Background knowledge</td>
+<td class="note">Dependency follows from the domain background knowledge</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DataSpecific&nbsp;</td>
+<td class="name">Data specific</td>
+<td class="note">Dependency follows from data anomalies</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Unknown&nbsp;</td>
+<td class="name">Unknown</td>
+<td class="note">Scope is unknown</td>
+</tr>
+</table>
+<h3 id="MutualInfluenceType">MutualInfluenceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Influence not set yet</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SomeInfluence&nbsp;</td>
+<td class="name">Some influence</td>
+<td class="note">There is some influence but not examined in detail</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PositiveInfluence&nbsp;</td>
+<td class="name">Positive influence</td>
+<td class="note">If the row attribute increases then the column attribute increases too</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NegativeInfluence&nbsp;</td>
+<td class="name">Negative influence</td>
+<td class="note">If the row attribute increases then the column attribute decreases</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PositiveFrequency&nbsp;</td>
+<td class="name">Positive frequency</td>
+<td class="note">If the row attribute increases then the relative frequency of objects satisfying column attribute increases</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NegativeFrequency&nbsp;</td>
+<td class="name">Negative frequency</td>
+<td class="note">If the row attribute increases then the relative frequency of objects satisfying column attribute decreases</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>PositiveBoolean&nbsp;</td>
+<td class="name">Positive boolean</td>
+<td class="note">If truthfulness of the row attribute increases then relative frequency of true values of column attribute increases too</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NegativeBoolean&nbsp;</td>
+<td class="name">Negative boolean</td>
+<td class="note">If truthfulness of the row attribute increases then relative frequency of true values of column attribute decreases</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Functional&nbsp;</td>
+<td class="name">Functional</td>
+<td class="note">There is a strong function-like dependency</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>None&nbsp;</td>
+<td class="name">None</td>
+<td class="note">No influence at all</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DontCare&nbsp;</td>
+<td class="name">Don't care about influence</td>
+<td class="note">There maybe some influence but we don't care</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Unknown&nbsp;</td>
+<td class="name">Unknown</td>
+<td class="note">There could be an influence, no details are known</td>
+</tr>
+</table>
+<h3 id="MutualInfluenceValidityType">MutualInfluenceValidityType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>NotSet&nbsp;</td>
+<td class="name">Not set</td>
+<td class="note">Validity not set yet</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Proven&nbsp;</td>
+<td class="name">Proven</td>
+<td class="note">Dependency proven</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Rejected&nbsp;</td>
+<td class="name">Rejected</td>
+<td class="note">Dependency was rejected</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Unknown&nbsp;</td>
+<td class="name">Unknown</td>
+<td class="note">Validity not know</td>
+</tr>
+</table>
+<h3 id="QuantityBinarizeType">QuantityBinarizeType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>None&nbsp;</td>
+<td class="name">None</td>
+<td class="note">Not set</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>EqualNotEqual&nbsp;</td>
+<td class="name">Equal versus Not-equal</td>
+<td class="note">One category against all others. As many dichotimized attributes with categories '=' and '<>' as there is categories in the original attribute. Suitable for nominal attributes.</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>UpToAbove&nbsp;</td>
+<td class="name">Up-to versus Above</td>
+<td class="note">Disjunction of all categories up to a certain category against all other categories. As many dichotomized attributes with categories '<=' and '>' as there is categories in the original attribute minus one. Suitable for ordinal and cardinal attributes.</td>
+</tr>
+</table>
+<h3 id="RMAssignType">RMAssignType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Random&nbsp;</td>
+<td class="name">Random</td>
+<td class="note">Column values generated randomly</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Init&nbsp;</td>
+<td class="name">Initialized by formula</td>
+<td class="note">Column values initially computed by a mathematical formula</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Update&nbsp;</td>
+<td class="name">Updated by formula</td>
+<td class="note">Column values continuously updated by a mathematical formula</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Copy&nbsp;</td>
+<td class="name">Copied from the underlying data</td>
+<td class="note">Column values initialized by copying values from the underlying data</td>
+</tr>
+</table>
+<h3 id="RMCaseType">RMCaseType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Evolution&nbsp;</td>
+<td class="name">Evolution</td>
+<td class="note">Generating artificial data using evolutionary algorithm</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Randomizer&nbsp;</td>
+<td class="name">Randomizer</td>
+<td class="note">Randomization of previously generated data using evolution algorithm</td>
+</tr>
+</table>
+<h3 id="RMDistributionType">RMDistributionType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Uniform&nbsp;</td>
+<td class="name">Uniform</td>
+<td class="note">Uniform distribution of values across possible range</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Gaussian&nbsp;</td>
+<td class="name">Gaussian</td>
+<td class="note">A bell-shaped distribution with defined mean value and standard deviation</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Manually&nbsp;</td>
+<td class="name">Manually user-specified</td>
+<td class="note">Manually specified frequencies (for enumerations only)</td>
+</tr>
+</table>
+<h3 id="RMDiversityType">RMDiversityType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Random&nbsp;</td>
+<td class="name">Random</td>
+<td class="note">Randomly generated values for each individual</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Permutation&nbsp;</td>
+<td class="name">Permutation</td>
+<td class="note">Permutation of a one-time pregenerated random values</td>
+</tr>
+</table>
+<h3 id="RMCharibType">RMCharibType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Enumeration&nbsp;</td>
+<td class="name">Enumeration</td>
+<td class="note">Column could contain values only from a pre-defined list</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Range&nbsp;</td>
+<td class="name">Range of values</td>
+<td class="note">Column with any value within a given range</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RangeEnum&nbsp;</td>
+<td class="name">Range with predefined values</td>
+<td class="note">Column with any value within a given range with some predefined values</td>
+</tr>
+</table>
+<h3 id="SDConstructionType">SDConstructionType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Simple&nbsp;</td>
+<td class="name">FirstSet versus SecondSet</td>
+<td class="note">Comparison of the first set versus the second set</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>JoinedSet&nbsp;</td>
+<td class="name">FirstSet versus FirstSet and SecondSet</td>
+<td class="note">The second set is treated as a subset specification to the first set</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>InverseSet&nbsp;</td>
+<td class="name">FirstSet versus not FirstSet</td>
+<td class="note">The second set is inverse of the first set</td>
+</tr>
+</table>
+<h3 id="SDQuantifierSourceType">SDQuantifierSourceType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FirstSet&nbsp;</td>
+<td class="name">First set frequencies</td>
+<td class="note">Quantifier test applied to the first set data only</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SecondSet&nbsp;</td>
+<td class="name">Second set frequencies</td>
+<td class="note">Quantifier test applied to the second set data only</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiffAbs&nbsp;</td>
+<td class="name">Delta of absolute frequencies values</td>
+<td class="note">Quantifier test applied to the frequency table computed by substracting of corresponding frequencies</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DiffRel&nbsp;</td>
+<td class="name">Delta of relative frequencies values</td>
+<td class="note">Quantifier test applied to the frequency table computed by substracting of corresponding relative frequencies</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValDiff&nbsp;</td>
+<td class="name">Difference of interest-measures</td>
+<td class="note">Test applied to the difference of quantifier values computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValDiffAbs&nbsp;</td>
+<td class="name">Absolute difference of interest-measures</td>
+<td class="note">Test applied to the absolute difference of interest-measures computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValRation&nbsp;</td>
+<td class="name">Ratio of interest-measures</td>
+<td class="note">Test applied to the ratio of interest-measures computed separately from each frequency table</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ValRatioMax&nbsp;</td>
+<td class="name">Higher of ratios of interest-measures</td>
+<td class="note">Test applied to the higher of two ratios of interest-measures (im1/im2 or im2/im1)</td>
+</tr>
+</table>
+<h3 id="TaskSubType">TaskSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>FTMiner&nbsp;</td>
+<td class="name">4ft-Miner</td>
+<td class="note">4ft-Miner task for 4ft-association rules with rich syntax</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CFMiner&nbsp;</td>
+<td class="name">CF-Miner</td>
+<td class="note">CF-Miner task for conditonal frequencies of a single multi-categorical attribute</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KLMiner&nbsp;</td>
+<td class="name">KL-Miner</td>
+<td class="note">KL-Miner task for conditional frequencies of two multi-categorical attributes</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SD4ftMiner&nbsp;</td>
+<td class="name">SD4ft-Miner</td>
+<td class="note">SD4ft-Miner task for set difference in terms of two 4ft-association rules</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SDCFMiner&nbsp;</td>
+<td class="name">SDCF-Miner</td>
+<td class="note">SDCF-Miner task for set difference in terms of two frequencies of a single attribute</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>SDKLMiner&nbsp;</td>
+<td class="name">SDKL-Miner</td>
+<td class="note">SDKL-Miner task for set difference in terms of two frequencies of two multi-categorical attributes</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Ac4ftMiner&nbsp;</td>
+<td class="name">Ac4ft-Miner</td>
+<td class="note">Ac4ft-Miner task for 4ft-action rules</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ETreeMiner&nbsp;</td>
+<td class="name">ETree-Miner</td>
+<td class="note">ETree-Miner task for decision and exploration trees</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>MClusterMiner&nbsp;</td>
+<td class="name">MCluster-Miner</td>
+<td class="note">MCluster-Miner task for clustering analysis</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>KEx&nbsp;</td>
+<td class="name">Knowledge Explorer</td>
+<td class="note">Knowledge Explorer (KEx) task for classifications using machine learning</td>
+</tr>
+</table>
+<h3 id="TestingType">TestingType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>TrainingSet&nbsp;</td>
+<td class="name">Use training set</td>
+<td class="note">Use same records as for training</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>CrossValidation&nbsp;</td>
+<td class="name">Cross-validation</td>
+<td class="note">Cross-validating each of n-folds</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>RandomSplit&nbsp;</td>
+<td class="name">Random split</td>
+<td class="note">Random split of available data in given ration</td>
+</tr>
+</table>
+<h3 id="ValueSubType">ValueSubType</h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Integer&nbsp;</td>
+<td class="name">Integer number</td>
+<td class="note">Integer number between -2E09 and 2E09</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Float&nbsp;</td>
+<td class="name">Decimal number</td>
+<td class="note">Floating-point number with double precision</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>String&nbsp;</td>
+<td class="name">Text</td>
+<td class="note">String of characters</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Boolean&nbsp;</td>
+<td class="name">Boolean</td>
+<td class="note">Boolean value of TRUE/FALSE</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DateTime&nbsp;</td>
+<td class="name">Date/Time</td>
+<td class="note">Value with date, time or both</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<h2>Additional codes</h2>
+
+<h3><a name="LogVerbosityLevel">LogVerbosityLevel</a></h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Error</td>
+<td class="name">Error</td>
+<td class="note">Errors only</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Warning</td>
+<td class="name">Warning</td>
+<td class="note">Include warnings</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Info</td>
+<td class="name">Info</td>
+<td class="note">Include calls to lm.logInfo</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Normal</td>
+<td class="name">Normal</td>
+<td class="note">Include all calls to lm.log</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Fine</td>
+<td class="name">Fine</td>
+<td class="note">Log calls of main functions</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Finer</td>
+<td class="name">Finer</td>
+<td class="note">Log calls of all functions with named paremeters</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Finest</td>
+<td class="name">Finest</td>
+<td class="note">for debugging purposes</td>
+</tr>
+</table>
+
+<h3><a name="TargetPlatform">TargetPlatform</a></h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>TaskPooler</td>
+<td class="name">TaskPooler</td>
+<td class="note">Add task to TaskPooler queue (no parallelization)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>ProcPooler</td>
+<td class="name">ProcPooler</td>
+<td class="note">Add task to ProcPooler queue (parallel procesing on multiple cores)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>GridPooler</td>
+<td class="name">GridPooler</td>
+<td class="note">Add task to GridPooler queue (distributed parallel processing)</td>
+</tr>
+</table>
+
+<h3><a name="TaskGenerationStatus">TaskGenerationStatus</a></h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>None</td>
+<td class="name">Not generated yet</td>
+<td class="note">For newly created tasks or after a change has been made to task description</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Waiting</td>
+<td class="name">Waiting</td>
+<td class="note">Waiting in the queue of TaskPooler, ProcPooler or GridPooler</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Running</td>
+<td class="name">Running</td>
+<td class="note">Running locally or on the grid</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Solved</td>
+<td class="name">Solved</td>
+<td class="note">Successfully finished</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Interrupted</td>
+<td class="name">Interrupted</td>
+<td class="note">Finished because of the <a href="Task.html#HypothesesCountMax">HypothesesCountMax</a> was reached or interrupted by user</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Failed</td>
+<td class="name">Failed</td>
+<td class="note">An error occured which caused the task run to stop</td>
+</tr>
+</table>
+
+<h3><a name="HypothesisMutualInfluenceRelationship">HypothesisMutualInfluenceRelationship</a></h3>
+<table class="codetable_list">
+<tr>
+<td class="keyname" nowrap><strong>Key</strong></td>
+<td class="name"><strong>Name</strong></td>
+<td class="note"><strong>Note</strong></td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Unknown</td>
+<td class="name">Unknown</td>
+<td class="note">Relationship between the hypothesis and given mutual influence could not be described</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Unrelated</td>
+<td class="name">Unrelated</td>
+<td class="note">The hypothesis and given mutual influence are not related</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>DerivedFrom</td>
+<td class="name">DerivedFrom</td>
+<td class="note">Hypothesis is derived from the mutual influence (supports it)</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>Extending</td>
+<td class="name">Extending</td>
+<td class="note">Hypothesis extends the mutual influence</td>
+</tr>
+<tr>
+<td class="keyname" nowrap>InConflictWith</td>
+<td class="name">InConflictWith</td>
+<td class="note">Hypothesis is in conflict with the mutual influence (is an exception to)</td>
+</tr>
+</table>
+
+</div> <!-- id="content_single" -->
+
+</div> <!-- id="content_base" -->
+
+</body>
+</html>

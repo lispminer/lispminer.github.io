@@ -1,0 +1,475 @@
+/* LISp-Miner Control Language Documentation style */
+/* Layout inspired by LuaDoc (http://keplerproject.github.io/luadoc) */
+
+body { 
+/*    	background: #ffffff; */
+	background: #f5f5f5;
+    	font-family: Verdana, Arial CE, Arial, Helvetica, sans-serif;
+/*	font-size: 70%;	/*12pt;	/*80%;	/*xx-small;*/	
+	text-align: left;
+	color: black;
+	margin: 0px;
+	padding: 0px;
+/*	margin-left: 1em; 	*/
+/*	margin-right: 1em; 	*/
+}
+
+a:link { 
+/*	font-weight:bold; */
+/*	color: #004080; */
+	text-decoration: none; 
+}
+a:link:hover 
+	{ 
+	text-decoration:underline; 
+}
+a:visited { 
+/*	font-weight:bold; */
+/*	color: #006699; */
+	text-decoration: none; 
+}
+a:visited:hover 
+	{ 
+	text-decoration:underline; 
+}
+
+/*p { margin-left: 1em; }*/
+
+/*
+p.name { 
+    font-family: "Andale Mono", monospace; 
+    padding-top: 1em;
+    margin-left: 0em; 
+}
+
+hrule { 
+	margin-left: 0em;
+	background: #00007f; 
+	border: 0px;
+	height: 1px;
+}
+*/
+
+
+#imagebox { 
+	text-align: center;
+	font-style: italic;
+	margin: 1em;
+	border-width: 0px; 
+}
+
+#imagebox.img { 
+	border-width: 0px; 
+}
+
+ul { list-style-type: disc; }
+
+li { /*margin-left: 2em;*/
+	/*display: block;*/
+	padding: 3px 3px 3px 3px;
+	padding-left: 7px;
+}
+
+/*
+table.index { border: 1px #00007f; }
+table.index td { text-align: left; vertical-align: top; }
+table.index ul { padding-top: 0em; margin-top: 0em; }
+*/
+
+table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+th {
+    border: 1px solid black;
+    padding: 0.5em;
+}
+td {
+    border: 1px solid black;
+    padding: 0.5em;
+}
+
+/* ************************************************************************** */
+/*                              Refrence Header                               */
+/* ************************************************************************** */
+
+#main_title {
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+	height: 20px;	/*1.3em;*/
+        width: 100%;
+	font-size:0.9em;
+	text-align: left;
+	border-bottom: 1px solid #cccccc;
+/*	border: 2px solid #cccccc; */
+/*	background-color: #f0f0f0;*/
+	background-color: #ffffff;
+	padding:10px;
+	padding:10px;
+}
+
+	#main_title .version {
+	/*#main_title version {*/
+		font-size:0.8em;
+	}
+
+/* ************************************************************************** */
+/*                                   Navigation                               */
+/* ************************************************************************** */
+
+#navigation {
+	position: fixed;
+/*	overflow:visible; */
+        overflow: scroll;
+        top: 40px;	/*2em;*/
+        bottom: 0;
+	width: 15em;
+/*	height: 100%;*/
+	margin: 0;
+/*	margin-top: 2em;*/
+	padding: 0;
+	padding-right: 1em;
+	padding-bottom: 3em;
+	vertical-align: top;
+	background-color: #f5f5f5;
+}
+
+	#navigation h1 {
+		background-color:#f0f0f0;
+		font-size:1.1em;
+		color:#000000;
+		text-align:left;
+		margin:0em;	/*0px;*/
+		padding:0.3em;
+		border-top:1px solid #dddddd;
+		border-bottom:1px solid #dddddd;
+	}
+	
+	#navigation h2 {
+	/*	background-color:#f0f0f0;*/
+		font-size:1.0em;
+		color:#000000;
+		text-align:left;
+		margin-left:0em;	/*0px;*/
+		padding-left:0.5em;
+	/*	border-top:1px solid #dddddd;
+		border-bottom:1px solid #dddddd; */
+	}
+	
+	#navigation ul {
+		font-size:1em;
+		list-style-type: none;
+		padding: 0;
+		margin: 0.7em;
+	}
+	
+	#navigation li {
+		text-indent: -1em;
+		margin: 0em 0em 0em 0.5em;
+		display: block;
+		padding: 3px 3px 3px 12px;
+	}
+	
+	/*#navigation li li a
+	{
+		padding: 0px 3px 0px -1em;
+	}*/
+
+/* ************************************************************************** */
+/*                               Content Container                            */
+/* ************************************************************************** */
+
+#content_base {
+	background-color: #ffffff;
+}
+
+	#content_base h1 {
+		background-color:#f5f5f5;
+		font-size:1.5em;
+		color:#000000;
+		text-align:left;
+		margin-top:0em;
+		margin-bottom:0.5em;
+	/*	margin:0.5em;	/*0px;*/
+		padding:0.3em;
+		border-top:1px solid #dddddd;
+		border-bottom:1px solid #dddddd;
+	}
+
+	#content_base h2 {
+		font-size:1.2em;
+		color:#000000;
+		margin-top:1em;	/*0px;*/
+		margin-bottom:0.5em;	/*0px;*/
+		padding:0.0em;
+	}
+	
+	#content_base h3 {
+		font-size:1.2em;
+		background-color:#f5f5f5;
+		color:#000000;
+		margin-top:1.0em;	/*0px;*/
+		margin-bottom:0.5em;	/*0px;*/
+		padding-top:0.3em;
+		padding-bottom:0.3em;
+	}
+
+/* ************************************************************************** */
+/*                               Content Title                                */
+/* ************************************************************************** */
+
+#content_title {
+        position: fixed;
+/*      overflow: scroll;*/
+	left: 16em;
+	top: 40px;	/*2em;*/
+	right: 0;
+	height: 65px;
+/*        margin-left: 1em;*/
+	vertical-align: top;
+	border-left: 1px solid #cccccc;
+/*	border-right: 1px solid #cccccc; */
+/*	border-bottom: 1px solid #cccccc; */
+        padding-top: 0.3em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 0.3em; 
+/*	background-color: #ffffff;*/
+	background-color:#f5f5f5;
+}
+
+	#content_title h1 {
+		background-color:#f5f5f5;
+		font-size:1.5em;
+		color:#000000;
+		text-align:left;
+		margin:0px;
+/*		margin-bottom:0.5em;*/
+		padding:0em;
+		border-top: 0px;
+		border-bottom:0px;
+	}
+
+/* ************************************************************************** */
+/*                              Content Body                                  */
+/* ************************************************************************** */
+
+#content_body {
+        position: fixed;
+        overflow: scroll;
+	top: 115px; 
+	left: 16em;
+	right: 0;
+        bottom: 0; 
+/*        margin-top: 0.5em;*/
+/*        margin-left: 1em;*/
+	vertical-align: top;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #cccccc;
+	padding-top: 0.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 3em; 
+/*      border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;*/
+	background-color: #ffffff;
+}
+
+/* ************************************************************************** */
+/*                               Content Single                               */
+/* ************************************************************************** */
+
+#content_single {
+        position: fixed;
+        overflow: scroll;
+	left: 16em;
+	top: 40px;	
+/*      width: 100%;*/
+/*      height: 100%;*/
+	right: 0;
+	bottom: 0;
+	vertical-align: top;
+        padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 3em;
+	border-left: 1px solid #cccccc;
+/*	border-right: 1px solid #cccccc; */
+/*	border-bottom: 1px solid #cccccc; */
+	background-color: #ffffff;
+}
+
+	#content_single h2 {
+		background-color:#f5f5f5;
+		padding-top:0.3em;
+		padding-bottom:0.3em;
+	}
+
+	#content_single h3 {
+		font-size:1.0em;
+		background-color:#ffffff;
+		margin-top:0.5em;	/*0px;*/
+		margin-bottom:0.3em;	/*0px;*/
+		padding-top:0.3em;
+		padding-bottom:0.3em;
+	}
+
+/* ************************************************************************** */
+/*                                 Lists                                      */
+/* ************************************************************************** */
+
+table.property_list {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-collapse: collapse;
+	width: 100%;
+}
+table.property_list td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #cccccc;
+}
+table.property_list td.name { background-color: #f5f5f5; }
+table.property_list td.summary { width: 100%; }
+
+table.method_list {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-collapse: collapse;
+	width: 100%;
+}
+table.method_list td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #cccccc;
+}
+table.method_list td.name { background-color: #f5f5f5; }
+table.method_list td.summary { width: 100%; }
+
+dl.constructor dt {border-top: 1px solid #ccc; padding-top: 1em;}
+dl.constructor dd {padding-top:0.3em; padding-bottom: 1em;}
+dl.constructor h3 {
+	background-color: #ffffff !important; 
+	padding: 0 !important; 
+	margin-top: 0.6em !important; 
+	margin-bottom: 0.1em !important; 
+	font-size: 1em !important;
+    	font-weight: normal !important;
+}
+
+dl.constructor li {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+dl.constructor ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+dl.property dt {border-top: 1px solid #ccc; padding-top: 1em;}
+dl.property dd {padding-top:0.3em; padding-bottom: 1em;}
+dl.property h3 {
+	background-color: #ffffff !important; 
+	padding: 0 !important; 
+	margin-top: 0.6em !important; 
+	margin-bottom: 0.1em !important; 
+	font-size: 1em !important;
+    	font-weight: normal !important;
+}
+
+dl.method dt {border-top: 1px solid #ccc; padding-top: 1em;}
+dl.method dd {padding-top:0.3em; padding-bottom: 1em;}
+dl.method h3 {
+	background-color: #ffffff !important; 
+	padding: 0 !important; 
+	margin-top: 0.6em !important; 
+	margin-bottom: 0.1em !important; 
+	font-size: 1em !important;
+	font-variant: small-caps !important;
+    	font-weight: 100 !important;
+}
+
+dl.method li {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+dl.method ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+table.codetable_list {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-collapse: collapse;
+	width: 100%;
+}
+table.codetable_list td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: #cccccc;
+}
+
+table.codetable_list td.keyname { 
+	width: 25%; 
+	background-color: #f5f5f5; 
+	font-family: "Andale Mono", monospace; 
+	font-size:1.1em;
+}
+table.codetable_list td.name { width: 25%; }
+table.codetable_list td.note { width: 50%; }
+table.codetable_list td.summary { width: 100%; }
+
+code {
+	font-family: "Andale Mono", monospace; 
+	font-size:1.2em;
+}
+
+#codebox {
+	background-color:#f5f5f5;
+	font-family: "Andale Mono", monospace; 
+	font-size:1.1em;
+	color:#000000;
+	text-align:left;
+	margin-top:1em;
+	margin-bottom:1em;
+	padding:0.5em;
+	border:1px solid #dddddd;
+	border:1px solid #dddddd;
+}
+
+#codebox comment {
+	color: #008800;
+}
+
+/*
+#w3validator
+{
+	clear: both;
+	margin: 0;
+	padding: 5px;
+	border-top: 2px solid #cccccc;
+	background-color: #ffffff;
+}
+*/
