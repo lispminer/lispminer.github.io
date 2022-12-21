@@ -541,19 +541,19 @@ version: 27.19.01 of 18 Dec 2022
 <td class="note">Absolute number. Threshold value is left as given.</td>
 </tr>
 <tr>
-<td class="keyname" nowrap>RelSet&nbsp;</td>
-<td class="name">Relative [%] to act condition in conjuction with a state</td>
-<td class="note">Relative to number of rows matching condition and simoultaneously the state before or after. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition in conjunction with a state)</td>
+<td class="note">Relative to sum of frequencies in the source contingency table. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</td>
+<td class="note">Relative to maximal value in the source contingency table. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="AggregateType">AggregateType</h3>
@@ -965,18 +965,18 @@ version: 27.19.01 of 18 Dec 2022
 </tr>
 <tr>
 <td class="keyname" nowrap>RelCondition&nbsp;</td>
-<td class="name">Relative [%] to act condition</td>
-<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition)</td>
+<td class="note">Relative to sum of frequencies in the whole histogram. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal frequency in the whole histogram. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</td>
+<td class="note">Relative to maximal frequency in the whole histogram. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="CoefficientType">CoefficientType</h3>
@@ -1389,19 +1389,19 @@ version: 27.19.01 of 18 Dec 2022
 <td class="note">Absolute number. Threshold value is left as given.</td>
 </tr>
 <tr>
-<td class="keyname" nowrap>RelSet&nbsp;</td>
-<td class="name">Relative [%] to act condition in conjuction with a set</td>
-<td class="note">Relative to number of rows matching condition and simoultaneously the first or second set. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition in conjunction with a set)</td>
+<td class="note">Relative to sum of frequencies in the source histogram. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole histogram)/100</td>
+<td class="note">Relative to maximal value in the source histogram. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="DFQuantifierType">DFQuantifierType</h3>
@@ -1535,19 +1535,19 @@ version: 27.19.01 of 18 Dec 2022
 <td class="note">Absolute number. Threshold value is left as given.</td>
 </tr>
 <tr>
-<td class="keyname" nowrap>RelSet&nbsp;</td>
-<td class="name">Relative [%] to act condition in conjuction with a set</td>
-<td class="note">Relative to number of rows matching condition and simoultaneously the first or second set. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition in conjunction with a set)</td>
+<td class="note">Relative to sum of frequencies in the source contingency table. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal value in the current contingency table. Threshold value [%] is multiplied by (the highest frequency)/100</td>
+<td class="note">Relative to maximal value in the source contingency table. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="DKQuantifierType">DKQuantifierType</h3>
@@ -1631,19 +1631,19 @@ version: 27.19.01 of 18 Dec 2022
 <td class="note">Absolute number. Threshold value is left as given.</td>
 </tr>
 <tr>
-<td class="keyname" nowrap>RelSet&nbsp;</td>
-<td class="name">Relative [%] to act condition in conjuction with a set</td>
-<td class="note">Relative to number of rows matching condition and simoultaneously the first or second set. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="keyname" nowrap>RelCondition&nbsp;</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition in conjunction with a set)</td>
+<td class="note">Relative to sum of frequencies in the source KL-table. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal frequency in the current contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</td>
+<td class="note">Relative to maximal frequency in the source KL-table. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="FTQuantifierType">FTQuantifierType</h3>
@@ -2162,18 +2162,18 @@ version: 27.19.01 of 18 Dec 2022
 </tr>
 <tr>
 <td class="keyname" nowrap>RelCondition&nbsp;</td>
-<td class="name">Relative [%] to act condition</td>
-<td class="note">Relative to number of rows matching condition. Threshold value [%] is multiplied by (number of rows matching condition)/100</td>
+<td class="name">Relative [%] to sum of frequencies (i.e. condition)</td>
+<td class="note">Relative to sum of frequencies in the whole KL-table. Threshold value [%] is multiplied by 'sum of frequencies'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelAll&nbsp;</td>
 <td class="name">Relative [%] to all objects</td>
-<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by (number of rows in the whole matrix)/100</td>
+<td class="note">Relative to number of all rows in the data matrix. Threshold value [%] is multiplied by 'number of rows in the whole matrix'/100</td>
 </tr>
 <tr>
 <td class="keyname" nowrap>RelFrequencyMax&nbsp;</td>
 <td class="name">Relative [%] to max frequency</td>
-<td class="note">Relative to maximal frequency in the whole contingency table. Threshold value [%] is multiplied by (the highest frequency in the whole KL-table)/100</td>
+<td class="note">Relative to maximal frequency in the whole KL-table. Threshold value [%] is multiplied by 'the highest frequency'/100</td>
 </tr>
 </table>
 <h3 id="LaqMapType">LaqMapType</h3>
