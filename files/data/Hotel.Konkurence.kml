@@ -1,0 +1,22 @@
+<!-- Hotel: Pozice konkurentu -->
+<?xml version="1.0" encoding="windows-1250"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <Placemark>
+    <name>Alpha</name>
+    <Point><coordinates>13.8266006,48.8621342,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Beta</name>
+    <Point><coordinates>11.1015116,51.3596439,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Delta</name>
+    <Point><coordinates>15.9422627,49.5797314,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>Gamma</name>
+    <Point><coordinates>20.2252977,49.1395278,0</coordinates></Point>
+  </Placemark>
+</Document>
+</kml>
